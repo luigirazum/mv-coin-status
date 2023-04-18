@@ -1,7 +1,14 @@
 import '../styles/App.css';
 
 const App = () => (
-  <h2>Welcome to CoinStatus</h2>
+  <>
+    <header>
+      Main Nav
+    </header>
+    <main>
+      Start Menu
+    </main>
+  </>
 );
 
 export default App;
