@@ -1,8 +1,13 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import coinsReducer from './coins/coinsSlice';
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  coins: coinsReducer,
+});
 
-const setupStore = (preloadedState) => configureStore({
+const setupStore = (
+  preloadedState,
+) => configureStore({
   reducer: rootReducer,
   preloadedState,
 });
