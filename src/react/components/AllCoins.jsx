@@ -1,4 +1,5 @@
 import { useSelector, shallowEqual } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Coin from './Coin';
 
 const AllCoins = () => {
@@ -7,7 +8,9 @@ const AllCoins = () => {
   return (
     <section className="allCoins">
       {coins.map((coin) => (
-        <Coin key={coin.id} id={coin.id} />
+        <Link to={coin.id} key={coin.id} className="coinLink">
+          <Coin id={coin.id} />
+        </Link>
       ))}
     </section>
   );
