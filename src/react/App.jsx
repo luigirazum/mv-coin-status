@@ -1,13 +1,11 @@
 import { useDispatch } from 'react-redux';
-import '../styles/App.css';
 import { useEffect } from 'react';
-import {
-  BrowserRouter, Routes, Route,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { fetchCoins } from '../redux/coins/coinsActions';
 import Home from './routes/Home';
 import CoinsContainer from './routes/CoinsContainer';
-import AllCoins from './routes/AllCoins';
+import AllCoins from './components/AllCoins';
+import '../styles/App.css';
 
 const App = () => {
   const dispatch = useDispatch();
