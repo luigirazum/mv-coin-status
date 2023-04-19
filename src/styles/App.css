@@ -54,6 +54,7 @@
 
   /* color palette */
   --color-pure-white: #fff;
+  --color-rgb-white-a05: rgba(255, 255, 255, 0.05);
   --color-dark-grey: #1d1d1d;
   --color-medium-dark-grey: #171717;
   --color-semi-dark-grey: #464646;
@@ -159,9 +160,19 @@ body {
   color: var(--color-light-dark-grey);
 }
 
+.coinLink {
+  color: var(--color-pure-white);
+}
+
+.coinLink:hover .coinItem {
+  background-color: var(--color-rgb-white-a05);
+}
+
 .coinItem {
   display: flex;
   flex-direction: column;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
 }
 
 .iconContainer {
