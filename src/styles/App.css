@@ -158,3 +158,20 @@ body {
 .navLink.active:active {
   color: var(--color-light-dark-grey);
 }
+
+.coinItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconContainer {
+  --iContainerSize: 7rem;
+  inline-size: var(--iContainerSize);
+  block-size: var(--iContainerSize);
+  padding: 0.5rem;
+}
+
+.coinIcon {
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+}
