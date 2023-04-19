@@ -2,9 +2,12 @@ import { useDispatch } from 'react-redux';
 import '../styles/App.css';
 import { useEffect } from 'react';
 import {
-  BrowserRouter, Routes, Route, Outlet,
+  BrowserRouter, Routes, Route,
 } from 'react-router-dom';
 import { fetchCoins } from '../redux/coins/coinsActions';
+import Home from './routes/Home';
+import CoinsContainer from './routes/CoinsContainer';
+import AllCoins from './routes/AllCoins';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -16,20 +19,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<h1>HOME</h1>} />
-        <Route
-          path="coins"
-          caseSensitive
-          element={
-            (
-              <>
-                <h3>NAVIGATION AT COINS</h3>
-                <Outlet />
-              </>
-)
-            }
-        >
-          <Route index caseSensitive element={<h3>LIST OF COINS</h3>} />
+        <Route index element={<Home />} />
+        <Route path="coins" caseSensitive element={<CoinsContainer />}>
+          <Route index caseSensitive element={<AllCoins />} />
           <Route path=":coin" caseSensitive element={<h4>DETAILS FOR A COIN</h4>} />
         </Route>
         <Route path="*" element={<h3>ERROR</h3>} />
