@@ -1,3 +1,81 @@
+/* Font Imports */
+
+/* Lato is going to be used on Controls */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+/* Gill Sans is going to be used on Body and Titles */
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../assets/fonts/GillSansMTStd-Light.otf') format('opentype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../assets/fonts/GillSansMTStd-Medium.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../assets/fonts/GillSansMTStd-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../assets/fonts/GillSansMTStd-ExtraBold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Setting global variables */
+:root {
+  /* font families */
+  --ff-lato: 'Lato', sans-serif;
+  --ff-gillSans: 'Gill Sans', sans-serif;
+
+  /* font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* font assigns */
+  --ff-body: var(--ff-gillSans);
+  --ff-titles: var(--ff-gillSans);
+  --ff-controls: var(--ff-lato);
+
+  /* color palette */
+  --color-pure-white: #fff;
+  --color-dark-grey: #1d1d1d;
+  --color-medium-dark-grey: #171717;
+  --color-semi-dark-grey: #464646;
+  --color-light-dark-grey: #414141;
+  --color-blue: #4369b2;
+  --color-medium-blue: #3a5b99;
+  --color-semi-blue: #3a5b98;
+  --color-light-blue: #6096ff;
+  --color-pie-light-blue: #588be8;
+  --color-pie-dark-blue: #35548c;
+  --color-yellow: #fcff02;
+  --color-light-yellow: #fff200;
+  --color-green: #00b64f;
+  --color-lemon: #6ecf00;
+  --color-orange: #ff5b2e;
+  --color-pink: #e42a72;
+
+  /* color assignments */
+  --fg-color-text: var(--color-pure-white);
+  --bg-color-main: var(--color-dark-grey);
+}
+
 /* Resets */
 * {
   box-sizing: border-box;
@@ -5,3 +83,18 @@
   padding: 0;
   list-style-type: none;
 }
+
+body {
+  font-family: var(--ff-body);
+  background-color: var(--bg-color-main);
+  color: var(--fg-color-text);
+}
+
+.ffControls { font-family: var(--ff-controls); }
+.ffTitles { font-family: var(--ff-gillSans); }
+
+/* font weights */
+.regular { font-weight: var(--fw-regular); }
+.light { font-weight: var(--fw-light); }
+.bold { font-weight: var(--fw-bold); }
+.black { font-weight: var(--fw-black); }
