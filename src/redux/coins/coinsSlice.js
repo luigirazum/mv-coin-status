@@ -29,10 +29,10 @@ const coinsSlice = createSlice({
    *   > if the coins are retrieved
    *  ------------------------------------------ */
     .addCase(fetchCoins.fulfilled,
-      (state, { payload }) => (
+      (state, { payload: { coins } }) => (
         {
           ...state,
-          assets: payload,
+          assets: coins,
           status: { type: 'idle' },
           error: null,
         }
