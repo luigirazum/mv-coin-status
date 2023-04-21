@@ -7,12 +7,38 @@ import { fetchCoins } from './coinsActions';
 const initialState = {
   assets: [],
   status: { type: 'idle' },
+  filter: { active: false, by: '' },
   error: null,
 };
 
 const coinsSlice = createSlice({
   name: 'coins',
   initialState,
+  reducers: {
+    filterCoins: (state, { payload }) => {
+      const filteredAssets = state.assets
+        .filter((asset) => (
+          asset.name.toLowerCase().includes(payload)
+        || asset.symbol.toLowerCase().includes(payload)
+        ));
+
+      return ({
+        ...state,
+        filter: {
+          active: true,
+          by: payload,
+          assets: filteredAssets,
+        },
+      });
+    },
+    clearFilterCoins: (state) => ({
+      ...state,
+      filter: {
+        active: false,
+        by: '',
+      },
+    }),
+  },
   extraReducers: (builder) => builder
   /** ------------------------------------------
    *   > when we launch the request
@@ -49,5 +75,7 @@ const coinsSlice = createSlice({
         }
       )),
 });
+
+export const { filterCoins, clearFilterCoins } = coinsSlice.actions;
 
 export default coinsSlice.reducer;
