@@ -3,8 +3,9 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { fetchCoins } from '../redux/coins/coinsActions';
 import Home from './routes/Home';
-import CoinsContainer from './routes/CoinsContainer';
-import AllCoins from './components/AllCoins';
+import CoinsLayout from './routes/CoinsLayout';
+import AllCoins from './routes/AllCoins';
+import CoinDetails from './routes/CoinDetails';
 import '../styles/App.css';
 
 const App = () => {
@@ -18,9 +19,9 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="coins" caseSensitive element={<CoinsContainer />}>
+        <Route path="coins" caseSensitive element={<CoinsLayout />}>
           <Route index caseSensitive element={<AllCoins />} />
-          <Route path=":coin" caseSensitive element={<h4>DETAILS FOR A COIN</h4>} />
+          <Route path=":id" caseSensitive element={<CoinDetails />} />
         </Route>
         <Route path="*" element={<h3>ERROR</h3>} />
       </Routes>
