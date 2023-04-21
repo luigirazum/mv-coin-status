@@ -22,6 +22,6 @@ const fetchCoins = createAsyncThunk(
   },
 );
 
-export default FETCH_COINS;
+export { FETCH_COINS };
 
 export { fetchCoins };
