@@ -166,10 +166,6 @@ input {
   color: var(--fg-color-text);
 }
 
-input:focus:focus-visible .ctrl-btn {
-  background-color: #35548c;
-}
-
 .ctrl-btn {
   inline-size: 1.5rem;
   padding: 0.25rem;
@@ -182,6 +178,10 @@ input:focus:focus-visible .ctrl-btn {
 .ctrl-btn:hover {
   color: var(--color-light-yellow);
   background-color: var(--color-dark-grey);
+}
+
+input:focus:focus-visible .ctrl-btn {
+  background-color: #35548c;
 }
 
 .navLink {
@@ -203,7 +203,6 @@ input:focus:focus-visible .ctrl-btn {
 .navLink.active:active {
   color: var(--color-light-dark-grey);
 }
-
 
 .allCoins {
   --min-column-size: 15rem;
