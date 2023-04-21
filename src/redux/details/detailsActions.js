@@ -1,20 +1,19 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import getCoinDetails from '../api/apiLibrary';
 
 /** -----------------------------------------------------
  *   > Action type definitions
  *  ----------------------------------------------------- */
-const FETCH_COINS = 'coins/fetchCoins';
+const FETCH_DETAILS = 'details/fetchDetails';
 
 /** -----------------------------------------------------
  *   > Action Thunks definitions
  *  ----------------------------------------------------- */
-const fetchCoins = createAsyncThunk(
-  FETCH_COINS,
-  async (_, thunkAPI) => {
+const fetchDetails = createAsyncThunk(
+  FETCH_DETAILS,
+  async (coinId, thunkAPI) => {
     try {
-      const resp = await axios
-        .get('https://api.coinstats.app/public/v1/coins?skip=0&currency=USD');
+      const resp = await getCoinDetails(coinId, thunkAPI);
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -22,6 +21,6 @@ const fetchCoins = createAsyncThunk(
   },
 );
 
-export { FETCH_COINS };
+export { FETCH_DETAILS };
 
-export { fetchCoins };
+export { fetchDetails };
