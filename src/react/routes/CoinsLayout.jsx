@@ -4,7 +4,9 @@ import NavBar from '../components/NavBar';
 const CoinsContainer = () => (
   <>
     <NavBar />
-    <Outlet />
+    <div className="wrapper">
+      <Outlet />
+    </div>
   </>
 );
 
