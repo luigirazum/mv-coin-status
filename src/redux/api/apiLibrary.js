@@ -1,14 +1,28 @@
 import axios from 'axios';
 
+/** ----------------------------------------------------------------------
+ *   > API endpoints Url generators
+ *  ---------------------------------------------------------------------- */
+export const allCoinsUrl = () => (
+  'https://api.coinstats.app/public/v1/coins?skip=0&currency=USD'
+);
+export const coinHistoryUrlById = (coinId) => (
+  `https://api.coinstats.app/public/v1/charts?period=1w&coinId=${coinId}`
+);
+export const coinMarketsUrlById = (coinId) => (
+  `https://api.coinstats.app/public/v1/markets?coinId=${coinId}`
+);
+
+/** ----------------------------------------------------------------------
+ *   > get the details for a Coin
+ *  ---------------------------------------------------------------------- */
 const getCoinDetails = (coinId, thunkAPI) => new Promise((resolve, reject) => {
   const { coins: { assets: availableCoins } } = thunkAPI.getState();
   const [coinFound] = availableCoins.filter((coin) => coin.id === coinId);
 
   const fetchAllDetails = async (coinFound) => {
-    const historyUrl = `https://api.coinstats.app/public/v1/charts?period=1w&coinId=${coinId}`;
-    const respHistory = await axios.get(historyUrl);
-    const marketsUrl = `https://api.coinstats.app/public/v1/markets?coinId=${coinId}`;
-    const respMarkets = await axios.get(marketsUrl);
+    const respHistory = await axios.get(coinHistoryUrlById(coinId));
+    const respMarkets = await axios.get(coinMarketsUrlById(coinId));
 
     const coinFullDetails = {
       ...coinFound,
