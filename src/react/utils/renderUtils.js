@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 
 // import your setupStore as a basic setup
 import setupStore from '../../redux/store';
@@ -27,7 +28,10 @@ const renderWithProviders = (
   };
 
   // Return an object with the store and all of RTL's query functions
-  return ({ store, ...render(ui, { wrapper: Wrapper, ...renderOptions }) });
+  return ({
+    store,
+    ...render(ui, { wrapper: Wrapper, ...renderOptions }),
+  });
 };
 
 /** --------------------------------------------------------------
