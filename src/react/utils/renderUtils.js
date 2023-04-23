@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 
 // import your setupStore as a basic setup
 import setupStore from '../../redux/store';
@@ -41,7 +40,6 @@ const renderWithRouter = (ui, { route = '/' } = {}) => {
   window.history.pushState({}, 'Test page', route);
 
   return {
-    user: userEvent.setup(),
     ...render(ui, { wrapper: BrowserRouter }),
   };
 };
