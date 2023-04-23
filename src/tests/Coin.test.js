@@ -52,6 +52,23 @@ describe('Coin component tests', () => {
   /**
    * END: Coin render
   */
+
+  describe('Coin component snapshot test', () => {
+    test('snapshot renders correctly', () => {
+      container = renderWithProviders(<Coin id={bitCoin.id} />, {
+        preloadedState: {
+          coins: {
+            assets: [mockCoins.coins],
+            status: { type: 'idle' },
+            filter: { active: false, by: '' },
+            error: null,
+          },
+        },
+      }).container;
+
+      expect(container).toMatchSnapshot();
+    });
+  });
 });
 /**
  * END: Coin component tests

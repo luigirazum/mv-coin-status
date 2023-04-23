@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coin component tests Coin component snapshot test snapshot renders correctly 1`] = `
+<div>
+  <article
+    class="coinItem"
+  >
+    <section
+      class="itemSection itemHeader"
+    >
+      <h3
+        class="itemName"
+        data-testid="coinName"
+      />
+      <div
+        class="iconContainer"
+      >
+        <img
+          class="coinIcon"
+          data-testid="coinLogo"
+        />
+      </div>
+    </section>
+    <section
+      class="itemSection"
+    >
+      <div
+        class="itemDescription"
+      >
+        <h3
+          class="itemCategory rankCategory"
+        >
+          Rank
+        </h3>
+        <p
+          class="itemData rankData"
+          data-testid="coinRank"
+        />
+      </div>
+      <div
+        class="itemDescription"
+      >
+        <h4
+          class="itemCategory"
+        >
+          Symbol
+        </h4>
+        <p
+          class="itemData"
+          data-testid="coinSymbol"
+        />
+      </div>
+    </section>
+  </article>
+</div>
+`;
