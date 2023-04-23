@@ -9,7 +9,7 @@ const Coin = ({ id }) => {
   } = coin;
 
   return (
-    <article className="coinItem">
+    <article data-testid={id} className="coinItem">
       <section className="itemSection itemHeader">
         <h3 data-testid="coinName" className="itemName">{name}</h3>
         <div className="iconContainer">

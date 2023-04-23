@@ -4,6 +4,7 @@ exports[`Coin component tests Coin component snapshot test snapshot renders corr
 <div>
   <article
     class="coinItem"
+    data-testid="bitcoin"
   >
     <section
       class="itemSection itemHeader"
