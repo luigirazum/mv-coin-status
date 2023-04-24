@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { act } from 'react-test-renderer';
+import renderer, { act } from 'react-test-renderer';
 import { renderWithProviders } from '../react/utils/renderUtils';
 import { mockCoins } from './mocks/mockData';
 import AllCoins from '../react/routes/AllCoins';
@@ -123,7 +123,7 @@ describe('AllCoins component tests', () => {
 
   describe('AllCoins component snapshot test', () => {
     test('snapshot renders 5 Coins correctly', () => {
-      container = renderWithProviders(
+      const renderedWithProviders = renderWithProviders(
         <MemoryRouter initialEntries={['/coins']}>
           <AllCoins />
         </MemoryRouter>,
@@ -137,9 +137,14 @@ describe('AllCoins component tests', () => {
             },
           },
         },
-      ).container;
+      );
 
-      expect(container).toMatchSnapshot();
+      container = renderedWithProviders.container;
+      const { component } = renderedWithProviders;
+
+      const tree = renderer.create(component);
+      const jsonTree = tree.toJSON();
+      expect(jsonTree).toMatchSnapshot();
     });
   });
 });
