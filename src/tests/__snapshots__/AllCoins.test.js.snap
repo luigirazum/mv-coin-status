@@ -1,330 +1,333 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AllCoins component tests AllCoins component snapshot test snapshot renders 5 Coins correctly 1`] = `
-<div>
-  <section
-    class="allCoins"
+<section
+  className="allCoins"
+>
+  <a
+    className="coinLink evenCoin"
+    href="/bitcoin"
+    onClick={[Function]}
   >
-    <a
-      class="coinLink evenCoin"
-      href="/bitcoin"
+    <article
+      className="coinItem"
+      data-testid="bitcoin"
     >
-      <article
-        class="coinItem"
-        data-testid="bitcoin"
+      <section
+        className="itemSection itemHeader"
       >
-        <section
-          class="itemSection itemHeader"
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          Bitcoin
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="Bitcoin"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="https://static.coinstats.app/coins/1650455588819.png"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
         >
           <h3
-            class="itemName"
-            data-testid="coinName"
+            className="itemCategory rankCategory"
           >
-            Bitcoin
+            Rank
           </h3>
-          <div
-            class="iconContainer"
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
           >
-            <img
-              alt="Bitcoin"
-              class="coinIcon"
-              data-testid="coinLogo"
-              src="https://static.coinstats.app/coins/1650455588819.png"
-            />
-          </div>
-        </section>
-        <section
-          class="itemSection"
+            1
+          </p>
+        </div>
+        <div
+          className="itemDescription"
         >
-          <div
-            class="itemDescription"
+          <h4
+            className="itemCategory"
           >
-            <h3
-              class="itemCategory rankCategory"
-            >
-              Rank
-            </h3>
-            <p
-              class="itemData rankData"
-              data-testid="coinRank"
-            >
-              1
-            </p>
-          </div>
-          <div
-            class="itemDescription"
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
           >
-            <h4
-              class="itemCategory"
-            >
-              Symbol
-            </h4>
-            <p
-              class="itemData"
-              data-testid="coinSymbol"
-            >
-              BTC
-            </p>
-          </div>
-        </section>
-      </article>
-    </a>
-    <a
-      class="coinLink oddCoin"
-      href="/ethereum"
+            BTC
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+  <a
+    className="coinLink oddCoin"
+    href="/ethereum"
+    onClick={[Function]}
+  >
+    <article
+      className="coinItem"
+      data-testid="ethereum"
     >
-      <article
-        class="coinItem"
-        data-testid="ethereum"
+      <section
+        className="itemSection itemHeader"
       >
-        <section
-          class="itemSection itemHeader"
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          Ethereum
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="Ethereum"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="https://static.coinstats.app/coins/1650455629727.png"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
         >
           <h3
-            class="itemName"
-            data-testid="coinName"
+            className="itemCategory rankCategory"
           >
-            Ethereum
+            Rank
           </h3>
-          <div
-            class="iconContainer"
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
           >
-            <img
-              alt="Ethereum"
-              class="coinIcon"
-              data-testid="coinLogo"
-              src="https://static.coinstats.app/coins/1650455629727.png"
-            />
-          </div>
-        </section>
-        <section
-          class="itemSection"
+            2
+          </p>
+        </div>
+        <div
+          className="itemDescription"
         >
-          <div
-            class="itemDescription"
+          <h4
+            className="itemCategory"
           >
-            <h3
-              class="itemCategory rankCategory"
-            >
-              Rank
-            </h3>
-            <p
-              class="itemData rankData"
-              data-testid="coinRank"
-            >
-              2
-            </p>
-          </div>
-          <div
-            class="itemDescription"
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
           >
-            <h4
-              class="itemCategory"
-            >
-              Symbol
-            </h4>
-            <p
-              class="itemData"
-              data-testid="coinSymbol"
-            >
-              ETH
-            </p>
-          </div>
-        </section>
-      </article>
-    </a>
-    <a
-      class="coinLink evenCoin"
-      href="/tether"
+            ETH
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+  <a
+    className="coinLink evenCoin"
+    href="/tether"
+    onClick={[Function]}
+  >
+    <article
+      className="coinItem"
+      data-testid="tether"
     >
-      <article
-        class="coinItem"
-        data-testid="tether"
+      <section
+        className="itemSection itemHeader"
       >
-        <section
-          class="itemSection itemHeader"
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          Tether
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="Tether"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="https://static.coinstats.app/coins/1650455771843.png"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
         >
           <h3
-            class="itemName"
-            data-testid="coinName"
+            className="itemCategory rankCategory"
           >
-            Tether
+            Rank
           </h3>
-          <div
-            class="iconContainer"
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
           >
-            <img
-              alt="Tether"
-              class="coinIcon"
-              data-testid="coinLogo"
-              src="https://static.coinstats.app/coins/1650455771843.png"
-            />
-          </div>
-        </section>
-        <section
-          class="itemSection"
+            3
+          </p>
+        </div>
+        <div
+          className="itemDescription"
         >
-          <div
-            class="itemDescription"
+          <h4
+            className="itemCategory"
           >
-            <h3
-              class="itemCategory rankCategory"
-            >
-              Rank
-            </h3>
-            <p
-              class="itemData rankData"
-              data-testid="coinRank"
-            >
-              3
-            </p>
-          </div>
-          <div
-            class="itemDescription"
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
           >
-            <h4
-              class="itemCategory"
-            >
-              Symbol
-            </h4>
-            <p
-              class="itemData"
-              data-testid="coinSymbol"
-            >
-              USDT
-            </p>
-          </div>
-        </section>
-      </article>
-    </a>
-    <a
-      class="coinLink oddCoin"
-      href="/binance-coin"
+            USDT
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+  <a
+    className="coinLink oddCoin"
+    href="/binance-coin"
+    onClick={[Function]}
+  >
+    <article
+      className="coinItem"
+      data-testid="binance-coin"
     >
-      <article
-        class="coinItem"
-        data-testid="binance-coin"
+      <section
+        className="itemSection itemHeader"
       >
-        <section
-          class="itemSection itemHeader"
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          BNB
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="BNB"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="https://static.coinstats.app/coins/1666608145347.png"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
         >
           <h3
-            class="itemName"
-            data-testid="coinName"
+            className="itemCategory rankCategory"
+          >
+            Rank
+          </h3>
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
+          >
+            4
+          </p>
+        </div>
+        <div
+          className="itemDescription"
+        >
+          <h4
+            className="itemCategory"
+          >
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
           >
             BNB
-          </h3>
-          <div
-            class="iconContainer"
-          >
-            <img
-              alt="BNB"
-              class="coinIcon"
-              data-testid="coinLogo"
-              src="https://static.coinstats.app/coins/1666608145347.png"
-            />
-          </div>
-        </section>
-        <section
-          class="itemSection"
-        >
-          <div
-            class="itemDescription"
-          >
-            <h3
-              class="itemCategory rankCategory"
-            >
-              Rank
-            </h3>
-            <p
-              class="itemData rankData"
-              data-testid="coinRank"
-            >
-              4
-            </p>
-          </div>
-          <div
-            class="itemDescription"
-          >
-            <h4
-              class="itemCategory"
-            >
-              Symbol
-            </h4>
-            <p
-              class="itemData"
-              data-testid="coinSymbol"
-            >
-              BNB
-            </p>
-          </div>
-        </section>
-      </article>
-    </a>
-    <a
-      class="coinLink evenCoin"
-      href="/usd-coin"
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+  <a
+    className="coinLink evenCoin"
+    href="/usd-coin"
+    onClick={[Function]}
+  >
+    <article
+      className="coinItem"
+      data-testid="usd-coin"
     >
-      <article
-        class="coinItem"
-        data-testid="usd-coin"
+      <section
+        className="itemSection itemHeader"
       >
-        <section
-          class="itemSection itemHeader"
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          USD Coin
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="USD Coin"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="https://static.coinstats.app/coins/1650455825065.png"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
         >
           <h3
-            class="itemName"
-            data-testid="coinName"
+            className="itemCategory rankCategory"
           >
-            USD Coin
+            Rank
           </h3>
-          <div
-            class="iconContainer"
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
           >
-            <img
-              alt="USD Coin"
-              class="coinIcon"
-              data-testid="coinLogo"
-              src="https://static.coinstats.app/coins/1650455825065.png"
-            />
-          </div>
-        </section>
-        <section
-          class="itemSection"
+            5
+          </p>
+        </div>
+        <div
+          className="itemDescription"
         >
-          <div
-            class="itemDescription"
+          <h4
+            className="itemCategory"
           >
-            <h3
-              class="itemCategory rankCategory"
-            >
-              Rank
-            </h3>
-            <p
-              class="itemData rankData"
-              data-testid="coinRank"
-            >
-              5
-            </p>
-          </div>
-          <div
-            class="itemDescription"
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
           >
-            <h4
-              class="itemCategory"
-            >
-              Symbol
-            </h4>
-            <p
-              class="itemData"
-              data-testid="coinSymbol"
-            >
-              USDC
-            </p>
-          </div>
-        </section>
-      </article>
-    </a>
-  </section>
-</div>
+            USDC
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+</section>
 `;
