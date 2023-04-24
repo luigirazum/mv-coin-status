@@ -1,57 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Coin component tests Coin component snapshot test snapshot renders correctly 1`] = `
-<div>
-  <article
-    class="coinItem"
-    data-testid="bitcoin"
+<article
+  className="coinItem"
+  data-testid="bitcoin"
+>
+  <section
+    className="itemSection itemHeader"
   >
-    <section
-      class="itemSection itemHeader"
+    <h3
+      className="itemName"
+      data-testid="coinName"
+    />
+    <div
+      className="iconContainer"
+    >
+      <img
+        className="coinIcon"
+        data-testid="coinLogo"
+      />
+    </div>
+  </section>
+  <section
+    className="itemSection"
+  >
+    <div
+      className="itemDescription"
     >
       <h3
-        class="itemName"
-        data-testid="coinName"
+        className="itemCategory rankCategory"
+      >
+        Rank
+      </h3>
+      <p
+        className="itemData rankData"
+        data-testid="coinRank"
       />
-      <div
-        class="iconContainer"
-      >
-        <img
-          class="coinIcon"
-          data-testid="coinLogo"
-        />
-      </div>
-    </section>
-    <section
-      class="itemSection"
+    </div>
+    <div
+      className="itemDescription"
     >
-      <div
-        class="itemDescription"
+      <h4
+        className="itemCategory"
       >
-        <h3
-          class="itemCategory rankCategory"
-        >
-          Rank
-        </h3>
-        <p
-          class="itemData rankData"
-          data-testid="coinRank"
-        />
-      </div>
-      <div
-        class="itemDescription"
-      >
-        <h4
-          class="itemCategory"
-        >
-          Symbol
-        </h4>
-        <p
-          class="itemData"
-          data-testid="coinSymbol"
-        />
-      </div>
-    </section>
-  </article>
-</div>
+        Symbol
+      </h4>
+      <p
+        className="itemData"
+        data-testid="coinSymbol"
+      />
+    </div>
+  </section>
+</article>
 `;
