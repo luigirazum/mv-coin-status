@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react';
-import renderer, { format as prettyFormat } from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 import { renderWithProviders } from '../react/utils/renderUtils';
 import { mockCoins } from './mocks/mockData';
 import Coin from '../react/components/Coin';
