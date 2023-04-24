@@ -1,4 +1,5 @@
 import { screen } from '@testing-library/react';
+import renderer, { format as prettyFormat } from 'react-test-renderer';
 import { renderWithProviders } from '../react/utils/renderUtils';
 import { mockCoins } from './mocks/mockData';
 import Coin from '../react/components/Coin';
@@ -55,7 +56,7 @@ describe('Coin component tests', () => {
 
   describe('Coin component snapshot test', () => {
     test('snapshot renders correctly', () => {
-      container = renderWithProviders(<Coin id={bitCoin.id} />, {
+      const renderedWithProviders = renderWithProviders(<Coin id={bitCoin.id} />, {
         preloadedState: {
           coins: {
             assets: [mockCoins.coins],
@@ -64,9 +65,14 @@ describe('Coin component tests', () => {
             error: null,
           },
         },
-      }).container;
+      });
 
-      expect(container).toMatchSnapshot();
+      container = renderedWithProviders.container;
+      const { component } = renderedWithProviders;
+
+      const tree = renderer.create(component);
+      const jsonTree = tree.toJSON();
+      expect(jsonTree).toMatchSnapshot();
     });
   });
 });
