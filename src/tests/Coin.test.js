@@ -1,32 +1,41 @@
 import { screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import { renderWithProviders } from '../react/utils/renderUtils';
+import { create } from 'react-test-renderer';
+import renderWithProvider from '../react/utils/renderUtils';
 import { mockCoins } from './mocks/mockData';
 import Coin from '../react/components/Coin';
 
-let container = null;
 const [bitCoin] = mockCoins.coins;
+const testState = {
+  coins: {
+    assets: [mockCoins.coins],
+    status: { type: 'idle' },
+    filter: { active: false, by: '' },
+    error: null,
+  },
+};
+
+let container = null;
+let testRender = null;
+
+const resetTestEnv = () => {
+  container.remove();
+  container = null;
+  testRender = null;
+};
 
 beforeEach(() => {
   // setup a DOM element as a render target
-  container = renderWithProviders(<Coin id={bitCoin.id} />, {
-    preloadedState: {
-      coins: {
-        assets: [mockCoins.coins],
-        status: { type: 'idle' },
-        filter: { active: false, by: '' },
-        error: null,
-      },
-    },
-  }).container;
+  testRender = renderWithProvider(
+    <Coin id={bitCoin.id} />,
+    { preloadedState: { ...testState } },
+  );
+  ({ container } = testRender);
   document.body.appendChild(container);
 });
 
 afterEach(() => {
   //  cleanup on exiting
-  // unmountComponentAtNode(container);
-  container.remove();
-  container = null;
+  resetTestEnv();
 });
 
 /**
@@ -56,23 +65,10 @@ describe('Coin component tests', () => {
 
   describe('Coin component snapshot test', () => {
     test('snapshot renders correctly', () => {
-      const renderedWithProviders = renderWithProviders(<Coin id={bitCoin.id} />, {
-        preloadedState: {
-          coins: {
-            assets: [mockCoins.coins],
-            status: { type: 'idle' },
-            filter: { active: false, by: '' },
-            error: null,
-          },
-        },
-      });
+      const { component } = testRender;
 
-      container = renderedWithProviders.container;
-      const { component } = renderedWithProviders;
-
-      const tree = renderer.create(component);
-      const jsonTree = tree.toJSON();
-      expect(jsonTree).toMatchSnapshot();
+      const tree = create(component).toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 });
