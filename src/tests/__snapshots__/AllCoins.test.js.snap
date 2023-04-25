@@ -6,7 +6,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
 >
   <a
     className="coinLink evenCoin"
-    href="/bitcoin"
+    href="/coins/bitcoin"
     onClick={[Function]}
   >
     <article
@@ -71,7 +71,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
   </a>
   <a
     className="coinLink oddCoin"
-    href="/ethereum"
+    href="/coins/ethereum"
     onClick={[Function]}
   >
     <article
@@ -136,7 +136,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
   </a>
   <a
     className="coinLink evenCoin"
-    href="/tether"
+    href="/coins/tether"
     onClick={[Function]}
   >
     <article
@@ -201,7 +201,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
   </a>
   <a
     className="coinLink oddCoin"
-    href="/binance-coin"
+    href="/coins/binance-coin"
     onClick={[Function]}
   >
     <article
@@ -266,7 +266,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
   </a>
   <a
     className="coinLink evenCoin"
-    href="/usd-coin"
+    href="/coins/usd-coin"
     onClick={[Function]}
   >
     <article

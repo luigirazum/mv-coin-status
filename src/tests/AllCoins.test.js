@@ -18,6 +18,7 @@ const testRouter = {
     memory: true,
   },
   routes: ['/coins'],
+  path: '/coins',
 };
 
 let testRender = null;
