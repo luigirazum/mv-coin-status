@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import {
+  BrowserRouter, MemoryRouter, Routes, Route,
+} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -22,6 +24,7 @@ const renderWithProvider = (
   {
     routerWrapper = null,
     routes = ['/'],
+    path = '/',
     user = userEvent,
   } = {},
 ) => {
@@ -29,14 +32,18 @@ const renderWithProvider = (
     if (routerWrapper.memory) {
       return (
         <MemoryRouter initialEntries={routes}>
-          {children}
+          <Routes>
+            <Route path={path} element={children} />
+          </Routes>
         </MemoryRouter>
       );
     }
 
     return (
       <BrowserRouter>
-        {children}
+        <Routes>
+          <Route path={path} element={children} />
+        </Routes>
       </BrowserRouter>
     );
   };
