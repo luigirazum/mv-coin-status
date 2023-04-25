@@ -1,13 +1,52 @@
 import { screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import renderer, { act } from 'react-test-renderer';
-import { renderWithProviders } from '../react/utils/renderUtils';
+import { act, create } from 'react-test-renderer';
+import renderWithProvider from '../react/utils/renderUtils';
 import { mockCoins } from './mocks/mockData';
 import AllCoins from '../react/routes/AllCoins';
 
-let testRenderWithProviders = null;
+const testState = {
+  coins: {
+    assets: [...mockCoins.coins],
+    status: { type: 'idle' },
+    filter: { active: false, by: '' },
+    error: null,
+  },
+};
+
+const testRouter = {
+  routerWrapper: {
+    memory: true,
+  },
+  routes: ['/coins'],
+};
+
+let testRender = null;
 let store = null;
 let container = null;
+
+const resetTestEnv = () => {
+  container.remove();
+  container = null;
+  testRender = null;
+  store = null;
+};
+
+beforeEach(() => {
+  // setup a DOM element as a render target
+  testRender = renderWithProvider(
+    <AllCoins />,
+    { preloadedState: { ...testState } },
+    { ...testRouter },
+  );
+  ({ container, store } = testRender);
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  //  cleanup on exiting
+  resetTestEnv();
+});
+
 /**
  * START: AllCoins component test
 */
@@ -16,35 +55,6 @@ describe('AllCoins component tests', () => {
    * START: AllCoins render
   */
   describe('Coins must be rendered', () => {
-    beforeEach(() => {
-      // setup a DOM element as a render target
-      testRenderWithProviders = renderWithProviders(
-        <MemoryRouter initialEntries={['/coins']}>
-          <AllCoins />
-        </MemoryRouter>,
-        {
-          preloadedState: {
-            coins: {
-              assets: [...mockCoins.coins],
-              status: { type: 'idle' },
-              filter: { active: false, by: '' },
-              error: null,
-            },
-          },
-        },
-      );
-      ({ container } = testRenderWithProviders);
-      document.body.appendChild(container);
-    });
-
-    afterEach(() => {
-      //  cleanup on exiting
-      // unmountComponentAtNode(container);
-      container.remove();
-      container = null;
-      testRenderWithProviders = null;
-    });
-
     test('should render bitcoin', () => {
       expect(screen.getByTestId('bitcoin')).toBeInTheDocument();
     });
@@ -69,32 +79,6 @@ describe('AllCoins component tests', () => {
   */
 
   describe('AllCoins component filter test', () => {
-    beforeEach(() => {
-      testRenderWithProviders = renderWithProviders(
-        <MemoryRouter initialEntries={['/coins']}>
-          <AllCoins />
-        </MemoryRouter>,
-        {
-          preloadedState: {
-            coins: {
-              assets: [...mockCoins.coins],
-              status: { type: 'idle' },
-              filter: { active: false, by: '' },
-              error: null,
-            },
-          },
-        },
-      );
-      ({ container, store } = testRenderWithProviders);
-    });
-
-    afterEach(() => {
-      container.remove();
-      container = null;
-      store = null;
-      testRenderWithProviders = null;
-    });
-
     test('no filter should render 5 coins', () => {
       expect(screen.getAllByTestId('coinName')).toHaveLength(5);
     });
@@ -123,28 +107,10 @@ describe('AllCoins component tests', () => {
 
   describe('AllCoins component snapshot test', () => {
     test('snapshot renders 5 Coins correctly', () => {
-      const renderedWithProviders = renderWithProviders(
-        <MemoryRouter initialEntries={['/coins']}>
-          <AllCoins />
-        </MemoryRouter>,
-        {
-          preloadedState: {
-            coins: {
-              assets: [...mockCoins.coins],
-              status: { type: 'idle' },
-              filter: { active: false, by: '' },
-              error: null,
-            },
-          },
-        },
-      );
+      const { component } = testRender;
 
-      container = renderedWithProviders.container;
-      const { component } = renderedWithProviders;
-
-      const tree = renderer.create(component);
-      const jsonTree = tree.toJSON();
-      expect(jsonTree).toMatchSnapshot();
+      const tree = create(component).toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 });
