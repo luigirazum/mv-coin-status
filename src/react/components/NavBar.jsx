@@ -8,7 +8,6 @@ import { resetDetails } from '../../redux/details/detailsSlice';
 const NavBar = () => {
   const { id } = useParams();
   const coin = useSelector(selectCoinDetails);
-  // const detailsIsLoading = useSelector(selectDetailsIsLoading);
   const detailsError = useSelector(selectDetailsError);
   const filterBy = useSelector(selectFilterBy, shallowEqual);
   const dispatch = useDispatch();
