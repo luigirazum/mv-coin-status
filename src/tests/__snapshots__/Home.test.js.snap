@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component tests Home page component snapshot test snapshot renders correctly 1`] = `
+<main>
+  <h1>
+    Welcome
+  </h1>
+  <a
+    className="fsControls btn btn-home btn-start"
+    href="/coins"
+    onClick={[Function]}
+  >
+    Start
+  </a>
+  <a
+    className="fsControls btn btn-home btn-about"
+    href="/"
+    onClick={[Function]}
+  >
+    About
+  </a>
+</main>
+`;
