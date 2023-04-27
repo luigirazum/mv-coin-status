@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import genericCoinIcon from '../../assets/logo/generic-crypto-mock-logo.svg';
 import { fetchDetails } from '../../redux/details/detailsActions';
 import { selectCoinDetails, selectDetailsError, selectDetailsIsLoading } from '../../redux/details/detailsSelectors';
 
@@ -42,7 +43,7 @@ const CoinDetails = () => {
       <article data-testid={id} className="coin">
         <div className="coinBasics">
           <div className="iconContainer">
-            <img data-testid="coinIcon" src={coin.icon} className="coinIcon" alt={coin.name} />
+            <img data-testid="coinIcon" src={process.env.REACT_APP_API === 'intercept' ? genericCoinIcon : coin.icon} className="coinIcon" alt={coin.name} />
           </div>
           <section className="descriptionSection">
             <h3 data-testid="coinName" className="coinName">{coin.name}</h3>
