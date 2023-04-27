@@ -29,7 +29,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
             alt="Bitcoin"
             className="coinIcon"
             data-testid="coinLogo"
-            src="https://static.coinstats.app/coins/1650455588819.png"
+            src="generic-crypto-mock-logo.svg"
           />
         </div>
       </section>
@@ -94,7 +94,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
             alt="Ethereum"
             className="coinIcon"
             data-testid="coinLogo"
-            src="https://static.coinstats.app/coins/1650455629727.png"
+            src="generic-crypto-mock-logo.svg"
           />
         </div>
       </section>
@@ -159,7 +159,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
             alt="Tether"
             className="coinIcon"
             data-testid="coinLogo"
-            src="https://static.coinstats.app/coins/1650455771843.png"
+            src="generic-crypto-mock-logo.svg"
           />
         </div>
       </section>
@@ -224,7 +224,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
             alt="BNB"
             className="coinIcon"
             data-testid="coinLogo"
-            src="https://static.coinstats.app/coins/1666608145347.png"
+            src="generic-crypto-mock-logo.svg"
           />
         </div>
       </section>
@@ -289,7 +289,7 @@ exports[`AllCoins component tests AllCoins component snapshot test snapshot rend
             alt="USD Coin"
             className="coinIcon"
             data-testid="coinLogo"
-            src="https://static.coinstats.app/coins/1650455825065.png"
+            src="generic-crypto-mock-logo.svg"
           />
         </div>
       </section>

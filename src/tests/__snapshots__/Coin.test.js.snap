@@ -18,6 +18,7 @@ exports[`Coin component tests Coin component snapshot test snapshot renders corr
       <img
         className="coinIcon"
         data-testid="coinLogo"
+        src="generic-crypto-mock-logo.svg"
       />
     </div>
   </section>
