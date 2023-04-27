@@ -7,7 +7,10 @@ import App from './react/App';
 import worker from './tests/mocks/msw/browser';
 
 if (process.env.REACT_APP_API === 'intercept') {
-  worker.start();
+  worker.start({
+    quiet: true,
+    onUnhandledRequest: 'bypass',
+  });
 } else {
   worker.stop();
 }

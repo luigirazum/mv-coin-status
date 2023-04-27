@@ -3,15 +3,29 @@ import axios from 'axios';
 /** ----------------------------------------------------------------------
  *   > API endpoints Url generators
  *  ---------------------------------------------------------------------- */
-export const allCoinsUrl = () => (
-  'https://api.coinstats.app/public/v1/coins?skip=0&currency=USD'
-);
-export const coinHistoryUrlById = (coinId) => (
-  `https://api.coinstats.app/public/v1/charts?period=1w&coinId=${coinId}`
-);
-export const coinMarketsUrlById = (coinId) => (
-  `https://api.coinstats.app/public/v1/markets?coinId=${coinId}`
-);
+export const allCoinsUrl = ({ mockVersion = null } = {}) => {
+  const baseAllCoinsUrl = 'https://api.coinstats.app/public/v1/coins';
+
+  if (mockVersion) return baseAllCoinsUrl;
+
+  return `${baseAllCoinsUrl}?skip=0&currency=USD`;
+};
+
+export const coinHistoryUrlById = (coinId, { mockVersion = null } = {}) => {
+  const baseCoinHistoryUrlById = 'https://api.coinstats.app/public/v1/charts';
+
+  if (mockVersion) return baseCoinHistoryUrlById;
+
+  return `${baseCoinHistoryUrlById}?period=1w&coinId=${coinId}`;
+};
+
+export const coinMarketsUrlById = (coinId, { mockVersion = null } = {}) => {
+  const baseCoinMarketsUrlById = 'https://api.coinstats.app/public/v1/markets';
+
+  if (mockVersion) return baseCoinMarketsUrlById;
+
+  return `${baseCoinMarketsUrlById}?coinId=${coinId}`;
+};
 
 /** ----------------------------------------------------------------------
  *   > get the details for a Coin
