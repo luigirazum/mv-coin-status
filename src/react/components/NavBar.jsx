@@ -1,4 +1,4 @@
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
 import { selectFilterBy } from '../../redux/coins/coinsSelectors';
 import { selectCoinDetails, selectDetailsError } from '../../redux/details/detailsSelectors';
@@ -7,10 +7,10 @@ import { resetDetails } from '../../redux/details/detailsSlice';
 
 const NavBar = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
   const coin = useSelector(selectCoinDetails);
   const detailsError = useSelector(selectDetailsError);
-  const filterBy = useSelector(selectFilterBy, shallowEqual);
-  const dispatch = useDispatch();
+  const filterBy = useSelector(selectFilterBy);
 
   const onChangeHandler = (e) => {
     const filter = e.target.value.trim().toLowerCase();
