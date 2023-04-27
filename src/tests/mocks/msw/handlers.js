@@ -1,15 +1,22 @@
 import { rest } from 'msw';
-import { allCoinsUrl } from '../../../redux/api/apiLibrary';
-import { mockCoins } from '../mockData';
+import { mockCoins, mockCoinsDetails } from '../mockData';
+import {
+  allCoinsUrl,
+  coinHistoryUrlById,
+  coinMarketsUrlById,
+} from '../../../redux/api/apiLibrary';
 
-console.log(allCoinsUrl({ mockVersion: true }));
+const mockApi = true;
+
 const handlers = [
-  rest.get(allCoinsUrl({ mockVersion: true }), (req, res, ctx) => {
+  // mock request api for fetching all coins
+  rest.get(allCoinsUrl(mockApi), (req, res, ctx) => {
     const { searchParams } = req.url;
     const { skip, currency } = Object
       .fromEntries(searchParams.entries());
 
     if (Number(skip) === 0 && currency === 'USD') {
+      // success response
       return res(
         ctx.status(200),
         ctx.json({
@@ -18,10 +25,59 @@ const handlers = [
       );
     }
 
+    // error response
     return res(
       ctx.status(404),
       ctx.json({
         error: { message: 'not found' },
+      }),
+    );
+  }),
+
+  // mock request api for fetching history data for a coin
+  rest.get(coinHistoryUrlById(undefined, mockApi), (req, res, ctx) => {
+    const { searchParams } = req.url;
+    const { period, coinId } = Object
+      .fromEntries(searchParams.entries());
+
+    if (period === '1w' && coinId) {
+      // success response
+      return res(
+        ctx.status(200),
+        ctx.json({
+          ...mockCoinsDetails[coinId].history,
+        }),
+      );
+    }
+
+    // error response
+    return res(
+      ctx.status(404),
+      ctx.json({
+        error: { message: `the coin with id: '${coinId}' was not found` },
+      }),
+    );
+  }),
+
+  // mock request api for fetching markets data for a coin
+  rest.get(coinMarketsUrlById(undefined, mockApi), (req, res, ctx) => {
+    const { searchParams } = req.url;
+    const { coinId } = Object
+      .fromEntries(searchParams.entries());
+
+    if (coinId) {
+      // success response
+      return res(
+        ctx.status(200),
+        ctx.json([...mockCoinsDetails[coinId].markets]),
+      );
+    }
+
+    // error response
+    return res(
+      ctx.status(404),
+      ctx.json({
+        error: { message: `the coin with id: '${coinId}' was not found` },
       }),
     );
   }),
