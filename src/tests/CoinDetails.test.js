@@ -1,9 +1,8 @@
-import { waitFor } from '@testing-library/react';
+import { create } from 'react-test-renderer';
+import server from './mocks/msw/server';
 import renderWithProvider from '../react/utils/renderUtils';
 import { mockCoins, mockBitcoin } from './mocks/mockData';
 import CoinDetails from '../react/routes/CoinDetails';
-
-const getCoinDetails = jest.fn();
 
 const testDetailsBitcoin = {
   details: {
@@ -33,86 +32,78 @@ const testRouter = {
 
 let testRender = null;
 let container = null;
-let queryByTestId;
+let component = null;
+let getByTestId;
 
 const resetTestEnv = () => {
   container.remove();
   container = null;
-  // testRender = null;
+  component = null;
 };
 
-beforeEach(async () => {
+beforeAll(() => {
+  // start API mocking before all tests
+  server.listen();
+});
+
+beforeEach(() => {
   // setup a DOM element as a render target
-  testRender = await renderWithProvider(
+  testRender = renderWithProvider(
     <CoinDetails />,
     { preloadedState: { ...testState } },
     { ...testRouter },
   );
-  ({ container } = testRender);
-  ({ queryByTestId } = testRender);
+  ({
+    container, component, getByTestId,
+  } = testRender);
   document.body.appendChild(container);
 });
 
 afterEach(() => {
   //  cleanup on exiting
   resetTestEnv();
+  // reset request handlers at mocked API
+  server.resetHandlers();
+});
+
+afterAll(() => {
+  // closes the mocked API server
+  server.close();
 });
 
 /** START: CoinDetails component test */
 describe('CoinDetails component tests', () => {
   /** START: CoinDetails render at /coins/bitcoin */
   describe('at /coins/bitcoin renders bitcoin currency details', () => {
-    test('it\'s id is bitcoin', async () => {
-      await getCoinDetails.mockResolvedValue(mockBitcoin);
-      waitFor(() => {
-        expect(getCoinDetails).toHaveBeenCalledWith('bitcoin');
-        // expect(queryByTestId('bitcois')).toBeInTheDocument();
-      });
+    test('it\'s id is bitcoin', () => {
+      expect(getByTestId('bitcoin')).toBeInTheDocument();
     });
     test('it has a Name', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinName')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinName')).toBeInTheDocument();
     });
     test('it has a Symbol', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinSymbol')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinSymbol')).toBeInTheDocument();
     });
     test('it has a Rank', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinRank')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinRank')).toBeInTheDocument();
     });
     test('it has a Price', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinPrice')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinPrice')).toBeInTheDocument();
     });
     test('it has a Volume', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinVolume')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinVolume')).toBeInTheDocument();
     });
     test('it has a price per hour', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinPrice1h')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinPrice1h')).toBeInTheDocument();
     });
     test('it has a price per day', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinPrice1d')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinPrice1d')).toBeInTheDocument();
     });
     test('it has a price per week', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinPrice1w')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinPrice1w')).toBeInTheDocument();
     });
     test('it has an image icon', () => {
-      waitFor(() => {
-        expect(queryByTestId('coinIcon')).toBeInTheDocument();
-      });
+      expect(getByTestId('coinIcon')).toBeInTheDocument();
     });
   });
   /** END: CoinDetails render at /coins/bitcoin */
@@ -120,6 +111,8 @@ describe('CoinDetails component tests', () => {
   /** START: CoinDetails snapshot test */
   describe('CoinDetails component snapshot test', () => {
     test('snapshot renders CoinDetails correctly', () => {
+      const tree = create(component).toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
   /** END: CoinDetails snapshot test */
