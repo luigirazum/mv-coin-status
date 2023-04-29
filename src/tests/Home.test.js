@@ -1,4 +1,3 @@
-import { screen } from '@testing-library/react';
 import { create } from 'react-test-renderer';
 import renderWithProvider from '../react/utils/renderUtils';
 import Home from '../react/routes/Home';
@@ -6,7 +5,6 @@ import Home from '../react/routes/Home';
 let container = null;
 let testRender = null;
 let queryByText;
-let queryByRole;
 
 const resetTestEnv = () => {
   container.remove();
