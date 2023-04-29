@@ -1,7 +1,14 @@
 /** ------------------------------------------------
  *   > selectDetails for the selected Coin
  *  ------------------------------------------------ */
-export const selectCoinDetails = (store) => store.details.asset;
+export const selectCoinDetailsById = (store, id) => {
+  const { asset: storedCoin } = store.details;
+  if (storedCoin && (storedCoin.id === id)) {
+    return storedCoin;
+  }
+
+  return null;
+};
 
 /** ------------------------------------------------
  *   > selectors for Status
