@@ -4,7 +4,7 @@ import {
   BrowserRouter, MemoryRouter, Routes, Route,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 // import your setupStore as a basic setup
@@ -25,7 +25,6 @@ const renderWithProvider = (
     routerWrapper = null,
     routes = ['/'],
     path = '/',
-    user = userEvent,
   } = {},
 ) => {
   const RouterWrapper = ({ children }) => {
@@ -41,9 +40,7 @@ const renderWithProvider = (
 
     return (
       <BrowserRouter>
-        <Routes>
-          <Route path={path} element={children} />
-        </Routes>
+        {children}
       </BrowserRouter>
     );
   };
@@ -73,7 +70,8 @@ const renderWithProvider = (
   return ({
     store,
     component,
-    user,
+    userEvent,
+    screen,
     ...render(ui, { wrapper: Wrapper, ...renderOptions }),
   });
 };
