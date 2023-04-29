@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
 import { selectFilterBy } from '../../redux/coins/coinsSelectors';
-import { selectCoinDetails, selectDetailsError } from '../../redux/details/detailsSelectors';
+import { selectCoinDetailsById, selectDetailsError } from '../../redux/details/detailsSelectors';
 import { clearFilterCoins, filterCoins } from '../../redux/coins/coinsSlice';
 import { resetDetails } from '../../redux/details/detailsSlice';
 
 const NavBar = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const coin = useSelector(selectCoinDetails);
+  const coin = useSelector((store) => selectCoinDetailsById(store, id));
   const detailsError = useSelector(selectDetailsError);
   const filterBy = useSelector(selectFilterBy);
 
@@ -39,7 +39,7 @@ const NavBar = () => {
         {(!coin && !detailsError) ? (
           <>
             <NavLink to="/" end className="fsControls navLink">Home</NavLink>
-            <NavLink to="/coins" end className="fsControls navLink" onClickCapture={onClickHandler}>Coins</NavLink>
+            <NavLink to="." end className="fsControls navLink" onClick={onClickHandler}>Coins</NavLink>
           </>
         ) : (
           <>
