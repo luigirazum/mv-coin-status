@@ -15,7 +15,6 @@ exports[`NavBar component tests NavBar component snapshot test snapshot renders 
       className="fsControls navLink active"
       href="/coins"
       onClick={[Function]}
-      onClickCapture={[Function]}
     >
       Coins
     </a>

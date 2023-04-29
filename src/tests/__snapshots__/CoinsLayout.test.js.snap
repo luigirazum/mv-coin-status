@@ -16,7 +16,6 @@ Array [
         className="fsControls navLink active"
         href="/coins"
         onClick={[Function]}
-        onClickCapture={[Function]}
       >
         Coins
       </a>
