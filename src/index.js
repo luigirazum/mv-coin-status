@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import setupStore from './redux/store';
 import App from './react/App';
 import worker from './tests/mocks/msw/browser';
+import { fetchCoins } from './redux/coins/coinsActions';
 
 if (process.env.REACT_APP_API === 'intercept') {
   worker.start({
@@ -17,10 +18,13 @@ if (process.env.REACT_APP_API === 'intercept') {
 
 const rootTarget = document.getElementById('root');
 const root = ReactDOM.createRoot(rootTarget);
+const appStore = setupStore();
+
+appStore.dispatch(fetchCoins());
 
 root.render(
   <React.StrictMode>
-    <Provider store={setupStore()}>
+    <Provider store={appStore}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
