@@ -1,19 +1,22 @@
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import genericCoinIcon from '../../assets/logo/generic-crypto-mock-logo.svg';
+import { selectCoinDetailsById, selectDetailsError, selectDetailsIsLoading } from '../../redux/details/detailsSelectors';
 import { fetchDetails } from '../../redux/details/detailsActions';
-import { selectCoinDetails, selectDetailsError, selectDetailsIsLoading } from '../../redux/details/detailsSelectors';
+import { selectAllCoinsIds } from '../../redux/coins/coinsSelectors';
 
 const CoinDetails = () => {
   const { id } = useParams();
-  const dispatch = useDispatch();
-  const coin = useSelector(selectCoinDetails);
+  const coin = useSelector((store) => selectCoinDetailsById(store, id));
   const detailsLoading = useSelector(selectDetailsIsLoading);
   const detailsError = useSelector(selectDetailsError);
+  const allCoins = useSelector(selectAllCoinsIds, shallowEqual);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchDetails(id));
-  }, [id, dispatch]);
+    if (!coin && (allCoins.length > 0)) dispatch(fetchDetails(id));
+  }, [id, coin, allCoins, dispatch]);
 
   if (detailsLoading) {
     return (
@@ -39,14 +42,14 @@ const CoinDetails = () => {
 
   return coin ? (
     <section className="coinDetails">
-      <article className="coin">
+      <article data-testid={id} className="coin">
         <div className="coinBasics">
           <div className="iconContainer">
-            <img src={coin.icon} className="coinIcon" alt={coin.name} />
+            <img data-testid="coinIcon" src={process.env.REACT_APP_API === 'intercept' ? genericCoinIcon : coin.icon} className="coinIcon" alt={coin.name} />
           </div>
           <section className="descriptionSection">
-            <h3 className="coinName">{coin.name}</h3>
-            <h4 className="sectionCategory symbolCategory">Symbol</h4>
+            <h3 data-testid="coinName" className="coinName">{coin.name}</h3>
+            <h4 data-testid="coinSymbol" className="sectionCategory symbolCategory">Symbol</h4>
             <p className="sectionData symbolData">{coin.symbol}</p>
           </section>
         </div>
@@ -54,30 +57,30 @@ const CoinDetails = () => {
         <div className="coinDescription">
           <section className="descriptionSection">
             <h3 className="sectionCategory rankCategory">Rank</h3>
-            <p className="sectionData rankData">{coin.rank}</p>
+            <p data-testid="coinRank" className="sectionData rankData">{coin.rank}</p>
           </section>
           <section className="descriptionSection">
             <h4 className="sectionCategory">Price</h4>
-            <p className="sectionData">
+            <p data-testid="coinPrice" className="sectionData">
               {coin.price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
             </p>
             <h4 className="sectionCategory">Volume</h4>
-            <p className="sectionData">
+            <p data-testid="coinVolume" className="sectionData">
               {coin.volume.toLocaleString(undefined, { maximumFractionDigits: 2 })}
             </p>
           </section>
           <section className="descriptionSection">
             <h4 className="sectionSubCategory">Price Change</h4>
             <h5 className="sectionTitle">1 hour</h5>
-            <p className="sectionData">
+            <p data-testid="coinPrice1h" className="sectionData">
               {coin.priceChange1h.toLocaleString(undefined, { maximumFractionDigits: 2 })}
             </p>
             <h5 className="sectionTitle">1 day</h5>
-            <p className="sectionData">
+            <p data-testid="coinPrice1d" className="sectionData">
               {coin.priceChange1d.toLocaleString(undefined, { maximumFractionDigits: 2 })}
             </p>
             <h5 className="sectionTitle">1 week</h5>
-            <p className="sectionData">
+            <p data-testid="coinPrice1w" className="sectionData">
               {coin.priceChange1w.toLocaleString(undefined, { maximumFractionDigits: 2 })}
             </p>
           </section>

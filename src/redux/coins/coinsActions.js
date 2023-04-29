@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { allCoinsUrl } from '../api/apiLibrary';
 
 /** -----------------------------------------------------
  *   > Action type definitions
@@ -14,7 +15,7 @@ const fetchCoins = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const resp = await axios
-        .get('https://api.coinstats.app/public/v1/coins?skip=0&currency=USD');
+        .get(allCoinsUrl());
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

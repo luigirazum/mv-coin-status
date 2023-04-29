@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coin component tests Coin component snapshot test snapshot renders correctly 1`] = `
+<article
+  className="coinItem"
+  data-testid="bitcoin"
+>
+  <section
+    className="itemSection itemHeader"
+  >
+    <h3
+      className="itemName"
+      data-testid="coinName"
+    />
+    <div
+      className="iconContainer"
+    >
+      <img
+        className="coinIcon"
+        data-testid="coinLogo"
+        src="generic-crypto-mock-logo.svg"
+      />
+    </div>
+  </section>
+  <section
+    className="itemSection"
+  >
+    <div
+      className="itemDescription"
+    >
+      <h3
+        className="itemCategory rankCategory"
+      >
+        Rank
+      </h3>
+      <p
+        className="itemData rankData"
+        data-testid="coinRank"
+      />
+    </div>
+    <div
+      className="itemDescription"
+    >
+      <h4
+        className="itemCategory"
+      >
+        Symbol
+      </h4>
+      <p
+        className="itemData"
+        data-testid="coinSymbol"
+      />
+    </div>
+  </section>
+</article>
+`;

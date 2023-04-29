@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoinsLayout component tests CoinsLayout component snapshot test snapshot renders correctly 1`] = `
+Array [
+  <header>
+    <nav>
+      <a
+        className="fsControls navLink"
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        aria-current="page"
+        className="fsControls navLink active"
+        href="/coins"
+        onClick={[Function]}
+      >
+        Coins
+      </a>
+    </nav>
+    <form
+      id="filter"
+      onSubmit={[Function]}
+    >
+      <input
+        id="field"
+        onChange={[Function]}
+        placeholder="filter by name/symbol"
+        type="text"
+        value=""
+      />
+      <button
+        className="ctrl-btn"
+        id="reset"
+        onClick={[Function]}
+        type="button"
+      >
+        X
+      </button>
+    </form>
+  </header>,
+  <div
+    className="wrapper"
+  />,
+]
+`;

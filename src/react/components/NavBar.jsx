@@ -1,17 +1,15 @@
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
 import { selectFilterBy } from '../../redux/coins/coinsSelectors';
-import { selectCoinDetails, selectDetailsError } from '../../redux/details/detailsSelectors';
+import { selectCoinDetailsById, selectDetailsError } from '../../redux/details/detailsSelectors';
 import { clearFilterCoins, filterCoins } from '../../redux/coins/coinsSlice';
-import { resetDetails } from '../../redux/details/detailsSlice';
 
 const NavBar = () => {
   const { id } = useParams();
-  const coin = useSelector(selectCoinDetails);
-  // const detailsIsLoading = useSelector(selectDetailsIsLoading);
-  const detailsError = useSelector(selectDetailsError);
-  const filterBy = useSelector(selectFilterBy, shallowEqual);
   const dispatch = useDispatch();
+  const coin = useSelector((store) => selectCoinDetailsById(store, id));
+  const detailsError = useSelector(selectDetailsError);
+  const filterBy = useSelector(selectFilterBy);
 
   const onChangeHandler = (e) => {
     const filter = e.target.value.trim().toLowerCase();
@@ -30,21 +28,17 @@ const NavBar = () => {
     e.preventDefault();
   };
 
-  const onClickLinkHandler = () => {
-    dispatch(resetDetails());
-  };
-
   return (
     <header>
       <nav>
         {(!coin && !detailsError) ? (
           <>
             <NavLink to="/" end className="fsControls navLink">Home</NavLink>
-            <NavLink to="/coins" end className="fsControls navLink" onClickCapture={onClickHandler}>Coins</NavLink>
+            <NavLink to="." end className="fsControls navLink" onClick={onClickHandler}>Coins</NavLink>
           </>
         ) : (
           <>
-            <NavLink to=".." relative="path" end className="fsControls navLink" onClick={onClickLinkHandler}>&lt;</NavLink>
+            <NavLink to=".." relative="path" end className="fsControls navLink">&lt;</NavLink>
             <NavLink to={id} end className="fsControls navLink">{coin ? coin.name : `${id}coin`}</NavLink>
           </>
         )}
