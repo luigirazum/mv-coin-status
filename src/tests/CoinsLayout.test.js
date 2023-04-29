@@ -24,7 +24,6 @@ let testRender = null;
 let container = null;
 let queryByRole;
 let queryByPlaceholderText;
-let queryAllByTestId;
 
 const resetTestEnv = () => {
   container.remove();
@@ -41,7 +40,6 @@ beforeEach(() => {
   );
   ({
     container, queryByRole, queryByPlaceholderText,
-    queryAllByTestId,
   } = testRender);
   document.body.appendChild(container);
 });
