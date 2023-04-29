@@ -3,7 +3,6 @@ import { NavLink, useParams } from 'react-router-dom';
 import { selectFilterBy } from '../../redux/coins/coinsSelectors';
 import { selectCoinDetailsById, selectDetailsError } from '../../redux/details/detailsSelectors';
 import { clearFilterCoins, filterCoins } from '../../redux/coins/coinsSlice';
-import { resetDetails } from '../../redux/details/detailsSlice';
 
 const NavBar = () => {
   const { id } = useParams();
@@ -29,10 +28,6 @@ const NavBar = () => {
     e.preventDefault();
   };
 
-  const onClickLinkHandler = () => {
-    dispatch(resetDetails());
-  };
-
   return (
     <header>
       <nav>
@@ -43,7 +38,7 @@ const NavBar = () => {
           </>
         ) : (
           <>
-            <NavLink to=".." relative="path" end className="fsControls navLink" onClick={onClickLinkHandler}>&lt;</NavLink>
+            <NavLink to=".." relative="path" end className="fsControls navLink">&lt;</NavLink>
             <NavLink to={id} end className="fsControls navLink">{coin ? coin.name : `${id}coin`}</NavLink>
           </>
         )}
