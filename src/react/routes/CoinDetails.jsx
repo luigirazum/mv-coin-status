@@ -1,13 +1,22 @@
-import { useSelector } from 'react-redux';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import genericCoinIcon from '../../assets/logo/generic-crypto-mock-logo.svg';
-import { selectCoinDetails, selectDetailsError, selectDetailsIsLoading } from '../../redux/details/detailsSelectors';
+import { selectCoinDetailsById, selectDetailsError, selectDetailsIsLoading } from '../../redux/details/detailsSelectors';
+import { fetchDetails } from '../../redux/details/detailsActions';
+import { selectAllCoinsIds } from '../../redux/coins/coinsSelectors';
 
 const CoinDetails = () => {
   const { id } = useParams();
-  const coin = useSelector(selectCoinDetails);
+  const coin = useSelector((store) => selectCoinDetailsById(store, id));
   const detailsLoading = useSelector(selectDetailsIsLoading);
   const detailsError = useSelector(selectDetailsError);
+  const allCoins = useSelector(selectAllCoinsIds, shallowEqual);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!coin && (allCoins.length > 0)) dispatch(fetchDetails(id));
+  }, [id, coin, allCoins, dispatch]);
 
   if (detailsLoading) {
     return (
