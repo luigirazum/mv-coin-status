@@ -42,7 +42,7 @@ const NavBar = () => {
               <HomeIcon />
               <span className="fsControls navName">Home</span>
             </NavLink>
-            <NavLink to="." end className="fsControls navLink" onClick={onClickHandler}>
+            <NavLink to="." end className="fsControls navLink" id="cancel-filter" onClick={onClickHandler}>
               <CoinsIcon />
               <span className="fsControls navName">Coins</span>
             </NavLink>
@@ -70,7 +70,8 @@ const NavBar = () => {
         />
         <button
           type="button"
-          id="reset"
+          id="cancel"
+          data-testid={`${filterBy ? 'cancel-btn' : 'filter-btn'}`}
           className={`ctrl-btn ${filterBy ? 'cancel-btn' : 'filter-btn'}`}
           onClick={onClickHandler}
         >
