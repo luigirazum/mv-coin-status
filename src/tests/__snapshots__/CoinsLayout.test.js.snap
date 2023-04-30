@@ -9,15 +9,72 @@ Array [
         href="/"
         onClick={[Function]}
       >
-        Home
+        <div
+          className="appIcon homeIcon"
+          data-testid="homeIcon"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              home-icon
+            </title>
+            <g>
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z"
+              />
+            </g>
+          </svg>
+        </div>
+        <span
+          className="fsControls navName"
+        >
+          Home
+        </span>
       </a>
       <a
         aria-current="page"
         className="fsControls navLink active"
         href="/coins"
+        id="cancel-filter"
         onClick={[Function]}
       >
-        Coins
+        <div
+          className="appIcon CoinsIcon"
+          data-testid="CoinsIcon"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            viewBox="0 0 512 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              coins-icon
+            </title>
+            <path
+              d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"
+            />
+          </svg>
+        </div>
+        <span
+          className="fsControls navName"
+        >
+          Coins
+        </span>
       </a>
     </nav>
     <form
@@ -32,12 +89,33 @@ Array [
         value=""
       />
       <button
-        className="ctrl-btn"
-        id="reset"
+        className="ctrl-btn filter-btn"
+        data-testid="filter-btn"
+        id="cancel"
         onClick={[Function]}
         type="button"
       >
-        X
+        <div
+          className="appIcon lensIcon"
+          data-testid="lensIcon"
+        >
+          <svg
+            fill="currentColor"
+            height="800px"
+            id="filter-icon"
+            version="1.1"
+            viewBox="0 0 32 32"
+            width="800px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              lens-icon
+            </title>
+            <path
+              d="M0 14.048q0 2.848 1.12 5.44t2.976 4.48 4.48 2.976 5.472 1.12q4.064 0 7.52-2.24l5.312 5.312q0.864 0.864 2.112 0.864t2.144-0.864 0.864-2.112-0.864-2.144l-5.312-5.312q2.24-3.456 2.24-7.52 0-2.88-1.12-5.472t-2.976-4.448-4.48-3.008-5.44-1.12q-2.88 0-5.472 1.12t-4.48 3.008-2.976 4.448-1.12 5.472zM4 14.048q0-2.752 1.344-5.056t3.648-3.648 5.056-1.344q2.688 0 5.024 1.344t3.648 3.648 1.344 5.056q0 2.72-1.344 5.024t-3.648 3.648-5.024 1.344q-2.752 0-5.056-1.344t-3.648-3.648-1.344-5.024z"
+            />
+          </svg>
+        </div>
       </button>
     </form>
   </header>,
