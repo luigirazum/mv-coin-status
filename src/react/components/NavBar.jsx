@@ -3,6 +3,10 @@ import { NavLink, useParams } from 'react-router-dom';
 import { selectFilterBy } from '../../redux/coins/coinsSelectors';
 import { selectCoinDetailsById, selectDetailsError } from '../../redux/details/detailsSelectors';
 import { clearFilterCoins, filterCoins } from '../../redux/coins/coinsSlice';
+import {
+  CancelIcon,
+  CoinIcon, CoinsIcon, GoBackIcon, HomeIcon, LensIcon,
+} from './icons';
 
 const NavBar = () => {
   const { id } = useParams();
@@ -20,8 +24,9 @@ const NavBar = () => {
     }
   };
 
-  const onClickHandler = () => {
-    dispatch(clearFilterCoins());
+  const onClickHandler = (e) => {
+    const { id: btnId } = e.target;
+    if (btnId.includes('cancel')) dispatch(clearFilterCoins());
   };
 
   const onSubmitHandler = (e) => {
@@ -33,13 +38,24 @@ const NavBar = () => {
       <nav>
         {(!coin && !detailsError) ? (
           <>
-            <NavLink to="/" end className="fsControls navLink">Home</NavLink>
-            <NavLink to="." end className="fsControls navLink" onClick={onClickHandler}>Coins</NavLink>
+            <NavLink to="/" end className="fsControls navLink">
+              <HomeIcon />
+              <span className="fsControls navName">Home</span>
+            </NavLink>
+            <NavLink to="." end className="fsControls navLink" onClick={onClickHandler}>
+              <CoinsIcon />
+              <span className="fsControls navName">Coins</span>
+            </NavLink>
           </>
         ) : (
           <>
-            <NavLink to=".." relative="path" end className="fsControls navLink">&lt;</NavLink>
-            <NavLink to={id} end className="fsControls navLink">{coin ? coin.name : `${id}coin`}</NavLink>
+            <NavLink to=".." relative="path" end className="fsControls navLink">
+              <GoBackIcon />
+            </NavLink>
+            <NavLink to={id} end className="fsControls navLink navCoin">
+              <CoinIcon />
+              <span className="fsControls navName">{coin ? coin.name : `${id}coin`}</span>
+            </NavLink>
           </>
         )}
       </nav>
@@ -55,10 +71,10 @@ const NavBar = () => {
         <button
           type="button"
           id="reset"
-          className="ctrl-btn"
+          className={`ctrl-btn ${filterBy ? 'cancel-btn' : 'filter-btn'}`}
           onClick={onClickHandler}
         >
-          X
+          {filterBy ? <CancelIcon /> : <LensIcon />}
         </button>
       </form>
       )}
