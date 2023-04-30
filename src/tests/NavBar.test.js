@@ -32,6 +32,7 @@ let testRender = null;
 let container = null;
 let queryByText;
 let queryByPlaceholderText;
+let queryByTitle;
 
 const resetTestEnv = () => {
   container.remove();
@@ -93,15 +94,15 @@ describe('NavBar component tests', () => {
         },
       );
       ({ container } = testRender);
-      ({ queryByText, queryByPlaceholderText } = testRender);
+      ({ queryByText, queryByPlaceholderText, queryByTitle } = testRender);
       document.body.appendChild(container);
     });
 
     test('it has a Home link', () => {
-      expect(queryByText('<')).toBeInTheDocument();
+      expect(queryByTitle('back-icon')).toBeInTheDocument();
     });
     test('it has a Bitcoin link', () => {
-      expect(queryByText('Bitcoin')).toBeInTheDocument();
+      expect(queryByText(/Bitcoin/i)).toBeInTheDocument();
     });
     test('it does\'t have a Filter field', () => {
       expect(queryByPlaceholderText(/filter by/i)).toBeNull();

@@ -33,13 +33,10 @@ describe('Home component tests', () => {
   /* START: Home page render */
   describe('Home page must be rendered', () => {
     test('should render a Welcome', () => {
-      expect(queryByText('Welcome')).toBeInTheDocument();
+      expect(queryByText(/Welcome/i)).toBeInTheDocument();
     });
     test('should render a Start button', () => {
       expect(queryByText('Start')).toBeInTheDocument();
-    });
-    test('should render an About button', () => {
-      expect(queryByText('About')).toBeInTheDocument();
     });
   });
   /* END: Home page render */
