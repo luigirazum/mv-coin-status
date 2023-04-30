@@ -106,9 +106,28 @@ body {
 .bold { font-weight: var(--fw-bold); }
 .black { font-weight: var(--fw-black); }
 
+.home {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-light);
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  line-height: 1.5;
+}
+
+.home .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .btn {
   display: inline-block;
   font-size: 1.5rem;
+  font-weight: bold;
+  inline-size: 10rem;
+  text-align: center;
 }
 
 .btn-home {
@@ -148,13 +167,29 @@ header {
 
 nav {
   flex-grow: 1;
+  display: flex;
+}
+
+.appIcon {
+  --iconSize: 1em;
+
+  inline-size: var(--iconSize);
+  block-size: var(--iconSize);
+  display: flex;
+  border-radius: 9999px;
+}
+
+svg {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 form {
   display: flex;
-  margin-block: 0.3rem;
+  margin-block: 0.5rem;
   margin-inline-end: 0.3rem;
-  padding-inline: 0.5rem 0;
+  padding-inline: 0.75rem 0;
   background-color: var(--color-light-dark-grey);
   border-radius: 999px;
 }
@@ -163,31 +198,46 @@ input {
   background-color: transparent;
   border: none;
   outline: none;
+  padding: 0.25rem;
   color: var(--fg-color-text);
 }
 
 .ctrl-btn {
   inline-size: 1.5rem;
-  padding: 0.25rem;
+  padding-inline: 0.25rem;
   border: 1px solid transparent;
   border-radius: 50%;
-  background-color: var(--color-medium-dark-grey);
+  background-color: var(--color-dark-grey);
   color: var(--fg-color-text);
 }
 
 .ctrl-btn:hover {
-  color: var(--color-light-yellow);
-  background-color: var(--color-dark-grey);
+  color: var(--color-light-dark-grey);
+  background-color: var(--color-pie-light-blue);
 }
 
-input:focus:focus-visible .ctrl-btn {
-  background-color: #35548c;
+.ctrl-btn:active {
+  color: var(--color-pure-white);
+  background-color: var(--color-medium-dark-grey);
 }
 
 .navLink {
-  display: inline-block;
+  display: flex;
+  align-items: self-end;
   padding-block: 0.5rem;
   padding-inline: 0.85rem;
+  gap: 0.25rem;
+}
+
+.navLink.navCoin.active {
+  color: var(--color-pure-white);
+}
+
+.navName {
+  display: inline-block;
+  position: relative;
+  top: 0.04rem;
+  color: inherit;
 }
 
 .navLink.active {
@@ -213,11 +263,21 @@ input:focus:focus-visible .ctrl-btn {
       auto-fit,
       minmax(min(var(--min-column-size), 50%), 1fr)
     );
+  grid-auto-rows: auto;
   transition: all 500ms ease-out;
 }
 
 .coinLink {
   color: var(--color-pure-white);
+  position: relative;
+}
+
+.moreIcon {
+  --position: 1.25rem;
+
+  position: absolute;
+  right: var(--position);
+  top: calc(var(--position) * 0.8);
 }
 
 .coinLink:hover {
