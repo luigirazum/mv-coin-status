@@ -20,6 +20,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#🚀-live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Available Scripts](#available-scripts)
@@ -43,8 +44,8 @@
 ### Preview of CoinStatus App.
 
 <p>
-  <img src="src/assets/wireframe/coinstatus-wireframe.png" alt="CoinStatus App" width="600" height="auto" /><br>
-  <sup>The app will have these styles but with different content.</sup><br>
+  <img src="src/assets/screenshots/all-coins.png" alt="CoinStatus App" width="600" height="auto" /><br>
+  <sup>The image above shows the general view for the app.</sup><br>
 </p>
 
 </div>
@@ -77,14 +78,14 @@ This project was bootstrapped with:
 - *Get the details of the Cryptocurrency selected.*
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!--
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- <a href="https://luigirazum.github.io/mv-coin-status/" target="_blank" rel="noopener noreferrer">CoinStatus App</a>
+- <a href="https://644dedc1cbc6c40d771d0ddd--statuesque-fox-2c2e3f.netlify.app/" target="_blank" rel="noopener noreferrer">CoinStatus App</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
