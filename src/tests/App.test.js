@@ -70,7 +70,7 @@ describe('FULL App unit test', () => {
         document.body.appendChild(container);
       });
 
-      expect(screen.getByText('Welcome')).toBeInTheDocument();
+      expect(screen.getByText(/Welcome/i)).toBeInTheDocument();
     });
 
     test('a start button is displayed', () => {
@@ -90,23 +90,6 @@ describe('FULL App unit test', () => {
       expect(screen.getByText('Start')).toBeInTheDocument();
     });
 
-    test('an about button is displayed', () => {
-      act(() => {
-        testRender = renderWithProvider(
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>,
-          { preloadedState: { ...initialTestState } },
-        );
-        ({
-          container, userEvent, screen,
-        } = testRender);
-        document.body.appendChild(container);
-      });
-
-      expect(screen.getByText('About')).toBeInTheDocument();
-    });
-
     test('successful snapshot test', () => {
       act(() => {
         testRender = renderWithProvider(
@@ -121,7 +104,7 @@ describe('FULL App unit test', () => {
         document.body.appendChild(container);
       });
 
-      expect(screen.getByText('About')).toBeInTheDocument();
+      expect(screen.getByText('Start')).toBeInTheDocument();
       const tree = create(component).toJSON();
       expect(tree).toMatchSnapshot();
     });
@@ -253,7 +236,7 @@ describe('FULL App unit test', () => {
       });
 
       await act(async () => {
-        userEvent.click(await screen.getByRole('link', { name: 'Bitcoin Bitcoin Rank 1 Symbol BTC' }));
+        userEvent.click(await screen.getByRole('link', { name: 'more-icon Bitcoin Bitcoin Rank 1 Symbol BTC' }));
       });
       waitFor(() => {
         screen.findByText('Loading...');
@@ -337,7 +320,7 @@ describe('FULL App unit test', () => {
         screen.getByText('Price Change');
       });
 
-      expect(screen.getByRole('link', { name: '<' })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'back-icon' })).toBeInTheDocument();
     });
 
     test('the coin name that is showing the details page', async () => {
@@ -426,7 +409,7 @@ describe('FULL App unit test', () => {
       });
 
       act(() => {
-        userEvent.click(screen.getByRole('link', { name: '<' }));
+        userEvent.click(screen.getByRole('link', { name: 'back-icon' }));
       });
 
       waitFor(() => {
@@ -616,7 +599,7 @@ describe('FULL App unit test', () => {
       expect(screen.getAllByRole('article')).toHaveLength(2);
 
       act(() => {
-        fireEvent.click(screen.getByRole('button', { name: 'X' }));
+        fireEvent.click(screen.getByTestId('cancel-btn'));
       });
 
       waitFor(() => {
@@ -656,7 +639,7 @@ describe('FULL App unit test', () => {
       expect(screen.getAllByRole('article')).toHaveLength(1);
 
       act(() => {
-        fireEvent.click(screen.getByRole('link', { name: 'Coins' }));
+        fireEvent.click(screen.getByRole('link', { name: 'coins-icon Coins' }));
       });
 
       waitFor(() => {
@@ -696,7 +679,7 @@ describe('FULL App unit test', () => {
       expect(screen.getAllByRole('article')).toHaveLength(2);
 
       act(() => {
-        fireEvent.click(screen.getByRole('button', { name: 'X' }));
+        fireEvent.click(screen.getByRole('button', { name: 'cancel-icon' }));
       });
 
       expect(screen.getAllByRole('article')).toHaveLength(5);

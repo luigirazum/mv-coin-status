@@ -2,22 +2,31 @@
 
 exports[`Home component tests Home page component snapshot test snapshot renders correctly 1`] = `
 <main>
-  <h1>
-    Welcome
-  </h1>
-  <a
-    className="fsControls btn btn-home btn-start"
-    href="/coins"
-    onClick={[Function]}
+  <section
+    className="home"
   >
-    Start
-  </a>
-  <a
-    className="fsControls btn btn-home btn-about"
-    href="/"
-    onClick={[Function]}
-  >
-    About
-  </a>
+    <div
+      className="wrapper"
+    >
+      <h1>
+        Welcome to CoinStatus
+      </h1>
+      <div>
+        <p>
+          Here you will find the most current information about your favorite crypto coin.
+        </p>
+        <p>
+          Press the Start button below to explore the world of cryptocurrencies.
+        </p>
+      </div>
+      <a
+        className="fsControls btn btn-home btn-start"
+        href="/coins"
+        onClick={[Function]}
+      >
+        Start
+      </a>
+    </div>
+  </section>
 </main>
 `;

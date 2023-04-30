@@ -22,7 +22,7 @@ const testRouter = {
 
 let testRender = null;
 let container = null;
-let queryByRole;
+let queryByTitle;
 let queryByPlaceholderText;
 
 const resetTestEnv = () => {
@@ -39,7 +39,7 @@ beforeEach(() => {
     { ...testRouter },
   );
   ({
-    container, queryByRole, queryByPlaceholderText,
+    container, queryByTitle, queryByPlaceholderText,
   } = testRender);
   document.body.appendChild(container);
 });
@@ -54,10 +54,10 @@ describe('CoinsLayout component tests', () => {
   /* START: CoinsLayout render */
   describe('CoinsLayout must render a NavBar', () => {
     test('should render the Home link', () => {
-      expect(queryByRole('link', { name: 'Home' })).toBeInTheDocument();
+      expect(queryByTitle('home-icon')).toBeInTheDocument();
     });
     test('should render the Coins link', () => {
-      expect(queryByRole('link', { name: 'Coins' })).toBeInTheDocument();
+      expect(queryByTitle('coins-icon')).toBeInTheDocument();
     });
     test('should render the Filter field', () => {
       expect(queryByPlaceholderText(/filter by/i)).toBeInTheDocument();
