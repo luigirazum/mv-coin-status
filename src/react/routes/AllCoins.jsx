@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Coin from '../components/Coin';
 import { selectAllCoinsIdsByFilter, selectFilterActive } from '../../redux/coins/coinsSelectors';
 import { fetchCoins } from '../../redux/coins/coinsActions';
+import { MoreIcon } from '../components/icons';
 
 const AllCoins = () => {
   const filterActive = useSelector(selectFilterActive);
@@ -26,6 +27,7 @@ const AllCoins = () => {
           key={coinId}
           className={`coinLink ${(index % 2) === 0 ? 'evenCoin' : 'oddCoin'}`}
         >
+          <MoreIcon />
           <Coin id={coinId} />
         </Link>
       ))}
