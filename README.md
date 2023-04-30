@@ -81,7 +81,7 @@ This project was bootstrapped with:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- <a href="https://644dedc1cbc6c40d771d0ddd--statuesque-fox-2c2e3f.netlify.app/" target="_blank" rel="noopener noreferrer">CoinStatus App</a>
+- <a href="https://statuesque-fox-2c2e3f.netlify.app/" target="_blank" rel="noopener noreferrer">CoinStatus App</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
