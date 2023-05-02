@@ -1,0 +1,518 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllCoins component tests AllCoins component snapshot test snapshot renders 5 Coins correctly 1`] = `
+<section
+  className="allCoins"
+>
+  <a
+    className="coinLink evenCoin"
+    href="/coins/bitcoin"
+    onClick={[Function]}
+  >
+    <div
+      className="appIcon moreIcon"
+      data-testid="moreIcon"
+    >
+      <svg
+        height="1em"
+        version="1.1"
+        viewBox="0 0 20 20"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          more-icon
+        </title>
+        <defs />
+        <g
+          fill="none"
+          fillRule="evenodd"
+          id="Page-1"
+          stroke="none"
+          strokeWidth="1"
+        >
+          <g
+            fill="currentColor"
+            transform="translate(-420.000000, -6559.000000)"
+          >
+            <g
+              transform="translate(56.000000, 160.000000)"
+            >
+              <path
+                d="M375.127681,6399.29274 C374.737008,6398.90242 374.104537,6398.90242 373.714864,6399.29274 C373.324191,6399.68307 373.324191,6400.31497 373.714864,6400.7043 L380.149475,6407.14215 C380.464211,6407.45661 380.241398,6408.00167 379.79677,6408.00167 L365.016149,6408.00167 C364.464611,6408.00167 364,6408.44091 364,6408.99195 L364,6408.99594 C364,6409.54699 364.464611,6409.99821 365.016149,6409.99821 L379.79677,6409.99821 C380.241398,6409.99821 380.464211,6410.52829 380.149475,6410.84275 L373.68389,6417.29957 C373.293217,6417.68889 373.293217,6418.3188 373.68389,6418.70913 L373.68389,6418.70813 C374.073563,6419.09746 374.706034,6419.09746 375.096707,6418.70713 L383.41474,6410.39652 L383.41474,6410.39652 C384.195087,6409.61687 384.195087,6408.35206 383.41474,6407.57241 C383.233892,6407.39272 374.946832,6399.11206 375.127681,6399.29274"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <article
+      className="coinItem"
+      data-testid="bitcoin"
+    >
+      <section
+        className="itemSection itemHeader"
+      >
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          Bitcoin
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="Bitcoin"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="generic-crypto-mock-logo.svg"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
+        >
+          <h3
+            className="itemCategory rankCategory"
+          >
+            Rank
+          </h3>
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
+          >
+            1
+          </p>
+        </div>
+        <div
+          className="itemDescription"
+        >
+          <h4
+            className="itemCategory"
+          >
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
+          >
+            BTC
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+  <a
+    className="coinLink oddCoin"
+    href="/coins/ethereum"
+    onClick={[Function]}
+  >
+    <div
+      className="appIcon moreIcon"
+      data-testid="moreIcon"
+    >
+      <svg
+        height="1em"
+        version="1.1"
+        viewBox="0 0 20 20"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          more-icon
+        </title>
+        <defs />
+        <g
+          fill="none"
+          fillRule="evenodd"
+          id="Page-1"
+          stroke="none"
+          strokeWidth="1"
+        >
+          <g
+            fill="currentColor"
+            transform="translate(-420.000000, -6559.000000)"
+          >
+            <g
+              transform="translate(56.000000, 160.000000)"
+            >
+              <path
+                d="M375.127681,6399.29274 C374.737008,6398.90242 374.104537,6398.90242 373.714864,6399.29274 C373.324191,6399.68307 373.324191,6400.31497 373.714864,6400.7043 L380.149475,6407.14215 C380.464211,6407.45661 380.241398,6408.00167 379.79677,6408.00167 L365.016149,6408.00167 C364.464611,6408.00167 364,6408.44091 364,6408.99195 L364,6408.99594 C364,6409.54699 364.464611,6409.99821 365.016149,6409.99821 L379.79677,6409.99821 C380.241398,6409.99821 380.464211,6410.52829 380.149475,6410.84275 L373.68389,6417.29957 C373.293217,6417.68889 373.293217,6418.3188 373.68389,6418.70913 L373.68389,6418.70813 C374.073563,6419.09746 374.706034,6419.09746 375.096707,6418.70713 L383.41474,6410.39652 L383.41474,6410.39652 C384.195087,6409.61687 384.195087,6408.35206 383.41474,6407.57241 C383.233892,6407.39272 374.946832,6399.11206 375.127681,6399.29274"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <article
+      className="coinItem"
+      data-testid="ethereum"
+    >
+      <section
+        className="itemSection itemHeader"
+      >
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          Ethereum
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="Ethereum"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="generic-crypto-mock-logo.svg"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
+        >
+          <h3
+            className="itemCategory rankCategory"
+          >
+            Rank
+          </h3>
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
+          >
+            2
+          </p>
+        </div>
+        <div
+          className="itemDescription"
+        >
+          <h4
+            className="itemCategory"
+          >
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
+          >
+            ETH
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+  <a
+    className="coinLink evenCoin"
+    href="/coins/tether"
+    onClick={[Function]}
+  >
+    <div
+      className="appIcon moreIcon"
+      data-testid="moreIcon"
+    >
+      <svg
+        height="1em"
+        version="1.1"
+        viewBox="0 0 20 20"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          more-icon
+        </title>
+        <defs />
+        <g
+          fill="none"
+          fillRule="evenodd"
+          id="Page-1"
+          stroke="none"
+          strokeWidth="1"
+        >
+          <g
+            fill="currentColor"
+            transform="translate(-420.000000, -6559.000000)"
+          >
+            <g
+              transform="translate(56.000000, 160.000000)"
+            >
+              <path
+                d="M375.127681,6399.29274 C374.737008,6398.90242 374.104537,6398.90242 373.714864,6399.29274 C373.324191,6399.68307 373.324191,6400.31497 373.714864,6400.7043 L380.149475,6407.14215 C380.464211,6407.45661 380.241398,6408.00167 379.79677,6408.00167 L365.016149,6408.00167 C364.464611,6408.00167 364,6408.44091 364,6408.99195 L364,6408.99594 C364,6409.54699 364.464611,6409.99821 365.016149,6409.99821 L379.79677,6409.99821 C380.241398,6409.99821 380.464211,6410.52829 380.149475,6410.84275 L373.68389,6417.29957 C373.293217,6417.68889 373.293217,6418.3188 373.68389,6418.70913 L373.68389,6418.70813 C374.073563,6419.09746 374.706034,6419.09746 375.096707,6418.70713 L383.41474,6410.39652 L383.41474,6410.39652 C384.195087,6409.61687 384.195087,6408.35206 383.41474,6407.57241 C383.233892,6407.39272 374.946832,6399.11206 375.127681,6399.29274"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <article
+      className="coinItem"
+      data-testid="tether"
+    >
+      <section
+        className="itemSection itemHeader"
+      >
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          Tether
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="Tether"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="generic-crypto-mock-logo.svg"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
+        >
+          <h3
+            className="itemCategory rankCategory"
+          >
+            Rank
+          </h3>
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
+          >
+            3
+          </p>
+        </div>
+        <div
+          className="itemDescription"
+        >
+          <h4
+            className="itemCategory"
+          >
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
+          >
+            USDT
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+  <a
+    className="coinLink oddCoin"
+    href="/coins/binance-coin"
+    onClick={[Function]}
+  >
+    <div
+      className="appIcon moreIcon"
+      data-testid="moreIcon"
+    >
+      <svg
+        height="1em"
+        version="1.1"
+        viewBox="0 0 20 20"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          more-icon
+        </title>
+        <defs />
+        <g
+          fill="none"
+          fillRule="evenodd"
+          id="Page-1"
+          stroke="none"
+          strokeWidth="1"
+        >
+          <g
+            fill="currentColor"
+            transform="translate(-420.000000, -6559.000000)"
+          >
+            <g
+              transform="translate(56.000000, 160.000000)"
+            >
+              <path
+                d="M375.127681,6399.29274 C374.737008,6398.90242 374.104537,6398.90242 373.714864,6399.29274 C373.324191,6399.68307 373.324191,6400.31497 373.714864,6400.7043 L380.149475,6407.14215 C380.464211,6407.45661 380.241398,6408.00167 379.79677,6408.00167 L365.016149,6408.00167 C364.464611,6408.00167 364,6408.44091 364,6408.99195 L364,6408.99594 C364,6409.54699 364.464611,6409.99821 365.016149,6409.99821 L379.79677,6409.99821 C380.241398,6409.99821 380.464211,6410.52829 380.149475,6410.84275 L373.68389,6417.29957 C373.293217,6417.68889 373.293217,6418.3188 373.68389,6418.70913 L373.68389,6418.70813 C374.073563,6419.09746 374.706034,6419.09746 375.096707,6418.70713 L383.41474,6410.39652 L383.41474,6410.39652 C384.195087,6409.61687 384.195087,6408.35206 383.41474,6407.57241 C383.233892,6407.39272 374.946832,6399.11206 375.127681,6399.29274"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <article
+      className="coinItem"
+      data-testid="binance-coin"
+    >
+      <section
+        className="itemSection itemHeader"
+      >
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          BNB
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="BNB"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="generic-crypto-mock-logo.svg"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
+        >
+          <h3
+            className="itemCategory rankCategory"
+          >
+            Rank
+          </h3>
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
+          >
+            4
+          </p>
+        </div>
+        <div
+          className="itemDescription"
+        >
+          <h4
+            className="itemCategory"
+          >
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
+          >
+            BNB
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+  <a
+    className="coinLink evenCoin"
+    href="/coins/usd-coin"
+    onClick={[Function]}
+  >
+    <div
+      className="appIcon moreIcon"
+      data-testid="moreIcon"
+    >
+      <svg
+        height="1em"
+        version="1.1"
+        viewBox="0 0 20 20"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          more-icon
+        </title>
+        <defs />
+        <g
+          fill="none"
+          fillRule="evenodd"
+          id="Page-1"
+          stroke="none"
+          strokeWidth="1"
+        >
+          <g
+            fill="currentColor"
+            transform="translate(-420.000000, -6559.000000)"
+          >
+            <g
+              transform="translate(56.000000, 160.000000)"
+            >
+              <path
+                d="M375.127681,6399.29274 C374.737008,6398.90242 374.104537,6398.90242 373.714864,6399.29274 C373.324191,6399.68307 373.324191,6400.31497 373.714864,6400.7043 L380.149475,6407.14215 C380.464211,6407.45661 380.241398,6408.00167 379.79677,6408.00167 L365.016149,6408.00167 C364.464611,6408.00167 364,6408.44091 364,6408.99195 L364,6408.99594 C364,6409.54699 364.464611,6409.99821 365.016149,6409.99821 L379.79677,6409.99821 C380.241398,6409.99821 380.464211,6410.52829 380.149475,6410.84275 L373.68389,6417.29957 C373.293217,6417.68889 373.293217,6418.3188 373.68389,6418.70913 L373.68389,6418.70813 C374.073563,6419.09746 374.706034,6419.09746 375.096707,6418.70713 L383.41474,6410.39652 L383.41474,6410.39652 C384.195087,6409.61687 384.195087,6408.35206 383.41474,6407.57241 C383.233892,6407.39272 374.946832,6399.11206 375.127681,6399.29274"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <article
+      className="coinItem"
+      data-testid="usd-coin"
+    >
+      <section
+        className="itemSection itemHeader"
+      >
+        <h3
+          className="itemName"
+          data-testid="coinName"
+        >
+          USD Coin
+        </h3>
+        <div
+          className="iconContainer"
+        >
+          <img
+            alt="USD Coin"
+            className="coinIcon"
+            data-testid="coinLogo"
+            src="generic-crypto-mock-logo.svg"
+          />
+        </div>
+      </section>
+      <section
+        className="itemSection"
+      >
+        <div
+          className="itemDescription"
+        >
+          <h3
+            className="itemCategory rankCategory"
+          >
+            Rank
+          </h3>
+          <p
+            className="itemData rankData"
+            data-testid="coinRank"
+          >
+            5
+          </p>
+        </div>
+        <div
+          className="itemDescription"
+        >
+          <h4
+            className="itemCategory"
+          >
+            Symbol
+          </h4>
+          <p
+            className="itemData"
+            data-testid="coinSymbol"
+          >
+            USDC
+          </p>
+        </div>
+      </section>
+    </article>
+  </a>
+</section>
+`;

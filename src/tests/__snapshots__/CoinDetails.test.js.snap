@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoinDetails component tests CoinDetails component snapshot test snapshot renders CoinDetails correctly 1`] = `
+<section
+  className="coinDetails"
+>
+  <article
+    className="coin"
+    data-testid="bitcoin"
+  >
+    <div
+      className="coinBasics"
+    >
+      <div
+        className="iconContainer"
+      >
+        <img
+          alt="Bitcoin"
+          className="coinIcon"
+          data-testid="coinIcon"
+          src="generic-crypto-mock-logo.svg"
+        />
+      </div>
+      <section
+        className="descriptionSection"
+      >
+        <h3
+          className="coinName"
+          data-testid="coinName"
+        >
+          Bitcoin
+        </h3>
+        <h4
+          className="sectionCategory symbolCategory"
+          data-testid="coinSymbol"
+        >
+          Symbol
+        </h4>
+        <p
+          className="sectionData symbolData"
+        >
+          BTC
+        </p>
+      </section>
+    </div>
+    <div
+      className="coinDescription"
+    >
+      <section
+        className="descriptionSection"
+      >
+        <h3
+          className="sectionCategory rankCategory"
+        >
+          Rank
+        </h3>
+        <p
+          className="sectionData rankData"
+          data-testid="coinRank"
+        >
+          1
+        </p>
+      </section>
+      <section
+        className="descriptionSection"
+      >
+        <h4
+          className="sectionCategory"
+        >
+          Price
+        </h4>
+        <p
+          className="sectionData"
+          data-testid="coinPrice"
+        >
+          27,242.27
+        </p>
+        <h4
+          className="sectionCategory"
+        >
+          Volume
+        </h4>
+        <p
+          className="sectionData"
+          data-testid="coinVolume"
+        >
+          82,809,392,859.99
+        </p>
+      </section>
+      <section
+        className="descriptionSection"
+      >
+        <h4
+          className="sectionSubCategory"
+        >
+          Price Change
+        </h4>
+        <h5
+          className="sectionTitle"
+        >
+          1 hour
+        </h5>
+        <p
+          className="sectionData"
+          data-testid="coinPrice1h"
+        >
+          -0.17
+        </p>
+        <h5
+          className="sectionTitle"
+        >
+          1 day
+        </h5>
+        <p
+          className="sectionData"
+          data-testid="coinPrice1d"
+        >
+          -2.98
+        </p>
+        <h5
+          className="sectionTitle"
+        >
+          1 week
+        </h5>
+        <p
+          className="sectionData"
+          data-testid="coinPrice1w"
+        >
+          -10.38
+        </p>
+      </section>
+    </div>
+  </article>
+</section>
+`;

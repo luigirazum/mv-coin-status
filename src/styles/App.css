@@ -1,0 +1,415 @@
+/* Font Imports */
+
+/* Lato is going to be used on Controls */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+/* Gill Sans is going to be used on Body and Titles */
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../assets/fonts/GillSansMTStd-Light.otf') format('opentype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../assets/fonts/GillSansMTStd-Medium.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../assets/fonts/GillSansMTStd-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../assets/fonts/GillSansMTStd-ExtraBold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* Setting global variables */
+:root {
+  /* font families */
+  --ff-lato: 'Lato', sans-serif;
+  --ff-gillSans: 'Gill Sans', sans-serif;
+
+  /* font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* font assigns */
+  --ff-body: var(--ff-gillSans);
+  --ff-titles: var(--ff-gillSans);
+  --ff-controls: var(--ff-lato);
+
+  /* color palette */
+  --color-pure-white: #fff;
+  --color-rgb-white-a05: rgba(255, 255, 255, 0.05);
+  --color-dark-grey: #1d1d1d;
+  --color-medium-dark-grey: #171717;
+  --color-semi-dark-grey: #464646;
+  --color-light-dark-grey: #414141;
+  --color-blue: #4369b2;
+  --color-medium-blue: #3a5b99;
+  --color-semi-blue: #3a5b98;
+  --color-light-blue: #6096ff;
+  --color-pie-light-blue: #588be8;
+  --color-pie-dark-blue: #35548c;
+  --color-yellow: #fcff02;
+  --color-light-yellow: #fff200;
+  --color-green: #00b64f;
+  --color-lemon: #6ecf00;
+  --color-orange: rgb(255, 91, 46);
+  --color-orange-alpha: rgba(255, 91, 46, 0.65);
+  --color-pink: #e42a72;
+
+  /* color assignments */
+  --fg-color-text: var(--color-pure-white);
+  --bg-color-main: var(--color-dark-grey);
+}
+
+/* Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  min-inline-size: 320px;
+  font-family: var(--ff-body);
+  background-color: var(--bg-color-main);
+  color: var(--fg-color-text);
+}
+
+.fsControls { font-family: var(--ff-controls); }
+.fsTitles { font-family: var(--ff-gillSans); }
+
+.fsControls,
+.fsTitles { color: var(--fg-color-text); }
+
+/* font weights */
+.regular { font-weight: var(--fw-regular); }
+.light { font-weight: var(--fw-light); }
+.bold { font-weight: var(--fw-bold); }
+.black { font-weight: var(--fw-black); }
+
+.home {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-light);
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  line-height: 1.5;
+}
+
+.home .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  inline-size: 10rem;
+  text-align: center;
+}
+
+.btn-home {
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.btn-start {
+  background-color: var(--color-medium-blue);
+}
+
+.btn-start:hover {
+  background-color: var(--color-light-blue);
+}
+
+.btn-start:active {
+  background-color: var(--color-light-dark-grey);
+}
+
+.btn-about {
+  background-color: var(--color-orange-alpha);
+}
+
+.btn-about:hover {
+  background-color: var(--color-orange);
+}
+
+.btn-about:active {
+  background-color: var(--color-light-dark-grey);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+}
+
+.appIcon {
+  --iconSize: 1em;
+
+  inline-size: var(--iconSize);
+  block-size: var(--iconSize);
+  display: flex;
+  border-radius: 9999px;
+}
+
+svg {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+form {
+  display: flex;
+  margin-block: 0.5rem;
+  margin-inline-end: 0.3rem;
+  padding-inline: 0.75rem 0;
+  background-color: var(--color-light-dark-grey);
+  border-radius: 999px;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0.25rem;
+  color: var(--fg-color-text);
+}
+
+.ctrl-btn {
+  inline-size: 1.5rem;
+  padding-inline: 0.25rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: var(--color-dark-grey);
+  color: var(--fg-color-text);
+}
+
+.ctrl-btn:hover {
+  color: var(--color-light-dark-grey);
+  background-color: var(--color-pie-light-blue);
+}
+
+.ctrl-btn:active {
+  color: var(--color-pure-white);
+  background-color: var(--color-medium-dark-grey);
+}
+
+.navLink {
+  display: flex;
+  align-items: self-end;
+  padding-block: 0.5rem;
+  padding-inline: 0.85rem;
+  gap: 0.25rem;
+}
+
+.navLink.navCoin.active {
+  color: var(--color-pure-white);
+}
+
+.navName {
+  display: inline-block;
+  position: relative;
+  top: 0.04rem;
+  color: inherit;
+}
+
+.navLink.active {
+  color: var(--color-blue);
+}
+
+.navLink:hover,
+.navLink.active:hover {
+  color: var(--color-light-blue);
+}
+
+.navLink:active,
+.navLink.active:active {
+  color: var(--color-light-dark-grey);
+}
+
+.allCoins {
+  --min-column-size: 15rem;
+
+  display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(min(var(--min-column-size), 50%), 1fr)
+    );
+  grid-auto-rows: auto;
+  transition: all 500ms ease-out;
+}
+
+.coinLink {
+  color: var(--color-pure-white);
+  position: relative;
+}
+
+.moreIcon {
+  --position: 1.25rem;
+
+  position: absolute;
+  right: var(--position);
+  top: calc(var(--position) * 0.8);
+}
+
+.coinLink:hover {
+  background-color: var(--color-rgb-white-a05);
+}
+
+.coinItem,
+.itemSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.coinItem {
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  gap: 0.5rem;
+}
+
+.itemHeader {
+  text-align: center;
+}
+
+.itemDescription {
+  display: flex;
+  gap: 0.5rem;
+  align-items: first baseline;
+  justify-content: center;
+}
+
+.itemData.rankData {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.rankData::before {
+  content: '#';
+  position: relative;
+}
+
+.iconContainer {
+  --iContainerSize: 7.5rem;
+
+  inline-size: var(--iContainerSize);
+  block-size: var(--iContainerSize);
+  padding: 0.75rem;
+  align-self: center;
+}
+
+.coinIcon {
+  inline-size: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.coin {
+  display: flex;
+  padding: 1.25rem;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.coinBasics,
+.coinDescription {
+  display: flex;
+  flex-direction: column;
+}
+
+.coinBasics {
+  flex-basis: 8.5rem;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.coinBasics .iconContainer {
+  padding: 0.25rem;
+}
+
+.coinName {
+  margin-block-end: 0.25rem;
+}
+
+.coinDescription {
+  flex-basis: 12rem;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.sectionCategory,
+.sectionTitle {
+  flex-basis: 4rem;
+}
+
+.sectionData {
+  flex-basis: 5rem;
+  text-align: end;
+  flex-grow: 1;
+}
+
+.sectionSubCategory,
+.coinName,
+.symbolCategory,
+.symbolData {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+/* styles for desktop */
+@media screen and (min-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .wrapper {
+    max-inline-size: 80%;
+    margin-inline: auto;
+  }
+
+  .allCoins {
+    --min-column-size: 13.5rem;
+
+    gap: 1rem;
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(min(var(--min-column-size), 40%), 1fr)
+      );
+  }
+}
