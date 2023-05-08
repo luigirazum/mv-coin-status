@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const LensIcon = () => (
   <div data-testid="lensIcon" className="appIcon lensIcon">
     <svg id="filter-icon" fill="currentColor" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -99,3 +101,29 @@ export const CoinIcon = () => (
     </svg>
   </div>
 );
+
+export const CryptoIcon = ({ symbol }) => {
+  const iconSymbol = symbol.trim().toUpperCase();
+
+  return (
+    symbol && (
+    <span className={`cryptoicon icon-${iconSymbol}`} />
+    )
+  );
+};
+
+CryptoIcon.propTypes = {
+  symbol: PropTypes.string,
+};
+
+CryptoIcon.defaultProps = {
+  symbol: '',
+};
+
+export const CryptoSvgIcon = ({ children }) => (
+  <>{children}</>
+);
+
+CryptoSvgIcon.propTypes = {
+  children: PropTypes.element.isRequired,
+};
