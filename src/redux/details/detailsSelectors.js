@@ -10,6 +10,15 @@ export const selectCoinDetailsById = (store, id) => {
   return null;
 };
 
+export const selectedCoinHasSvgIcon = (store) => {
+  const { asset: coin } = store.details;
+  if (!coin) return false;
+
+  if (!Object.keys(coin).includes('svg')) return false;
+
+  return true;
+};
+
 /** ------------------------------------------------
  *   > selectors for Status
  *  ------------------------------------------------ */
