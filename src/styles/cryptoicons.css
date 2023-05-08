@@ -1,0 +1,9499 @@
+@font-face {
+  font-family: 'cryptofont';
+  src: url('../assets/fonts/cryptofont.ttf?tf0kk8') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --btc: #f7931a;
+  --usdt: #4d9e7d;
+  --usdc: #3876c4;
+  --bnb: #e9ba41;
+  --ada: #0438a7;
+  --xrp: #24292e;
+  --busd: #e9ba41;
+  --sol: #8557f0;
+  --doge: #b79f47;
+  --dot: #d53079;
+  --wbtc: #e59c5d;
+  --trx: #ed332a;
+  --dai: #f1b447;
+  --avax: #d84f49;
+  --shib: #db4d36;
+  --dot: #7950dd;
+  --leo: #181c1f;
+  --cro: #1d305a;
+  --ltc: #3b5e98;
+  --near: #000;
+  --uni: #e9357a;
+  --ftt: #7ccfe2;
+  --xmr: #eb702d;
+  --bch: #98c061;
+  --xlm: #000;
+  --link: #3860cb;
+  --etc: #48803d;
+  --atom: #2e3146;
+  --algo: #242424;
+  --flow: #69ea94;
+  --vet: #50bcf9;
+  --hbar: #000;
+  --icp: #4faadd;
+  --mana: #ee575c;
+  --ape: #1d50c6;
+  --xtz: #1967f6;
+  --egld: #050505;
+  --kcs: #51ac92;
+  --sand: #46ade9;
+  --fil: #3591f7;
+  --aave: #9866a1;
+  --zec: #e5b359;
+  --tusd: #205ff6;
+  --eos: #000;
+  --axs: #4e8eec;
+  --theta: #55b6e1;
+  --klay: #ee5128;
+  --mkr: #6bafa3;
+  --ht: #2a3165;
+  --waves: #0b5af5;
+  --hnt: #4255f5;
+  --grt: #4b60bb;
+  --btt: #000;
+  --bsv: #e3b43d;
+  --usdp: #6bb357;
+  --ftm: #276df6;
+  --miota: #242424;
+  --rune: #67e2cc;
+  --xec: #2463b0;
+  --usdn: #6ff9ba;
+  --qnt: #000;
+  --neo: #4aab93;
+  --chz: #be272d;
+  --stx: #4e50f5;
+  --cake: #69d1de;
+  --lrc: #2565f6;
+  --nexo: #1f4393;
+  --okb: #000;
+  --usdd: #366a59;
+  --zil: #69bebe;
+  --dash: #348ce0;
+  --paxg: #cdae44;
+  --gmt: #e9cd87;
+  --crv: #a02217;
+  --ksm: #000;
+  --bat: #ef5d2a;
+  --celo: #f6cd6f;
+  --enj: #8b6ff6;
+  --cvx: #000;
+  --kava: #ef6257;
+  --gala: #000;
+  --one: #6dd1de;
+  --amp: #c73f78;
+  --gno: #031426;
+  --dcr: #3578eb;
+  --xdc: #2b4c7d;
+  --mina: #c86144;
+  --xem: #50ab9b;
+  --ar: #252629;
+  --hot: #7c45f5;
+  --gt: #bc5c57;
+  --fei: #489671;
+  --comp: #5bcf99;
+  --qtum: #024dee;
+  --btg: #e3a93c;
+  --oneinch: #c94054;
+  --bora: #e73ff7;
+  --kda: #c75b86;
+  --icx: #58c2c7;
+  --omg: #000;
+  --rose: #3793ef;
+  --knc: #62c79b;
+  --zrx: #181818;
+  --iotx: #5dd4be;
+  --tfuel: #ef6d31;
+  --iost: #1c1c1c;
+  --ldo: #df8f89;
+  --xym: #6325d6;
+  --ankr: #6299e8;
+  --bnt: #0b1029;
+  --jst: #a62920;
+  --snx: #0c0637;
+  --lpt: #57c37b;
+  --audio: #bf32c8;
+  --glm: #1128a2;
+  --rvn: #38437e;
+  --chsb: #4fb38c;
+  --sc: #6de98d;
+  --srm: #70c8db;
+  --sxp: #ed6a47;
+  --ont: #5ba3f8;
+  --zen: #06183f;
+  --ens: #7e99f3;
+  --imx: #142027;
+  --hive: #e63122;
+  --nft: #131314;
+  --skl: #000;
+  --poly: #4b6198;
+  --mxc: #317a9d;
+  --vgx: #4549cd;
+  --btrst: #19191b;
+  --storj: #3a85f7;
+  --scrt: #000;
+  --renbtc: #eb973d;
+  --uma: #ed5951;
+  --sushi: #be6fac;
+  --yfi: #3065ed;
+  --gusd: #45bcae;
+  --dgb: #226bcb;
+  --keep: #73d7b6;
+  --twt: #4175b6;
+  --rndr: #c02c22;
+  --ocean: #010101;
+  --cspr: #d14638;
+  --ilv: #3129a0;
+  --lsk: #4573ec;
+  --woo: #121824;
+  --rly: #ef612b;
+  --mx: #4eb499;
+  --aca: #c34889;
+  --xno: #449ce3;
+  --nu: #3370ed;
+  --cfx: #1a1a1a;
+  --orbs: #556191;
+  --flux: #3364ca;
+  --med: #3275e2;
+  --ren: #163155;
+  --sys: #2563f6;
+  --wtrx: #ed332a;
+  --tlm: #000;
+  --strax: #063485;
+  --alice: #ea8397;
+  --maid: #5592d7;
+  --hoo: #01cdae;
+  --rgt: #000;
+  --reef: #ac14de;
+  --dawn: #f55d5d;
+  --dar: #000;
+  --strk: #107def;
+  --ghst: #7e18f8;
+  --uqc: #d93637;
+  --meta: #000;
+  --qkc: #00c0ff;
+  --lqty: #2eb6ea;
+  --erg: #000;
+  --rkn: #194187;
+  --rif: #0083ff;
+  --utk: #6932d4;
+  --ark: #b01e20;
+  --ousd: #4b5a65;
+  --zeon: #000;
+  --cfg: #000;
+  --ssx: #f5371e;
+  --bfc: #3642e1;
+  --dusk: #3e238d;
+  --super: #7012fe;
+  --tlos: #9966e4;
+  --aurora: #6fd24d;
+  --ant: #3164fa;
+  --prom: #ec643f;
+  --xwc: #47aaf9;
+  --xvs: #387fff;
+  --nmr: #000;
+  --ssv: #1ba5f8;
+  --perp: #3ceaaa;
+  --onus: #06f;
+  --alpha: #060b47;
+  --pond: #2db8e3;
+  --nkn: #24397d;
+  --rad: #55f;
+  --xvg: #61bbde;
+  --mln: #6f56fd;
+  --agix: #000;
+  --exrd: #00c389;
+  --band: #4520e6;
+  --axel: #1442cc;
+  --zb: #e91c41;
+  --snl: #fdba19;
+  --bor: #0077e7;
+  --mbox: #1b5af5;
+  --boba: #cf0;
+  --bel: #00cba8;
+  --loom: #3b4daf;
+  --wozx: #029a64;
+  --orc: #0767b2;
+  --veri: #f6983f;
+  --ygg: #db2c0a;
+  --beta: #f6aea1;
+  --bake: #ffc772;
+  --kai: #000;
+  --ampl: #000;
+  --qc: #00ef92;
+  --orn: #f708a1;
+  --forth: #000;
+  --hero: #01ebed;
+  --jasmy: #f59627;
+  --dka: #00c1de;
+  --fleta: #114ef6;
+  --klv: #a744ea;
+  --bal: #000;
+  --mngo: #f8a721;
+  --cel: #ffa800;
+  --eps: #64a4e0;
+  --lcx: #1b509a;
+  --xch: #5ba962;
+  --pols: #f35165;
+  --ckb: #000;
+  --wxt: #053f33;
+  --vlx: #0037c1;
+  --dao: #2eb6ff;
+  --ceek: #2e48f0;
+  --cocos: #00f4e4;
+  --xprt: #e50913;
+  --xnc: #1f5b35;
+  --xdb: #43a5f8;
+  --coti: #194aad;
+  --chr: #ffb0c2;
+  --etn: #e5e5e5;
+  --rsr: #111;
+  --powr: #53e55c;
+  --snt: #4360df;
+  --ctsi: #1d1a3f;
+  --badger: #f2a52b;
+  --tel: #14c8ff;
+  --mtl: #c6398d;
+  --dpr: #4a5af3;
+  --c98: #d9b432;
+  --musd: #3e78ee;
+  --ardr: #3c87c7;
+  --pundix: #f1d24a;
+  --dero: #382fa5;
+  --ogn: #1a82ff;
+  --dent: #e73c3c;
+  --pyr: #c63c29;
+  --asd: #925bca;
+  --req: #008c62;
+  --tribe: #3b8dca;
+  --api3: #000;
+  --xyo: #262485;
+  --cvc: #3d5f7d;
+  --safemoon: #14aea5;
+  --tt: #09d1d1;
+  --sps: #ff6e00;
+  --tomo: #00e8b5;
+  --mask: #1c68f3;
+  --anc: #4bdb4b;
+  --nsbt: #623ed1;
+  --xpr: #7543e3;
+  --con: #1d428a;
+  --hunt: #fc6f6f;
+  --gene: #07fcc7;
+  --aergo: #e4097d;
+  --dvf: #6436ff;
+  --idex: #662bc9;
+  --mbl: #5b449b;
+  --arpa: #263145;
+  --flm: #dc44bf;
+  --egg: #00cfff;
+  --bmx: #36cfc9;
+  --atolo: #59eea3;
+  --dpi: #8150e6;
+  --sero: #429bf4;
+  --crts: #46acd6;
+  --stake: #48a9a6;
+  --gxc: #2116e5;
+  --clt: #007aff;
+  --sfp: #3f37ff;
+  --mft: #6e2ef4;
+  --mona: #dec799;
+  --cre: #35c480;
+  --blz: #7b84ff;
+  --vusdt: #fdbf43;
+  --noia: #a72f5c;
+  --lto: #9721b2;
+  --tru: #1a5aff;
+  --clv: #a9ffe0;
+  --cennz: #1130ff;
+  --gmt: #0063ff;
+  --wan: #2daef1;
+  --starl: #ff8943;
+  --bnana: #1457ff;
+  --aioz: #10b981;
+  --hyn: #000;
+  --ata: #b3502d;
+  --rbn: #fc0a54;
+  --mc: #e26828;
+  --yooshi: #65ca32;
+  --htr: #000;
+  --sos: #7ea5e0;
+  --gtc: #25e899;
+  --ae: #ce4272;
+  --akt: #e41e13;
+  --steem: #171fc9;
+  --lit: #14ea85;
+  --youc: #8e44ff;
+  --steth: #00a3ff;
+  --pre: #2d8eff;
+  --xcn: #00bfab;
+  --frax: #000;
+  --ton: #08c;
+  --wbnb: #f0b90b;
+  --bttold: #000;
+  --log: #48c57d;
+  --lusd: #1542cd;
+  --dfi: #ff00af;
+  --xaut: #c0a161;
+  --mlk: #2ea6a3;
+  --frts: #d2783d;
+  --lunc: #ffd83c;
+  --wemix: #27ea84;
+  --husd: #005ffa;
+  --bnx: #f0404c;
+  --t: #5f0fda;
+  --ttt: #5c00e9;
+  --lon: #5e54a7;
+  --osmo: #d101ce;
+  --vr: #ffab02;
+  --pha: #d1ff52;
+  --prq: #2d61b0;
+  --phl: #d35b2d;
+  --5ire: #1a1a2c;
+  --kzen: #e33c3c;
+  --sqr: #151515;
+  --fluid: #00d6f3;
+  --saffle: #002051;
+  --zam: #9ff381;
+  --fuse: #c6f9ac;
+  --1art: #5622ed;
+  --ufi: #151515;
+  --cgu: #7636e2;
+  --kiro: #eb00ff;
+  --arnx: #0086b6;
+  --btcp: #272d63;
+  --bsd: #000;
+  --bts: #000;
+  --blk: #d5a653;
+  --bcd: #f79421;
+  --tko: #1aa64a;
+  --troy: #29cfd9;
+  --nrg: #00e676;
+  --alpaca: #31c77f;
+  --alpine: #fcd535;
+  --swp: #ff564f;
+  --rmrk: #ca2b77;
+  --blct: #009080;
+  --hopr: #0101b4;
+  --aethc: #ffe81c;
+  --hydra: #026fc2;
+  --cbk: #0096ff;
+  --blok: #ff47ff;
+  --qom: #b8fd52;
+  --rfr: #803aff;
+  --dia: #4f33ff;
+  --hns: #000;
+  --bzrx: #33dfcc;
+  --grs: #0093bb;
+  --vega: #000;
+  --bzz: #dd7200;
+  --fct: #000;
+  --rei: #2116e5;
+  --alcx: #f5c09a;
+  --cqt: #ff4c8b;
+  --nct: #6e3bec;
+  --gas: #00e599;
+  --sfund: #37d9fd;
+  --ufo: #9f36da;
+  --eum: #63e078;
+  --rise: #cf1d39;
+  --fox: #376ef8;
+  --tvk: #ebe737;
+  --vra: #ed0a4b;
+  --unfi: #38f997;
+  --soul: #17b1e7;
+  --cos: #3a62bf;
+  --kmd: #0efff5;
+  --fio: #58b0e4;
+  --voxel: #0074ff;
+  --boson: #14f9ab;
+  --akro: #d944ab;
+  --farm: #edae50;
+  --efi: #7567ce;
+  --vxvs: #fdbe40;
+  --hard: #4d2176;
+  --mev: #fcbd1a;
+  --asm: #f5c200;
+  --mwc: #8400e0;
+  --vxv: #7ba3b1;
+  --drep: #fed419;
+  --boo: #6665dd;
+  --quack: #ffbb0b;
+  --coval: #5529ff;
+  --dnt: #7cf8fa;
+  --tpt: #2980fe;
+  --kin: #693be1;
+  --krt: #0e3ca5;
+  --dad: #00a7fd;
+  --cet: #17e5aa;
+  --prq: #0975f7;
+  --amo: #000;
+  --nif: #d340c4;
+  --ern: #22ace6;
+  --ctxc: #327fc1;
+  --iris: #1d87cd;
+  --aury: #e857cc;
+  --adx: #7d1dff;
+  --agld: #000;
+  --kp3r: #000;
+  --baby: #ecb53f;
+  --chess: #9edc39;
+  --rev: #ac1d36;
+  --slp: #204bba;
+  --dg: #006cff;
+  --psg: #005596;
+  --gyen: #005bac;
+  --ddx: #2d1680;
+  --torn: #44f1a6;
+  --rss3: #0b70ff;
+  --vbit: #fe6d25;
+  --mix: #ffd201;
+  --sdao: #e6732a;
+  --btse: #0e90f6;
+  --firo: #9b1c2e;
+  --apx: #5849ff;
+  --data: #ff6201;
+  --swap: #2e6acc;
+  --nmc: #6787b7;
+  --fis: #00f3ab;
+  --ichi: #016cf1;
+  --tnb: #ffc04e;
+  --la: #9ca1fb;
+  --nye: #9b0707;
+  --pnk: #9013fe;
+  --cube: #5a93ab;
+  --mnw: #375479;
+  --dxd: #3c59fe;
+  --trb: #20f092;
+  --peak: #0091c8;
+  --ctx: #a450e6;
+  --msol: #308d8a;
+  --bond: #ff4339;
+  --lazio: #84d8f9;
+  --aht: #1fc7c1;
+  --oxen: #12c7ba;
+  --om: #ed1b6c;
+  --maro: #96f2e5;
+  --kilt: #8c175b;
+  --ramp: #31c2da;
+  --fsn: #358dcc;
+  --ask: #f0ad4e;
+  --movez: #fc4c02;
+  --biot: #b2d026;
+  --rari: #3073ff;
+  --mdt: #5d9bec;
+  --math: #007aff;
+  --derc: #fd115c;
+  --dx: #fcb81d;
+  --rare: #1a73e8;
+  --reap: #f65632;
+  --front: #cc703c;
+  --key: #00d1e5;
+  --yld: #2c5ba4;
+  --samo: #a30eae;
+  --qash: #1248e8;
+  --six: #1b94d1;
+  --sofi: #b459ff;
+  --nuls: #00e789;
+  --ult: #86f9ff;
+  --hez: #7b3fe4;
+  --rai: #41c2ce;
+  --suku: #00f100;
+  --xhv: #8f6cbe;
+  --santos: #debd34;
+  --wild: #926cad;
+  --bar: #9e0000;
+  --rvp: #f7413a;
+  --wnxm: #60d3a2;
+  --qsp: #4cbbfd;
+  --city: #71a5cb;
+  --high: #02edfe;
+  --mof: #249fdb;
+  --btm: #1a64f2;
+  --bidr: #f0b90b;
+  --sdn: #764bc4;
+  --fida: #bfb9e4;
+  --usdj: #d73117;
+  --time: #ff8a62;
+  --mith: #03397b;
+  --quick: #408ac9;
+  --dexe: #7fffd4;
+  --gto: #af21c7;
+  --beam: #0b76ff;
+  --df: #9830f4;
+  --idrt: #cc4641;
+  --rook: #2f374c;
+  --rfox: #cd0d0d;
+  --hbtc: #2449ff;
+  --lusd: #2eb6ea;
+  --safe: #007bff;
+  --pla: #04d6b4;
+  --luna: #f2e373;
+  --bit: #adff00;
+  --nxm: #1eab89;
+  --titan: #2d5cfe;
+  --ln: #0ad599;
+  --cbg: #8a50fd;
+  --astr: #0ae2ff;
+  --ach: #050f66;
+  --acm: #e0071b;
+  --adadown: #0438a7;
+  --adaup: #0438a7;
+  --aion: #f44218;
+  --amb: #2153b4;
+  --asr: #ffb300;
+  --ast: #2c70ff;
+  --atm: #344171;
+  --auction: #000;
+  --aud: #0f3679;
+  --auto: #4958c5;
+  --ava: #2d2d4f;
+  --crodo: #4621ac;
+  --beth: #9d80d9;
+  --bico: #ea4300;
+  --bifi: #76bf94;
+  --bnbdown: #f0b90b;
+  --bnbdown: #f0b90b;
+  --brd: #ff568e;
+  --bsw: #1295ee;
+  --btcdown: #f7931a;
+  --btcst: #c7b8dd;
+  --btcup: #f7931a;
+  --bttc: #000;
+  --burger: #f0b80b;
+  --celr: #000;
+  --cream: #69e2dc;
+  --ctk: #e1ab4c;
+  --cvp: #000;
+  --dego: #22d99d;
+  --dock: #0063f7;
+  --dodo: #fff706;
+  --dotdown: #d53079;
+  --dotup: #d53079;
+  --dydx: #6966ff;
+  --elf: #2c5da8;
+  --epx: #bf57df;
+  --eth: #1c1cff;
+  --ethdown: #1c1cff;
+  --ethup: #1c1cff;
+  --eur: #2569e4;
+  --ez: #ff9e00;
+  --fet: #000;
+  --for: #52f9de;
+  --fun: #ec1966;
+  --fxs: #000;
+  --gal: #3671ff;
+  --gbp: #0f3679;
+  --glmr: #53cbc8;
+  --go: #008acb;
+  --inj: #00a4b8;
+  --iota: #000;
+  --iq: #ff5caa;
+  --joe: #f2716a;
+  --juv: #000;
+  --lina: #3256fa;
+  --linkdown: #3860cb;
+  --linkup: #3860cb;
+  --loka: #106cff;
+  --matic: #7b3fe4;
+  --mda: #5cc767;
+  --mdx: #4ca9dc;
+  --mir: #000;
+  --mob: #421c66;
+  --movr: #f2b705;
+  --multi: #9649f5;
+  --nas: #652ff7;
+  --nav: #d024bc;
+  --nbs: #01d8cc;
+  --nebl: #19ced4;
+  --nxs: #0ca4fb;
+  --oax: #22236f;
+  --og: #051c44;
+  --ong: #4baaff;
+  --ooki: #47aaff;
+  --op: #ff0420;
+  --oxt: #5f45ba;
+  --people: #f7d7c4;
+  --perl: #26ac93;
+  --phb: #ef4e23;
+  --pivx: #8821ff;
+  --pnt: #f66;
+  --porto: #0069a9;
+  --pros: #d1bbf8;
+  --qi: #5496a7;
+  --qlc: #05c7ff;
+  --ray: #8467fb;
+  --rep: #2ae7a8;
+  --rlc: #fbdc01;
+  --snm: #6522ff;
+  --sparta: #fb2715;
+  --spell: #9d61ff;
+  --stmx: #fa2e53;
+  --stpt: #25aae1;
+  --sun: #f8ba3a;
+  --tct: #2871db;
+  --trxdown: #ed332a;
+  --trxup: #ed332a;
+  --uft: #2b6def;
+  --ustc: #0e3ca5;
+  --vib: #ff1f43;
+  --vidt: #00c3d0;
+  --vite: #007aff;
+  --vtho: #25aff7;
+  --wabi: #ff5847;
+  --waxp: #f78e1e;
+  --win: #fbc509;
+  --wing: #60effb;
+  --wrx: #3067f0;
+  --wtc: #8200ff;
+  --xrpdown: #24292e;
+  --xrpup: #24292e;
+  --yfii: #ff2c7f;
+  --kar: #eb1d53;
+  --apt: #000;
+  --dcrn: #397afb;
+  --ethf: #b9a6ff;
+  --ethw: #6e89d3;
+  --hegic: #15c07c;
+  --aaveup: #f3ba2f;
+  --aavedown: #f3ba2f;
+  --susd: #00d1ff;
+  --cover: #272727;
+  --sushiup: #f3ba2f;
+  --sushidown: #f3ba2f;
+  --xlmup: #f3ba2f;
+  --xlmdown: #f3ba2f;
+  --bvnd: #f3ba2f;
+  --vai: #73bb59;
+  --any: #ff9860;
+  --ust: #2e84ff;
+  --bdot: #e6007a;
+  --nbt: #8d5adc;
+  --lever: #5aa800;
+  --stg: #666;
+  --gmx: #4a25ee;
+  --pln: #fb2a52;
+  --hft: #0f1319;
+  --hook: #a6f21c;
+  --magic: #dc2626;
+  --ron: #1273ea;
+  --mco: #061121;
+  --icn: #00a2ea;
+  --yoyow: #007bff;
+  --sngls: #aa1e24;
+  --salt: #0fb;
+  --mth: #0072ff;
+  --evx: #2f50a2;
+  --mod: #24c6ef;
+  --rcn: #4555fc;
+  --bcpt: #fb985b;
+  --gvt: #16b9ad;
+  --poe: #dfdad7;
+  --dgd: #c7a35c;
+  --ppt: #29405f;
+  --ost: #213b4a;
+  --edo: #12b29f;
+  --aapc: #fd8f56;
+  --ins: #65d4ff;
+  --chat: #1ba2f8;
+  --via: #0077fe;
+  --ncash: #3fb8e1;
+  --storm: #025bf7;
+  --wpr: #fdf004;
+  --gnt: #fece3b;
+  --bcn: #f04086;
+  --npxs: #eecc12;
+  --btcb: #f89e32;
+  --erd: #f2741f;
+  --ngn: #6b3290;
+  --bkrw: #f0b90b;
+  --bidr: #f0b90b;
+  --xtzup: #2e7ff7;
+  --xtzdown: #2e7ff7;
+  --eosup: #f3ba2f;
+  --eosdown: #f3ba2f;
+  --swrv: #202427;
+  --ltcup: #f3ba2f;
+  --ltcdown: #f3ba2f;
+  --uniup: #f3ba2f;
+  --unidown: #f3ba2f;
+  --brl: #5df3d0;
+  --sxpup: #f3ba2f;
+  --sxpdown: #f3ba2f;
+  --filup: #f3ba2f;
+  --fildown: #f3ba2f;
+  --yfiup: #f3ba2f;
+  --yfidown: #f3ba2f;
+  --bchup: #f3ba2f;
+  --bchdown: #f3ba2f;
+  --bnbup: #e9ba41;
+  --bmc: #000;
+  --lat: #000;
+  --appc: #ff862e;
+}
+
+.APT-color-bg {
+  background-color: var(--apt);
+}
+
+.DCRN-color-bg {
+  background-color: var(--dcrn);
+}
+
+.ETHF-color-bg {
+  background-color: var(--ethf);
+}
+
+.ETHW-color-bg {
+  background-color: var(--ethw);
+}
+
+.KAR-color-bg {
+  background-color: var(--kar);
+}
+
+.BTC-color-bg {
+  background-color: var(--btc);
+}
+
+.LAT-color-bg {
+  background-color: var(--lat);
+}
+
+.BNBUP-color-bg {
+  background-color: var(--bnbup);
+}
+
+.KP3R-color-bg {
+  background-color: var(--kp3r);
+}
+
+.BMC-color-bg {
+  background-color: var(--bmc);
+}
+
+.USDT-color-bg {
+  background-color: var(--usdt);
+}
+
+.USDC-color-bg {
+  background-color: var(--usdc);
+}
+
+.BNB-color-bg {
+  background-color: var(--bnb);
+}
+
+.ADA-color-bg {
+  background-color: var(--ada);
+}
+
+.XRP-color-bg {
+  background-color: var(--xrp);
+}
+
+.BUSD-color-bg {
+  background-color: var(--busd);
+}
+
+.SOL-color-bg {
+  background-color: var(--sol);
+}
+
+.DOGE-color-bg {
+  background-color: var(--doge);
+}
+
+.DOT-color-bg {
+  background-color: var(--dot);
+}
+
+.CRODO-color-bg {
+  background-color: var(--crodo);
+}
+
+.WBTC-color-bg {
+  background-color: var(--wbtc);
+}
+
+.TRX-color-bg {
+  background-color: var(--trx);
+}
+
+.DAI-color-bg {
+  background-color: var(--dai);
+}
+
+.AVAX-color-bg {
+  background-color: var(--avax);
+}
+
+.SHIB-color-bg {
+  background-color: var(--shib);
+}
+
+.DOT-color-bg {
+  background-color: var(--dot);
+}
+
+.LEO-color-bg {
+  background-color: var(--leo);
+}
+
+.CRO-color-bg {
+  background-color: var(--cro);
+}
+
+.LTC-color-bg {
+  background-color: var(--ltc);
+}
+
+.NEAR-color-bg {
+  background-color: var(--near);
+}
+
+.UNI-color-bg {
+  background-color: var(--uni);
+}
+
+.FTT-color-bg {
+  background-color: var(--ftt);
+}
+
+.XMR-color-bg {
+  background-color: var(--xmr);
+}
+
+.BCH-color-bg {
+  background-color: var(--bch);
+}
+
+.XLM-color-bg {
+  background-color: var(--xlm);
+}
+
+.LINK-color-bg {
+  background-color: var(--link);
+}
+
+.ETC-color-bg {
+  background-color: var(--etc);
+}
+
+.ATOM-color-bg {
+  background-color: var(--atom);
+}
+
+.ALGO-color-bg {
+  background-color: var(--algo);
+}
+
+.FLOW-color-bg {
+  background-color: var(--flow);
+}
+
+.VET-color-bg {
+  background-color: var(--vet);
+}
+
+.HBAR-color-bg {
+  background-color: var(--hbar);
+}
+
+.ICP-color-bg {
+  background-color: var(--icp);
+}
+
+.MANA-color-bg {
+  background-color: var(--mana);
+}
+
+.APE-color-bg {
+  background-color: var(--ape);
+}
+
+.XTZ-color-bg {
+  background-color: var(--xtz);
+}
+
+.EGLD-color-bg {
+  background-color: var(--egld);
+}
+
+.KCS-color-bg {
+  background-color: var(--kcs);
+}
+
+.SAND-color-bg {
+  background-color: var(--sand);
+}
+
+.FIL-color-bg {
+  background-color: var(--fil);
+}
+
+.AAVE-color-bg {
+  background-color: var(--aave);
+}
+
+.ZEC-color-bg {
+  background-color: var(--zec);
+}
+
+.TUSD-color-bg {
+  background-color: var(--tusd);
+}
+
+.EOS-color-bg {
+  background-color: var(--eos);
+}
+
+.AXS-color-bg {
+  background-color: var(--axs);
+}
+
+.THETA-color-bg {
+  background-color: var(--theta);
+}
+
+.KLAY-color-bg {
+  background-color: var(--klay);
+}
+
+.MKR-color-bg {
+  background-color: var(--mkr);
+}
+
+.HT-color-bg {
+  background-color: var(--ht);
+}
+
+.WAVES-color-bg {
+  background-color: var(--waves);
+}
+
+.HNT-color-bg {
+  background-color: var(--hnt);
+}
+
+.GRT-color-bg {
+  background-color: var(--grt);
+}
+
+.BTT-color-bg {
+  background-color: var(--btt);
+}
+
+.BSV-color-bg {
+  background-color: var(--bsv);
+}
+
+.USDP-color-bg {
+  background-color: var(--usdp);
+}
+
+.FTM-color-bg {
+  background-color: var(--ftm);
+}
+
+.MIOTA-color-bg {
+  background-color: var(--miota);
+}
+
+.RUNE-color-bg {
+  background-color: var(--rune);
+}
+
+.XEC-color-bg {
+  background-color: var(--xec);
+}
+
+.USDN-color-bg {
+  background-color: var(--usdn);
+}
+
+.QNT-color-bg {
+  background-color: var(--qnt);
+}
+
+.NEO-color-bg {
+  background-color: var(--neo);
+}
+
+.CHZ-color-bg {
+  background-color: var(--chz);
+}
+
+.STX-color-bg {
+  background-color: var(--stx);
+}
+
+.CAKE-color-bg {
+  background-color: var(--cake);
+}
+
+.LRC-color-bg {
+  background-color: var(--lrc);
+}
+
+.NEXO-color-bg {
+  background-color: var(--nexo);
+}
+
+.OKB-color-bg {
+  background-color: var(--okb);
+}
+
+.USDD-color-bg {
+  background-color: var(--usdd);
+}
+
+.ZIL-color-bg {
+  background-color: var(--zil);
+}
+
+.DASH-color-bg {
+  background-color: var(--dash);
+}
+
+.PAXG-color-bg {
+  background-color: var(--paxg);
+}
+
+.GMT-color-bg {
+  background-color: var(--gmt);
+}
+
+.CRV-color-bg {
+  background-color: var(--crv);
+}
+
+.KSM-color-bg {
+  background-color: var(--ksm);
+}
+
+.BAT-color-bg {
+  background-color: var(--bat);
+}
+
+.CELO-color-bg {
+  background-color: var(--celo);
+}
+
+.ENJ-color-bg {
+  background-color: var(--enj);
+}
+
+.CVX-color-bg {
+  background-color: var(--cvx);
+}
+
+.KAVA-color-bg {
+  background-color: var(--kava);
+}
+
+.GALA-color-bg {
+  background-color: var(--gala);
+}
+
+.ONE-color-bg {
+  background-color: var(--one);
+}
+
+.AMP-color-bg {
+  background-color: var(--amp);
+}
+
+.GNO-color-bg {
+  background-color: var(--gno);
+}
+
+.DCR-color-bg {
+  background-color: var(--dcr);
+}
+
+.XDC-color-bg {
+  background-color: var(--xdc);
+}
+
+.MINA-color-bg {
+  background-color: var(--mina);
+}
+
+.XEM-color-bg {
+  background-color: var(--xem);
+}
+
+.AR-color-bg {
+  background-color: var(--ar);
+}
+
+.HOT-color-bg {
+  background-color: var(--hot);
+}
+
+.GT-color-bg {
+  background-color: var(--gt);
+}
+
+.FEI-color-bg {
+  background-color: var(--fei);
+}
+
+.COMP-color-bg {
+  background-color: var(--comp);
+}
+
+.QTUM-color-bg {
+  background-color: var(--qtum);
+}
+
+.BTG-color-bg {
+  background-color: var(--btg);
+}
+
+.ONEINCH-color-bg {
+  background-color: var(--oneinch);
+}
+
+.BORA-color-bg {
+  background-color: var(--bora);
+}
+
+.KDA-color-bg {
+  background-color: var(--kda);
+}
+
+.ICX-color-bg {
+  background-color: var(--icx);
+}
+
+.OMG-color-bg {
+  background-color: var(--omg);
+}
+
+.ROSE-color-bg {
+  background-color: var(--rose);
+}
+
+.KNC-color-bg {
+  background-color: var(--knc);
+}
+
+.ZRX-color-bg {
+  background-color: var(--zrx);
+}
+
+.IOTX-color-bg {
+  background-color: var(--iotx);
+}
+
+.TFUEL-color-bg {
+  background-color: var(--tfuel);
+}
+
+.IOST-color-bg {
+  background-color: var(--iost);
+}
+
+.LDO-color-bg {
+  background-color: var(--ldo);
+}
+
+.XYM-color-bg {
+  background-color: var(--xym);
+}
+
+.ANKR-color-bg {
+  background-color: var(--ankr);
+}
+
+.BNT-color-bg {
+  background-color: var(--bnt);
+}
+
+.JST-color-bg {
+  background-color: var(--jst);
+}
+
+.SNX-color-bg {
+  background-color: var(--snx);
+}
+
+.LPT-color-bg {
+  background-color: var(--lpt);
+}
+
+.AUDIO-color-bg {
+  background-color: var(--audio);
+}
+
+.GLM-color-bg {
+  background-color: var(--glm);
+}
+
+.RVN-color-bg {
+  background-color: var(--rvn);
+}
+
+.CHSB-color-bg {
+  background-color: var(--chsb);
+}
+
+.SC-color-bg {
+  background-color: var(--sc);
+}
+
+.SRM-color-bg {
+  background-color: var(--srm);
+}
+
+.SXP-color-bg {
+  background-color: var(--sxp);
+}
+
+.ONT-color-bg {
+  background-color: var(--ont);
+}
+
+.ZEN-color-bg {
+  background-color: var(--zen);
+}
+
+.ENS-color-bg {
+  background-color: var(--ens);
+}
+
+.IMX-color-bg {
+  background-color: var(--imx);
+}
+
+.HIVE-color-bg {
+  background-color: var(--hive);
+}
+
+.NFT-color-bg {
+  background-color: var(--nft);
+}
+
+.SKL-color-bg {
+  background-color: var(--skl);
+}
+
+.POLY-color-bg {
+  background-color: var(--poly);
+}
+
+.MXC-color-bg {
+  background-color: var(--mxc);
+}
+
+.VGX-color-bg {
+  background-color: var(--vgx);
+}
+
+.BTRST-color-bg {
+  background-color: var(--btrst);
+}
+
+.STORJ-color-bg {
+  background-color: var(--storj);
+}
+
+.SCRT-color-bg {
+  background-color: var(--scrt);
+}
+
+.RENBTC-color-bg {
+  background-color: var(--renbtc);
+}
+
+.UMA-color-bg {
+  background-color: var(--uma);
+}
+
+.SUSHI-color-bg {
+  background-color: var(--sushi);
+}
+
+.YFI-color-bg {
+  background-color: var(--yfi);
+}
+
+.GUSD-color-bg {
+  background-color: var(--gusd);
+}
+
+.DGB-color-bg {
+  background-color: var(--dgb);
+}
+
+.KEEP-color-bg {
+  background-color: var(--keep);
+}
+
+.TWT-color-bg {
+  background-color: var(--twt);
+}
+
+.RNDR-color-bg {
+  background-color: var(--rndr);
+}
+
+.OCEAN-color-bg {
+  background-color: var(--ocean);
+}
+
+.CSPR-color-bg {
+  background-color: var(--cspr);
+}
+
+.ILV-color-bg {
+  background-color: var(--ilv);
+}
+
+.LSK-color-bg {
+  background-color: var(--lsk);
+}
+
+.WOO-color-bg {
+  background-color: var(--woo);
+}
+
+.RLY-color-bg {
+  background-color: var(--rly);
+}
+
+.MX-color-bg {
+  background-color: var(--mx);
+}
+
+.ACA-color-bg {
+  background-color: var(--aca);
+}
+
+.XNO-color-bg {
+  background-color: var(--xno);
+}
+
+.NU-color-bg {
+  background-color: var(--nu);
+}
+
+.CFX-color-bg {
+  background-color: var(--cfx);
+}
+
+.ORBS-color-bg {
+  background-color: var(--orbs);
+}
+
+.FLUX-color-bg {
+  background-color: var(--flux);
+}
+
+.MED-color-bg {
+  background-color: var(--med);
+}
+
+.REN-color-bg {
+  background-color: var(--ren);
+}
+
+.SYS-color-bg {
+  background-color: var(--sys);
+}
+
+.WTRX-color-bg {
+  background-color: var(--wtrx);
+}
+
+.TLM-color-bg {
+  background-color: var(--tlm);
+}
+
+.STRAX-color-bg {
+  background-color: var(--strax);
+}
+
+.ALICE-color-bg {
+  background-color: var(--alice);
+}
+
+.MAID-color-bg {
+  background-color: var(--maid);
+}
+
+.HOO-color-bg {
+  background-color: var(--hoo);
+}
+
+.RGT-color-bg {
+  background-color: var(--rgt);
+}
+
+.REEF-color-bg {
+  background-color: var(--reef);
+}
+
+.DAWN-color-bg {
+  background-color: var(--dawn);
+}
+
+.DAR-color-bg {
+  background-color: var(--dar);
+}
+
+.STRK-color-bg {
+  background-color: var(--strk);
+}
+
+.GHST-color-bg {
+  background-color: var(--ghst);
+}
+
+.UQC-color-bg {
+  background-color: var(--uqc);
+}
+
+.META-color-bg {
+  background-color: var(--meta);
+}
+
+.QKC-color-bg {
+  background-color: var(--qkc);
+}
+
+.LQTY-color-bg {
+  background-color: var(--lqty);
+}
+
+.ERG-color-bg {
+  background-color: var(--erg);
+}
+
+.RKN-color-bg {
+  background-color: var(--rkn);
+}
+
+.RIF-color-bg {
+  background-color: var(--rif);
+}
+
+.UTK-color-bg {
+  background-color: var(--utk);
+}
+
+.ARK-color-bg {
+  background-color: var(--ark);
+}
+
+.OUSD-color-bg {
+  background-color: var(--ousd);
+}
+
+.ZEON-color-bg {
+  background-color: var(--zeon);
+}
+
+.CFG-color-bg {
+  background-color: var(--cfg);
+}
+
+.SSX-color-bg {
+  background-color: var(--ssx);
+}
+
+.BFC-color-bg {
+  background-color: var(--bfc);
+}
+
+.DUSK-color-bg {
+  background-color: var(--dusk);
+}
+
+.SUPER-color-bg {
+  background-color: var(--super);
+}
+
+.TLOS-color-bg {
+  background-color: var(--tlos);
+}
+
+.AURORA-color-bg {
+  background-color: var(--aurora);
+}
+
+.ANT-color-bg {
+  background-color: var(--ant);
+}
+
+.PROM-color-bg {
+  background-color: var(--prom);
+}
+
+.XWC-color-bg {
+  background-color: var(--xwc);
+}
+
+.XVS-color-bg {
+  background-color: var(--xvs);
+}
+
+.NMR-color-bg {
+  background-color: var(--nmr);
+}
+
+.SSV-color-bg {
+  background-color: var(--ssv);
+}
+
+.PERP-color-bg {
+  background-color: var(--perp);
+}
+
+.ONUS-color-bg {
+  background-color: var(--onus);
+}
+
+.ALPHA-color-bg {
+  background-color: var(--alpha);
+}
+
+.POND-color-bg {
+  background-color: var(--pond);
+}
+
+.NKN-color-bg {
+  background-color: var(--nkn);
+}
+
+.RAD-color-bg {
+  background-color: var(--rad);
+}
+
+.XVG-color-bg {
+  background-color: var(--xvg);
+}
+
+.MLN-color-bg {
+  background-color: var(--mln);
+}
+
+.AGIX-color-bg {
+  background-color: var(--agix);
+}
+
+.EXRD-color-bg {
+  background-color: var(--exrd);
+}
+
+.BAND-color-bg {
+  background-color: var(--band);
+}
+
+.AXEL-color-bg {
+  background-color: var(--axel);
+}
+
+.ZB-color-bg {
+  background-color: var(--zb);
+}
+
+.SNL-color-bg {
+  background-color: var(--snl);
+}
+
+.BOR-color-bg {
+  background-color: var(--bor);
+}
+
+.MBOX-color-bg {
+  background-color: var(--mbox);
+}
+
+.BOBA-color-bg {
+  background-color: var(--boba);
+}
+
+.BEL-color-bg {
+  background-color: var(--bel);
+}
+
+.LOOM-color-bg {
+  background-color: var(--loom);
+}
+
+.WOZX-color-bg {
+  background-color: var(--wozx);
+}
+
+.ORC-color-bg {
+  background-color: var(--orc);
+}
+
+.VERI-color-bg {
+  background-color: var(--veri);
+}
+
+.YGG-color-bg {
+  background-color: var(--ygg);
+}
+
+.BETA-color-bg {
+  background-color: var(--beta);
+}
+
+.BAKE-color-bg {
+  background-color: var(--bake);
+}
+
+.KAI-color-bg {
+  background-color: var(--kai);
+}
+
+.AMPL-color-bg {
+  background-color: var(--ampl);
+}
+
+.QC-color-bg {
+  background-color: var(--qc);
+}
+
+.ORN-color-bg {
+  background-color: var(--orn);
+}
+
+.FORTH-color-bg {
+  background-color: var(--forth);
+}
+
+.HERO-color-bg {
+  background-color: var(--hero);
+}
+
+.JASMY-color-bg {
+  background-color: var(--jasmy);
+}
+
+.DKA-color-bg {
+  background-color: var(--dka);
+}
+
+.FLETA-color-bg {
+  background-color: var(--fleta);
+}
+
+.KLV-color-bg {
+  background-color: var(--klv);
+}
+
+.BAL-color-bg {
+  background-color: var(--bal);
+}
+
+.MNGO-color-bg {
+  background-color: var(--mngo);
+}
+
+.CEL-color-bg {
+  background-color: var(--cel);
+}
+
+.EPS-color-bg {
+  background-color: var(--eps);
+}
+
+.LCX-color-bg {
+  background-color: var(--lcx);
+}
+
+.XCH-color-bg {
+  background-color: var(--xch);
+}
+
+.POLS-color-bg {
+  background-color: var(--pols);
+}
+
+.CKB-color-bg {
+  background-color: var(--ckb);
+}
+
+.WXT-color-bg {
+  background-color: var(--wxt);
+}
+
+.VLX-color-bg {
+  background-color: var(--vlx);
+}
+
+.DAO-color-bg {
+  background-color: var(--dao);
+}
+
+.CEEK-color-bg {
+  background-color: var(--ceek);
+}
+
+.COCOS-color-bg {
+  background-color: var(--cocos);
+}
+
+.XPRT-color-bg {
+  background-color: var(--xprt);
+}
+
+.XNC-color-bg {
+  background-color: var(--xnc);
+}
+
+.XDB-color-bg {
+  background-color: var(--xdb);
+}
+
+.COTI-color-bg {
+  background-color: var(--coti);
+}
+
+.CHR-color-bg {
+  background-color: var(--chr);
+}
+
+.ETN-color-bg {
+  background-color: var(--etn);
+}
+
+.RSR-color-bg {
+  background-color: var(--rsr);
+}
+
+.POWR-color-bg {
+  background-color: var(--powr);
+}
+
+.SNT-color-bg {
+  background-color: var(--snt);
+}
+
+.CTSI-color-bg {
+  background-color: var(--ctsi);
+}
+
+.BADGER-color-bg {
+  background-color: var(--badger);
+}
+
+.TEL-color-bg {
+  background-color: var(--tel);
+}
+
+.MTL-color-bg {
+  background-color: var(--mtl);
+}
+
+.DPR-color-bg {
+  background-color: var(--dpr);
+}
+
+.C98-color-bg {
+  background-color: var(--c98);
+}
+
+.MUSD-color-bg {
+  background-color: var(--musd);
+}
+
+.ARDR-color-bg {
+  background-color: var(--ardr);
+}
+
+.PUNDIX-color-bg {
+  background-color: var(--pundix);
+}
+
+.DERO-color-bg {
+  background-color: var(--dero);
+}
+
+.OGN-color-bg {
+  background-color: var(--ogn);
+}
+
+.DENT-color-bg {
+  background-color: var(--dent);
+}
+
+.PYR-color-bg {
+  background-color: var(--pyr);
+}
+
+.ASD-color-bg {
+  background-color: var(--asd);
+}
+
+.REQ-color-bg {
+  background-color: var(--req);
+}
+
+.TRIBE-color-bg {
+  background-color: var(--tribe);
+}
+
+.API3-color-bg {
+  background-color: var(--api3);
+}
+
+.XYO-color-bg {
+  background-color: var(--xyo);
+}
+
+.CVC-color-bg {
+  background-color: var(--cvc);
+}
+
+.SAFEMOON-color-bg {
+  background-color: var(--safemoon);
+}
+
+.TT-color-bg {
+  background-color: var(--tt);
+}
+
+.SPS-color-bg {
+  background-color: var(--sps);
+}
+
+.TOMO-color-bg {
+  background-color: var(--tomo);
+}
+
+.MASK-color-bg {
+  background-color: var(--mask);
+}
+
+.ANC-color-bg {
+  background-color: var(--anc);
+}
+
+.NSBT-color-bg {
+  background-color: var(--nsbt);
+}
+
+.XPR-color-bg {
+  background-color: var(--xpr);
+}
+
+.CON-color-bg {
+  background-color: var(--con);
+}
+
+.HUNT-color-bg {
+  background-color: var(--hunt);
+}
+
+.GENE-color-bg {
+  background-color: var(--gene);
+}
+
+.AERGO-color-bg {
+  background-color: var(--aergo);
+}
+
+.DVF-color-bg {
+  background-color: var(--dvf);
+}
+
+.IDEX-color-bg {
+  background-color: var(--idex);
+}
+
+.MBL-color-bg {
+  background-color: var(--mbl);
+}
+
+.ARPA-color-bg {
+  background-color: var(--arpa);
+}
+
+.FLM-color-bg {
+  background-color: var(--flm);
+}
+
+.EGG-color-bg {
+  background-color: var(--egg);
+}
+
+.BMX-color-bg {
+  background-color: var(--bmx);
+}
+
+.ATOLO-color-bg {
+  background-color: var(--atolo);
+}
+
+.DPI-color-bg {
+  background-color: var(--dpi);
+}
+
+.SERO-color-bg {
+  background-color: var(--sero);
+}
+
+.CRTS-color-bg {
+  background-color: var(--crts);
+}
+
+.STAKE-color-bg {
+  background-color: var(--stake);
+}
+
+.GXC-color-bg {
+  background-color: var(--gxc);
+}
+
+.CLT-color-bg {
+  background-color: var(--clt);
+}
+
+.SFP-color-bg {
+  background-color: var(--sfp);
+}
+
+.MFT-color-bg {
+  background-color: var(--mft);
+}
+
+.MONA-color-bg {
+  background-color: var(--mona);
+}
+
+.CRE-color-bg {
+  background-color: var(--cre);
+}
+
+.BLZ-color-bg {
+  background-color: var(--blz);
+}
+
+.VUSDT-color-bg {
+  background-color: var(--vusdt);
+}
+
+.NOIA-color-bg {
+  background-color: var(--noia);
+}
+
+.LTO-color-bg {
+  background-color: var(--lto);
+}
+
+.TRU-color-bg {
+  background-color: var(--tru);
+}
+
+.CLV-color-bg {
+  background-color: var(--clv);
+}
+
+.CENNZ-color-bg {
+  background-color: var(--cennz);
+}
+
+.GMT-color-bg {
+  background-color: var(--gmt);
+}
+
+.WAN-color-bg {
+  background-color: var(--wan);
+}
+
+.STARL-color-bg {
+  background-color: var(--starl);
+}
+
+.BNANA-color-bg {
+  background-color: var(--bnana);
+}
+
+.AIOZ-color-bg {
+  background-color: var(--aioz);
+}
+
+.HYN-color-bg {
+  background-color: var(--hyn);
+}
+
+.ATA-color-bg {
+  background-color: var(--ata);
+}
+
+.RBN-color-bg {
+  background-color: var(--rbn);
+}
+
+.MC-color-bg {
+  background-color: var(--mc);
+}
+
+.YOOSHI-color-bg {
+  background-color: var(--yooshi);
+}
+
+.HTR-color-bg {
+  background-color: var(--htr);
+}
+
+.SOS-color-bg {
+  background-color: var(--sos);
+}
+
+.GTC-color-bg {
+  background-color: var(--gtc);
+}
+
+.AE-color-bg {
+  background-color: var(--ae);
+}
+
+.AKT-color-bg {
+  background-color: var(--akt);
+}
+
+.STEEM-color-bg {
+  background-color: var(--steem);
+}
+
+.LIT-color-bg {
+  background-color: var(--lit);
+}
+
+.YOUC-color-bg {
+  background-color: var(--youc);
+}
+
+.STETH-color-bg {
+  background-color: var(--steth);
+}
+
+.PRE-color-bg {
+  background-color: var(--pre);
+}
+
+.XCN-color-bg {
+  background-color: var(--xcn);
+}
+
+.FRAX-color-bg {
+  background-color: var(--frax);
+}
+
+.TON-color-bg {
+  background-color: var(--ton);
+}
+
+.WBNB-color-bg {
+  background-color: var(--wbnb);
+}
+
+.BTTOLD-color-bg {
+  background-color: var(--bttold);
+}
+
+.LOG-color-bg {
+  background-color: var(--log);
+}
+
+.LUSD-color-bg {
+  background-color: var(--lusd);
+}
+
+.DFI-color-bg {
+  background-color: var(--dfi);
+}
+
+.XAUT-color-bg {
+  background-color: var(--xaut);
+}
+
+.MLK-color-bg {
+  background-color: var(--mlk);
+}
+
+.FRTS-color-bg {
+  background-color: var(--frts);
+}
+
+.LUNC-color-bg {
+  background-color: var(--lunc);
+}
+
+.WEMIX-color-bg {
+  background-color: var(--wemix);
+}
+
+.HUSD-color-bg {
+  background-color: var(--husd);
+}
+
+.BNX-color-bg {
+  background-color: var(--bnx);
+}
+
+.T-color-bg {
+  background-color: var(--t);
+}
+
+.TTT-color-bg {
+  background-color: var(--ttt);
+}
+
+.LON-color-bg {
+  background-color: var(--lon);
+}
+
+.OSMO-color-bg {
+  background-color: var(--osmo);
+}
+
+.VR-color-bg {
+  background-color: var(--vr);
+}
+
+.PHA-color-bg {
+  background-color: var(--pha);
+}
+
+.PRQ-color-bg {
+  background-color: var(--prq);
+}
+
+.PHL-color-bg {
+  background-color: var(--phl);
+}
+
+.FIVEIRE-color-bg {
+  background-color: var(--5ire);
+}
+
+.KZEN-color-bg {
+  background-color: var(--kzen);
+}
+
+.SQR-color-bg {
+  background-color: var(--sqr);
+}
+
+.FLUID-color-bg {
+  background-color: var(--fluid);
+}
+
+.SAFFLE-color-bg {
+  background-color: var(--saffle);
+}
+
+.ZAM-color-bg {
+  background-color: var(--zam);
+}
+
+.FUSE-color-bg {
+  background-color: var(--fuse);
+}
+
+.ONEART-color-bg {
+  background-color: var(--1art);
+}
+
+.UFI-color-bg {
+  background-color: var(--ufi);
+}
+
+.CGU-color-bg {
+  background-color: var(--cgu);
+}
+
+.KIRO-color-bg {
+  background-color: var(--kiro);
+}
+
+.ARNX-color-bg {
+  background-color: var(--arnx);
+}
+
+.BTCP-color-bg {
+  background-color: var(--btcp);
+}
+
+.BSD-color-bg {
+  background-color: var(--bsd);
+}
+
+.BTS-color-bg {
+  background-color: var(--bts);
+}
+
+.BLK-color-bg {
+  background-color: var(--blk);
+}
+
+.BCD-color-bg {
+  background-color: var(--bcd);
+}
+
+.TKO-color-bg {
+  background-color: var(--tko);
+}
+
+.TROY-color-bg {
+  background-color: var(--troy);
+}
+
+.NRG-color-bg {
+  background-color: var(--nrg);
+}
+
+.ALPACA-color-bg {
+  background-color: var(--alpaca);
+}
+
+.ALPINE-color-bg {
+  background-color: var(--alpine);
+}
+
+.SWP-color-bg {
+  background-color: var(--swp);
+}
+
+.RMRK-color-bg {
+  background-color: var(--rmrk);
+}
+
+.BLCT-color-bg {
+  background-color: var(--blct);
+}
+
+.HOPR-color-bg {
+  background-color: var(--hopr);
+}
+
+.AETHC-color-bg {
+  background-color: var(--aethc);
+}
+
+.HYDRA-color-bg {
+  background-color: var(--hydra);
+}
+
+.CBK-color-bg {
+  background-color: var(--cbk);
+}
+
+.BLOK-color-bg {
+  background-color: var(--blok);
+}
+
+.QOM-color-bg {
+  background-color: var(--qom);
+}
+
+.RFR-color-bg {
+  background-color: var(--rfr);
+}
+
+.DIA-color-bg {
+  background-color: var(--dia);
+}
+
+.HNS-color-bg {
+  background-color: var(--hns);
+}
+
+.BZRX-color-bg {
+  background-color: var(--bzrx);
+}
+
+.GRS-color-bg {
+  background-color: var(--grs);
+}
+
+.VEGA-color-bg {
+  background-color: var(--vega);
+}
+
+.BZZ-color-bg {
+  background-color: var(--bzz);
+}
+
+.FCT-color-bg {
+  background-color: var(--fct);
+}
+
+.REI-color-bg {
+  background-color: var(--rei);
+}
+
+.ALCX-color-bg {
+  background-color: var(--alcx);
+}
+
+.CQT-color-bg {
+  background-color: var(--cqt);
+}
+
+.NCT-color-bg {
+  background-color: var(--nct);
+}
+
+.GAS-color-bg {
+  background-color: var(--gas);
+}
+
+.SFUND-color-bg {
+  background-color: var(--sfund);
+}
+
+.UFO-color-bg {
+  background-color: var(--ufo);
+}
+
+.EUM-color-bg {
+  background-color: var(--eum);
+}
+
+.RISE-color-bg {
+  background-color: var(--rise);
+}
+
+.FOX-color-bg {
+  background-color: var(--fox);
+}
+
+.TVK-color-bg {
+  background-color: var(--tvk);
+}
+
+.VRA-color-bg {
+  background-color: var(--vra);
+}
+
+.UNFI-color-bg {
+  background-color: var(--unfi);
+}
+
+.SOUL-color-bg {
+  background-color: var(--soul);
+}
+
+.COS-color-bg {
+  background-color: var(--cos);
+}
+
+.KMD-color-bg {
+  background-color: var(--kmd);
+}
+
+.FIO-color-bg {
+  background-color: var(--fio);
+}
+
+.VOXEL-color-bg {
+  background-color: var(--voxel);
+}
+
+.BOSON-color-bg {
+  background-color: var(--boson);
+}
+
+.AKRO-color-bg {
+  background-color: var(--akro);
+}
+
+.FARM-color-bg {
+  background-color: var(--farm);
+}
+
+.EFI-color-bg {
+  background-color: var(--efi);
+}
+
+.VXVS-color-bg {
+  background-color: var(--vxvs);
+}
+
+.HARD-color-bg {
+  background-color: var(--hard);
+}
+
+.MEV-color-bg {
+  background-color: var(--mev);
+}
+
+.ASM-color-bg {
+  background-color: var(--asm);
+}
+
+.MWC-color-bg {
+  background-color: var(--mwc);
+}
+
+.VXV-color-bg {
+  background-color: var(--vxv);
+}
+
+.DREP-color-bg {
+  background-color: var(--drep);
+}
+
+.BOO-color-bg {
+  background-color: var(--boo);
+}
+
+.QUACK-color-bg {
+  background-color: var(--quack);
+}
+
+.COVAL-color-bg {
+  background-color: var(--coval);
+}
+
+.DNT-color-bg {
+  background-color: var(--dnt);
+}
+
+.TPT-color-bg {
+  background-color: var(--tpt);
+}
+
+.KIN-color-bg {
+  background-color: var(--kin);
+}
+
+.KRT-color-bg {
+  background-color: var(--krt);
+}
+
+.DAD-color-bg {
+  background-color: var(--dad);
+}
+
+.CET-color-bg {
+  background-color: var(--cet);
+}
+
+.PRQ-color-bg {
+  background-color: var(--prq);
+}
+
+.AMO-color-bg {
+  background-color: var(--amo);
+}
+
+.NIF-color-bg {
+  background-color: var(--nif);
+}
+
+.ERN-color-bg {
+  background-color: var(--ern);
+}
+
+.CTXC-color-bg {
+  background-color: var(--ctxc);
+}
+
+.IRIS-color-bg {
+  background-color: var(--iris);
+}
+
+.AURY-color-bg {
+  background-color: var(--aury);
+}
+
+.ADX-color-bg {
+  background-color: var(--adx);
+}
+
+.AGLD-color-bg {
+  background-color: var(--agld);
+}
+
+.KPR-color-bg {
+  background-color: var(--kpr);
+}
+
+.BABY-color-bg {
+  background-color: var(--baby);
+}
+
+.CHESS-color-bg {
+  background-color: var(--chess);
+}
+
+.REV-color-bg {
+  background-color: var(--rev);
+}
+
+.SLP-color-bg {
+  background-color: var(--slp);
+}
+
+.DG-color-bg {
+  background-color: var(--dg);
+}
+
+.PSG-color-bg {
+  background-color: var(--psg);
+}
+
+.GYEN-color-bg {
+  background-color: var(--gyen);
+}
+
+.DDX-color-bg {
+  background-color: var(--ddx);
+}
+
+.TORN-color-bg {
+  background-color: var(--torn);
+}
+
+.RSS3-color-bg {
+  background-color: var(--rss3);
+}
+
+.VBIT-color-bg {
+  background-color: var(--vbit);
+}
+
+.MIX-color-bg {
+  background-color: var(--mix);
+}
+
+.SDAO-color-bg {
+  background-color: var(--sdao);
+}
+
+.BTSE-color-bg {
+  background-color: var(--btse);
+}
+
+.FIRO-color-bg {
+  background-color: var(--firo);
+}
+
+.APX-color-bg {
+  background-color: var(--apx);
+}
+
+.DATA-color-bg {
+  background-color: var(--data);
+}
+
+.SWAP-color-bg {
+  background-color: var(--swap);
+}
+
+.NMC-color-bg {
+  background-color: var(--nmc);
+}
+
+.FIS-color-bg {
+  background-color: var(--fis);
+}
+
+.ICHI-color-bg {
+  background-color: var(--ichi);
+}
+
+.TNB-color-bg {
+  background-color: var(--tnb);
+}
+
+.LA-color-bg {
+  background-color: var(--la);
+}
+
+.NYE-color-bg {
+  background-color: var(--nye);
+}
+
+.PNK-color-bg {
+  background-color: var(--pnk);
+}
+
+.CUBE-color-bg {
+  background-color: var(--cube);
+}
+
+.MNW-color-bg {
+  background-color: var(--mnw);
+}
+
+.DXD-color-bg {
+  background-color: var(--dxd);
+}
+
+.TRB-color-bg {
+  background-color: var(--trb);
+}
+
+.PEAK-color-bg {
+  background-color: var(--peak);
+}
+
+.CTX-color-bg {
+  background-color: var(--ctx);
+}
+
+.MSOL-color-bg {
+  background-color: var(--msol);
+}
+
+.BOND-color-bg {
+  background-color: var(--bond);
+}
+
+.LAZIO-color-bg {
+  background-color: var(--lazio);
+}
+
+.AHT-color-bg {
+  background-color: var(--aht);
+}
+
+.OXEN-color-bg {
+  background-color: var(--oxen);
+}
+
+.OM-color-bg {
+  background-color: var(--om);
+}
+
+.MARO-color-bg {
+  background-color: var(--maro);
+}
+
+.KILT-color-bg {
+  background-color: var(--kilt);
+}
+
+.RAMP-color-bg {
+  background-color: var(--ramp);
+}
+
+.FSN-color-bg {
+  background-color: var(--fsn);
+}
+
+.ASK-color-bg {
+  background-color: var(--ask);
+}
+
+.MOVEZ-color-bg {
+  background-color: var(--movez);
+}
+
+.BIOT-color-bg {
+  background-color: var(--biot);
+}
+
+.RARI-color-bg {
+  background-color: var(--rari);
+}
+
+.MDT-color-bg {
+  background-color: var(--mdt);
+}
+
+.MATH-color-bg {
+  background-color: var(--math);
+}
+
+.DERC-color-bg {
+  background-color: var(--derc);
+}
+
+.DX-color-bg {
+  background-color: var(--dx);
+}
+
+.RARE-color-bg {
+  background-color: var(--rare);
+}
+
+.REAP-color-bg {
+  background-color: var(--reap);
+}
+
+.FRONT-color-bg {
+  background-color: var(--front);
+}
+
+.KEY-color-bg {
+  background-color: var(--key);
+}
+
+.YLD-color-bg {
+  background-color: var(--yld);
+}
+
+.SAMO-color-bg {
+  background-color: var(--samo);
+}
+
+.QASH-color-bg {
+  background-color: var(--qash);
+}
+
+.SIX-color-bg {
+  background-color: var(--six);
+}
+
+.SOFI-color-bg {
+  background-color: var(--sofi);
+}
+
+.NULS-color-bg {
+  background-color: var(--nuls);
+}
+
+.ULT-color-bg {
+  background-color: var(--ult);
+}
+
+.HEZ-color-bg {
+  background-color: var(--hez);
+}
+
+.RAI-color-bg {
+  background-color: var(--rai);
+}
+
+.SUKU-color-bg {
+  background-color: var(--suku);
+}
+
+.XHV-color-bg {
+  background-color: var(--xhv);
+}
+
+.SANTOS-color-bg {
+  background-color: var(--santos);
+}
+
+.WILD-color-bg {
+  background-color: var(--wild);
+}
+
+.BAR-color-bg {
+  background-color: var(--bar);
+}
+
+.RVP-color-bg {
+  background-color: var(--rvp);
+}
+
+.WNXM-color-bg {
+  background-color: var(--wnxm);
+}
+
+.QSP-color-bg {
+  background-color: var(--qsp);
+}
+
+.CITY-color-bg {
+  background-color: var(--city);
+}
+
+.HIGH-color-bg {
+  background-color: var(--high);
+}
+
+.MOF-color-bg {
+  background-color: var(--mof);
+}
+
+.BTM-color-bg {
+  background-color: var(--btm);
+}
+
+.BIDR-color-bg {
+  background-color: var(--bidr);
+}
+
+.SDN-color-bg {
+  background-color: var(--sdn);
+}
+
+.FIDA-color-bg {
+  background-color: var(--fida);
+}
+
+.USDJ-color-bg {
+  background-color: var(--usdj);
+}
+
+.TIME-color-bg {
+  background-color: var(--time);
+}
+
+.MITH-color-bg {
+  background-color: var(--mith);
+}
+
+.QUICK-color-bg {
+  background-color: var(--quick);
+}
+
+.DEXE-color-bg {
+  background-color: var(--dexe);
+}
+
+.GTO-color-bg {
+  background-color: var(--gto);
+}
+
+.BEAM-color-bg {
+  background-color: var(--beam);
+}
+
+.DF-color-bg {
+  background-color: var(--df);
+}
+
+.IDRT-color-bg {
+  background-color: var(--idrt);
+}
+
+.ROOK-color-bg {
+  background-color: var(--rook);
+}
+
+.RFOX-color-bg {
+  background-color: var(--rfox);
+}
+
+.HBTC-color-bg {
+  background-color: var(--hbtc);
+}
+
+.LUSD-color-bg {
+  background-color: var(--lusd);
+}
+
+.SAFE-color-bg {
+  background-color: var(--safe);
+}
+
+.PLA-color-bg {
+  background-color: var(--pla);
+}
+
+.LUNA-color-bg {
+  background-color: var(--luna);
+}
+
+.BIT-color-bg {
+  background-color: var(--bit);
+}
+
+.NXM-color-bg {
+  background-color: var(--nxm);
+}
+
+.TITAN-color-bg {
+  background-color: var(--titan);
+}
+
+.LN-color-bg {
+  background-color: var(--ln);
+}
+
+.CBG-color-bg {
+  background-color: var(--cbg);
+}
+
+.ASTR-color-bg {
+  background-color: var(--astr);
+}
+
+.ACH-color-bg {
+  background-color: var(--ach);
+}
+
+.ACM-color-bg {
+  background-color: var(--acm);
+}
+
+.ADADOWN-color-bg {
+  background-color: var(--adadown);
+}
+
+.ADAUP-color-bg {
+  background-color: var(--adaup);
+}
+
+.AION-color-bg {
+  background-color: var(--aion);
+}
+
+.AMB-color-bg {
+  background-color: var(--amb);
+}
+
+.ASR-color-bg {
+  background-color: var(--asr);
+}
+
+.AST-color-bg {
+  background-color: var(--ast);
+}
+
+.ATM-color-bg {
+  background-color: var(--atm);
+}
+
+.AUCTION-color-bg {
+  background-color: var(--auction);
+}
+
+.AUD-color-bg {
+  background-color: var(--aud);
+}
+
+.AUTO-color-bg {
+  background-color: var(--auto);
+}
+
+.AVA-color-bg {
+  background-color: var(--ava);
+}
+
+.BETH-color-bg {
+  background-color: var(--beth);
+}
+
+.BICO-color-bg {
+  background-color: var(--bico);
+}
+
+.BIFI-color-bg {
+  background-color: var(--bifi);
+}
+
+.BNBDOWN-color-bg {
+  background-color: var(--bnbdown);
+}
+
+.BNBDOWN-color-bg {
+  background-color: var(--bnbdown);
+}
+
+.BRD-color-bg {
+  background-color: var(--brd);
+}
+
+.BSW-color-bg {
+  background-color: var(--bsw);
+}
+
+.BTCDOWN-color-bg {
+  background-color: var(--btcdown);
+}
+
+.BTCST-color-bg {
+  background-color: var(--btcst);
+}
+
+.BTCUP-color-bg {
+  background-color: var(--btcup);
+}
+
+.BTT-C-color-bg {
+  background-color: var(--btt-c);
+}
+
+.BURGER-color-bg {
+  background-color: var(--burger);
+}
+
+.CELR-color-bg {
+  background-color: var(--celr);
+}
+
+.CREAM-color-bg {
+  background-color: var(--cream);
+}
+
+.CTK-color-bg {
+  background-color: var(--ctk);
+}
+
+.CVP-color-bg {
+  background-color: var(--cvp);
+}
+
+.DEGO-color-bg {
+  background-color: var(--dego);
+}
+
+.DOCK-color-bg {
+  background-color: var(--dock);
+}
+
+.DODO-color-bg {
+  background-color: var(--dodo);
+}
+
+.DOTDOWN-color-bg {
+  background-color: var(--dotdown);
+}
+
+.DOTUP-color-bg {
+  background-color: var(--dotup);
+}
+
+.DYDX-color-bg {
+  background-color: var(--dydx);
+}
+
+.ELF-color-bg {
+  background-color: var(--elf);
+}
+
+.EPX-color-bg {
+  background-color: var(--epx);
+}
+
+.ETH-color-bg {
+  background-color: var(--eth);
+}
+
+.ETHDOWN-color-bg {
+  background-color: var(--ethdown);
+}
+
+.ETHUP-color-bg {
+  background-color: var(--ethup);
+}
+
+.EUR-color-bg {
+  background-color: var(--eur);
+}
+
+.EZ-color-bg {
+  background-color: var(--ez);
+}
+
+.FET-color-bg {
+  background-color: var(--fet);
+}
+
+.FOR-color-bg {
+  background-color: var(--for);
+}
+
+.FUN-color-bg {
+  background-color: var(--fun);
+}
+
+.FXS-color-bg {
+  background-color: var(--fxs);
+}
+
+.GAL-color-bg {
+  background-color: var(--gal);
+}
+
+.GBP-color-bg {
+  background-color: var(--gbp);
+}
+
+.GLMR-color-bg {
+  background-color: var(--glmr);
+}
+
+.GO-color-bg {
+  background-color: var(--go);
+}
+
+.INJ-color-bg {
+  background-color: var(--inj);
+}
+
+.IOTA-color-bg {
+  background-color: var(--iota);
+}
+
+.IQ-color-bg {
+  background-color: var(--iq);
+}
+
+.JOE-color-bg {
+  background-color: var(--joe);
+}
+
+.JUV-color-bg {
+  background-color: var(--juv);
+}
+
+.LINA-color-bg {
+  background-color: var(--lina);
+}
+
+.LINKDOWN-color-bg {
+  background-color: var(--linkdown);
+}
+
+.LINKUP-color-bg {
+  background-color: var(--linkup);
+}
+
+.LOKA-color-bg {
+  background-color: var(--loka);
+}
+
+.MATIC-color-bg {
+  background-color: var(--matic);
+}
+
+.MDA-color-bg {
+  background-color: var(--mda);
+}
+
+.MDX-color-bg {
+  background-color: var(--mdx);
+}
+
+.MIR-color-bg {
+  background-color: var(--mir);
+}
+
+.MOB-color-bg {
+  background-color: var(--mob);
+}
+
+.MOVR-color-bg {
+  background-color: var(--movr);
+}
+
+.MULTI-color-bg {
+  background-color: var(--multi);
+}
+
+.NAS-color-bg {
+  background-color: var(--nas);
+}
+
+.NAV-color-bg {
+  background-color: var(--nav);
+}
+
+.NBS-color-bg {
+  background-color: var(--nbs);
+}
+
+.NEBL-color-bg {
+  background-color: var(--nebl);
+}
+
+.NXS-color-bg {
+  background-color: var(--nxs);
+}
+
+.OAX-color-bg {
+  background-color: var(--oax);
+}
+
+.OG-color-bg {
+  background-color: var(--og);
+}
+
+.ONG-color-bg {
+  background-color: var(--ong);
+}
+
+.OOKI-color-bg {
+  background-color: var(--ooki);
+}
+
+.OP-color-bg {
+  background-color: var(--op);
+}
+
+.OXT-color-bg {
+  background-color: var(--oxt);
+}
+
+.PEOPLE-color-bg {
+  background-color: var(--people);
+}
+
+.PERL-color-bg {
+  background-color: var(--perl);
+}
+
+.PHB-color-bg {
+  background-color: var(--phb);
+}
+
+.PIVX-color-bg {
+  background-color: var(--pivx);
+}
+
+.PNT-color-bg {
+  background-color: var(--pnt);
+}
+
+.PORTO-color-bg {
+  background-color: var(--porto);
+}
+
+.PROS-color-bg {
+  background-color: var(--pros);
+}
+
+.QI-color-bg {
+  background-color: var(--qi);
+}
+
+.QLC-color-bg {
+  background-color: var(--qlc);
+}
+
+.RAY-color-bg {
+  background-color: var(--ray);
+}
+
+.REP-color-bg {
+  background-color: var(--rep);
+}
+
+.RLC-color-bg {
+  background-color: var(--rlc);
+}
+
+.SNM-color-bg {
+  background-color: var(--snm);
+}
+
+.SPARTA-color-bg {
+  background-color: var(--sparta);
+}
+
+.SPELL-color-bg {
+  background-color: var(--spell);
+}
+
+.STMX-color-bg {
+  background-color: var(--stmx);
+}
+
+.STPT-color-bg {
+  background-color: var(--stpt);
+}
+
+.SUN-color-bg {
+  background-color: var(--sun);
+}
+
+.TCT-color-bg {
+  background-color: var(--tct);
+}
+
+.TRXDOWN-color-bg {
+  background-color: var(--trxdown);
+}
+
+.TRXUP-color-bg {
+  background-color: var(--trxup);
+}
+
+.UFT-color-bg {
+  background-color: var(--uft);
+}
+
+.USTC-color-bg {
+  background-color: var(--ustc);
+}
+
+.VIB-color-bg {
+  background-color: var(--vib);
+}
+
+.VIDT-color-bg {
+  background-color: var(--vidt);
+}
+
+.VITE-color-bg {
+  background-color: var(--vite);
+}
+
+.VTHO-color-bg {
+  background-color: var(--vtho);
+}
+
+.WABI-color-bg {
+  background-color: var(--wabi);
+}
+
+.WAXP-color-bg {
+  background-color: var(--waxp);
+}
+
+.WIN-color-bg {
+  background-color: var(--win);
+}
+
+.WING-color-bg {
+  background-color: var(--wing);
+}
+
+.WRX-color-bg {
+  background-color: var(--wrx);
+}
+
+.WTC-color-bg {
+  background-color: var(--wtc);
+}
+
+.XRPDOWN-color-bg {
+  background-color: var(--xrpdown);
+}
+
+.XRPUP-color-bg {
+  background-color: var(--xrpup);
+}
+
+.YFII-color-bg {
+  background-color: var(--yfii);
+}
+
+.HEGIC-color-bg {
+  background-color: var(--hegic);
+}
+
+.AAVEUP-color-bg {
+  background-color: var(--aaveup);
+}
+
+.AAVEDOWN-color-bg {
+  background-color: var(--aavedown);
+}
+
+.SUSD-color-bg {
+  background-color: var(--susd);
+}
+
+.COVER-color-bg {
+  background-color: var(--cover);
+}
+
+.SUSHIUP-color-bg {
+  background-color: var(--sushiup);
+}
+
+.SUSHIDOWN-color-bg {
+  background-color: var(--sushidown);
+}
+
+.XLMUP-color-bg {
+  background-color: var(--xlmup);
+}
+
+.XLMDOWN-color-bg {
+  background-color: var(--xlmdown);
+}
+
+.BVND-color-bg {
+  background-color: var(--bvnd);
+}
+
+.VAI-color-bg {
+  background-color: var(--vai);
+}
+
+.ANY-color-bg {
+  background-color: var(--any);
+}
+
+.UST-color-bg {
+  background-color: var(--ust);
+}
+
+.BDOT-color-bg {
+  background-color: var(--bdot);
+}
+
+.NBT-color-bg {
+  background-color: var(--nbt);
+}
+
+.LEVER-color-bg {
+  background-color: var(--lever);
+}
+
+.STG-color-bg {
+  background-color: var(--stg);
+}
+
+.GMX-color-bg {
+  background-color: var(--gmx);
+}
+
+.PLN-color-bg {
+  background-color: var(--pln);
+}
+
+.HFT-color-bg {
+  background-color: var(--hft);
+}
+
+.HOOK-color-bg {
+  background-color: var(--hook);
+}
+
+.MAGIC-color-bg {
+  background-color: var(--magic);
+}
+
+.RON-color-bg {
+  background-color: var(--ron);
+}
+
+.MCO-color-bg {
+  background-color: var(--mco);
+}
+
+.ICN-color-bg {
+  background-color: var(--icn);
+}
+
+.YOYOW-color-bg {
+  background-color: var(--yoyow);
+}
+
+.SNGLS-color-bg {
+  background-color: var(--sngls);
+}
+
+.SALT-color-bg {
+  background-color: var(--salt);
+}
+
+.MTH-color-bg {
+  background-color: var(--mth);
+}
+
+.EVX-color-bg {
+  background-color: var(--evx);
+}
+
+.MOD-color-bg {
+  background-color: var(--mod);
+}
+
+.RCN-color-bg {
+  background-color: var(--rcn);
+}
+
+.BCPT-color-bg {
+  background-color: var(--bcpt);
+}
+
+.GVT-color-bg {
+  background-color: var(--gvt);
+}
+
+.POE-color-bg {
+  background-color: var(--poe);
+}
+
+.DGD-color-bg {
+  background-color: var(--dgd);
+}
+
+.PPT-color-bg {
+  background-color: var(--ppt);
+}
+
+.OST-color-bg {
+  background-color: var(--ost);
+}
+
+.EDO-color-bg {
+  background-color: var(--edo);
+}
+
+.APPC-color-bg {
+  background-color: var(--appc);
+}
+
+.INS-color-bg {
+  background-color: var(--ins);
+}
+
+.CHAT-color-bg {
+  background-color: var(--chat);
+}
+
+.VIA-color-bg {
+  background-color: var(--via);
+}
+
+.NCASH-color-bg {
+  background-color: var(--ncash);
+}
+
+.STORM-color-bg {
+  background-color: var(--storm);
+}
+
+.WPR-color-bg {
+  background-color: var(--wpr);
+}
+
+.GNT-color-bg {
+  background-color: var(--gnt);
+}
+
+.BCN-color-bg {
+  background-color: var(--bcn);
+}
+
+.NPXS-color-bg {
+  background-color: var(--npxs);
+}
+
+.BTCB-color-bg {
+  background-color: var(--btcb);
+}
+
+.ERD-color-bg {
+  background-color: var(--erd);
+}
+
+.NGN-color-bg {
+  background-color: var(--ngn);
+}
+
+.BKRW-color-bg {
+  background-color: var(--bkrw);
+}
+
+.BIDR-color-bg {
+  background-color: var(--bidr);
+}
+
+.XTZUP-color-bg {
+  background-color: var(--xtzup);
+}
+
+.XTZDOWN-color-bg {
+  background-color: var(--xtzdown);
+}
+
+.EOSUP-color-bg {
+  background-color: var(--eosup);
+}
+
+.EOSDOWN-color-bg {
+  background-color: var(--eosdown);
+}
+
+.SWRV-color-bg {
+  background-color: var(--swrv);
+}
+
+.LTCUP-color-bg {
+  background-color: var(--ltcup);
+}
+
+.LTCDOWN-color-bg {
+  background-color: var(--ltcdown);
+}
+
+.UNIUP-color-bg {
+  background-color: var(--uniup);
+}
+
+.UNIDOWN-color-bg {
+  background-color: var(--unidown);
+}
+
+.BRL-color-bg {
+  background-color: var(--brl);
+}
+
+.SXPUP-color-bg {
+  background-color: var(--sxpup);
+}
+
+.SXPDOWN-color-bg {
+  background-color: var(--sxpdown);
+}
+
+.FILUP-color-bg {
+  background-color: var(--filup);
+}
+
+.FILDOWN-color-bg {
+  background-color: var(--fildown);
+}
+
+.YFIUP-color-bg {
+  background-color: var(--yfiup);
+}
+
+.YFIDOWN-color-bg {
+  background-color: var(--yfidown);
+}
+
+.BCHUP-color-bg {
+  background-color: var(--bchup);
+}
+
+.BCHDOWN-color-bg {
+  background-color: var(--bchdown);
+}
+
+.HEGIC-color {
+  color: var(--hegic);
+}
+
+.AAVEUP-color {
+  color: var(--aaveup);
+}
+
+.AAVEDOWN-color {
+  color: var(--aavedown);
+}
+
+.SUSD-color {
+  color: var(--susd);
+}
+
+.COVER-color {
+  color: var(--cover);
+}
+
+.SUSHIUP-color {
+  color: var(--sushiup);
+}
+
+.SUSHIDOWN-color {
+  color: var(--sushidown);
+}
+
+.XLMUP-color {
+  color: var(--xlmup);
+}
+
+.XLMDOWN-color {
+  color: var(--xlmdown);
+}
+
+.BVND-color {
+  color: var(--bvnd);
+}
+
+.VAI-color {
+  color: var(--vai);
+}
+
+.ANY-color {
+  color: var(--any);
+}
+
+.UST-color {
+  color: var(--ust);
+}
+
+.BDOT-color {
+  color: var(--bdot);
+}
+
+.NBT-color {
+  color: var(--nbt);
+}
+
+.LEVER-color {
+  color: var(--lever);
+}
+
+.STG-color {
+  color: var(--stg);
+}
+
+.GMX-color {
+  color: var(--gmx);
+}
+
+.PLN-color {
+  color: var(--pln);
+}
+
+.HFT-color {
+  color: var(--hft);
+}
+
+.HOOK-color {
+  color: var(--hook);
+}
+
+.MAGIC-color {
+  color: var(--magic);
+}
+
+.RON-color {
+  color: var(--ron);
+}
+
+.MCO-color {
+  color: var(--mco);
+}
+
+.ICN-color {
+  color: var(--icn);
+}
+
+.YOYOW-color {
+  color: var(--yoyow);
+}
+
+.SNGLS-color {
+  color: var(--sngls);
+}
+
+.SALT-color {
+  color: var(--salt);
+}
+
+.MTH-color {
+  color: var(--mth);
+}
+
+.EVX-color {
+  color: var(--evx);
+}
+
+.MOD-color {
+  color: var(--mod);
+}
+
+.RCN-color {
+  color: var(--rcn);
+}
+
+.BCPT-color {
+  color: var(--bcpt);
+}
+
+.GVT-color {
+  color: var(--gvt);
+}
+
+.POE-color {
+  color: var(--poe);
+}
+
+.DGD-color {
+  color: var(--dgd);
+}
+
+.PPT-color {
+  color: var(--ppt);
+}
+
+.OST-color {
+  color: var(--ost);
+}
+
+.EDO-color {
+  color: var(--edo);
+}
+
+.APPC-color {
+  color: var(--appc);
+}
+
+.INS-color {
+  color: var(--ins);
+}
+
+.CHAT-color {
+  color: var(--chat);
+}
+
+.VIA-color {
+  color: var(--via);
+}
+
+.NCASH-color {
+  color: var(--ncash);
+}
+
+.STORM-color {
+  color: var(--storm);
+}
+
+.WPR-color {
+  color: var(--wpr);
+}
+
+.GNT-color {
+  color: var(--gnt);
+}
+
+.BCN-color {
+  color: var(--bcn);
+}
+
+.NPXS-color {
+  color: var(--npxs);
+}
+
+.BTCB-color {
+  color: var(--btcb);
+}
+
+.ERD-color {
+  color: var(--erd);
+}
+
+.NGN-color {
+  color: var(--ngn);
+}
+
+.BKRW-color {
+  color: var(--bkrw);
+}
+
+.BIDR-color {
+  color: var(--bidr);
+}
+
+.XTZUP-color {
+  color: var(--xtzup);
+}
+
+.XTZDOWN-color {
+  color: var(--xtzdown);
+}
+
+.EOSUP-color {
+  color: var(--eosup);
+}
+
+.EOSDOWN-color {
+  color: var(--eosdown);
+}
+
+.SWRV-color {
+  color: var(--swrv);
+}
+
+.LTCUP-color {
+  color: var(--ltcup);
+}
+
+.LTCDOWN-color {
+  color: var(--ltcdown);
+}
+
+.UNIUP-color {
+  color: var(--uniup);
+}
+
+.UNIDOWN-color {
+  color: var(--unidown);
+}
+
+.BRL-color {
+  color: var(--brl);
+}
+
+.SXPUP-color {
+  color: var(--sxpup);
+}
+
+.SXPDOWN-color {
+  color: var(--sxpdown);
+}
+
+.FILUP-color {
+  color: var(--filup);
+}
+
+.FILDOWN-color {
+  color: var(--fildown);
+}
+
+.YFIUP-color {
+  color: var(--yfiup);
+}
+
+.YFIDOWN-color {
+  color: var(--yfidown);
+}
+
+.BCHUP-color {
+  color: var(--bchup);
+}
+
+.BCHDOWN-color {
+  color: var(--bchdown);
+}
+
+.APT-color {
+  color: var(--apt);
+}
+
+.DCRN-color {
+  color: var(--dcrn);
+}
+
+.ETHF-color {
+  color: var(--ethf);
+}
+
+.ETHW-color {
+  color: var(--ethw);
+}
+
+.KAR-color {
+  color: var(--kar);
+}
+
+.BTC-color {
+  color: var(--btc);
+}
+
+.USDT-color {
+  color: var(--usdt);
+}
+
+.USDC-color {
+  color: var(--usdc);
+}
+
+.BNB-color {
+  color: var(--bnb);
+}
+
+.ADA-color {
+  color: var(--ada);
+}
+
+.XRP-color {
+  color: var(--xrp);
+}
+
+.BUSD-color {
+  color: var(--busd);
+}
+
+.SOL-color {
+  color: var(--sol);
+}
+
+.DOGE-color {
+  color: var(--doge);
+}
+
+.DOT-color {
+  color: var(--dot);
+}
+
+.WBTC-color {
+  color: var(--wbtc);
+}
+
+.TRX-color {
+  color: var(--trx);
+}
+
+.DAI-color {
+  color: var(--dai);
+}
+
+.AVAX-color {
+  color: var(--avax);
+}
+
+.SHIB-color {
+  color: var(--shib);
+}
+
+.DOT-color {
+  color: var(--dot);
+}
+
+.LEO-color {
+  color: var(--leo);
+}
+
+.CRO-color {
+  color: var(--cro);
+}
+
+.LTC-color {
+  color: var(--ltc);
+}
+
+.NEAR-color {
+  color: var(--near);
+}
+
+.UNI-color {
+  color: var(--uni);
+}
+
+.FTT-color {
+  color: var(--ftt);
+}
+
+.XMR-color {
+  color: var(--xmr);
+}
+
+.BCH-color {
+  color: var(--bch);
+}
+
+.XLM-color {
+  color: var(--xlm);
+}
+
+.LINK-color {
+  color: var(--link);
+}
+
+.ETC-color {
+  color: var(--etc);
+}
+
+.ATOM-color {
+  color: var(--atom);
+}
+
+.ALGO-color {
+  color: var(--algo);
+}
+
+.FLOW-color {
+  color: var(--flow);
+}
+
+.VET-color {
+  color: var(--vet);
+}
+
+.HBAR-color {
+  color: var(--hbar);
+}
+
+.ICP-color {
+  color: var(--icp);
+}
+
+.MANA-color {
+  color: var(--mana);
+}
+
+.APE-color {
+  color: var(--ape);
+}
+
+.XTZ-color {
+  color: var(--xtz);
+}
+
+.CRODO-color {
+  color: var(--crodo);
+}
+
+.EGLD-color {
+  color: var(--egld);
+}
+
+.KCS-color {
+  color: var(--kcs);
+}
+
+.SAND-color {
+  color: var(--sand);
+}
+
+.FIL-color {
+  color: var(--fil);
+}
+
+.AAVE-color {
+  color: var(--aave);
+}
+
+.ZEC-color {
+  color: var(--zec);
+}
+
+.TUSD-color {
+  color: var(--tusd);
+}
+
+.EOS-color {
+  color: var(--eos);
+}
+
+.AXS-color {
+  color: var(--axs);
+}
+
+.THETA-color {
+  color: var(--theta);
+}
+
+.KLAY-color {
+  color: var(--klay);
+}
+
+.MKR-color {
+  color: var(--mkr);
+}
+
+.HT-color {
+  color: var(--ht);
+}
+
+.WAVES-color {
+  color: var(--waves);
+}
+
+.HNT-color {
+  color: var(--hnt);
+}
+
+.GRT-color {
+  color: var(--grt);
+}
+
+.BTT-color {
+  color: var(--btt);
+}
+
+.BSV-color {
+  color: var(--bsv);
+}
+
+.USDP-color {
+  color: var(--usdp);
+}
+
+.FTM-color {
+  color: var(--ftm);
+}
+
+.MIOTA-color {
+  color: var(--miota);
+}
+
+.RUNE-color {
+  color: var(--rune);
+}
+
+.XEC-color {
+  color: var(--xec);
+}
+
+.USDN-color {
+  color: var(--usdn);
+}
+
+.QNT-color {
+  color: var(--qnt);
+}
+
+.NEO-color {
+  color: var(--neo);
+}
+
+.CHZ-color {
+  color: var(--chz);
+}
+
+.STX-color {
+  color: var(--stx);
+}
+
+.CAKE-color {
+  color: var(--cake);
+}
+
+.LRC-color {
+  color: var(--lrc);
+}
+
+.NEXO-color {
+  color: var(--nexo);
+}
+
+.OKB-color {
+  color: var(--okb);
+}
+
+.USDD-color {
+  color: var(--usdd);
+}
+
+.ZIL-color {
+  color: var(--zil);
+}
+
+.DASH-color {
+  color: var(--dash);
+}
+
+.PAXG-color {
+  color: var(--paxg);
+}
+
+.GMT-color {
+  color: var(--gmt);
+}
+
+.CRV-color {
+  color: var(--crv);
+}
+
+.KSM-color {
+  color: var(--ksm);
+}
+
+.BAT-color {
+  color: var(--bat);
+}
+
+.CELO-color {
+  color: var(--celo);
+}
+
+.ENJ-color {
+  color: var(--enj);
+}
+
+.CVX-color {
+  color: var(--cvx);
+}
+
+.KAVA-color {
+  color: var(--kava);
+}
+
+.GALA-color {
+  color: var(--gala);
+}
+
+.ONE-color {
+  color: var(--one);
+}
+
+.AMP-color {
+  color: var(--amp);
+}
+
+.GNO-color {
+  color: var(--gno);
+}
+
+.DCR-color {
+  color: var(--dcr);
+}
+
+.XDC-color {
+  color: var(--xdc);
+}
+
+.MINA-color {
+  color: var(--mina);
+}
+
+.XEM-color {
+  color: var(--xem);
+}
+
+.AR-color {
+  color: var(--ar);
+}
+
+.HOT-color {
+  color: var(--hot);
+}
+
+.GT-color {
+  color: var(--gt);
+}
+
+.FEI-color {
+  color: var(--fei);
+}
+
+.COMP-color {
+  color: var(--comp);
+}
+
+.QTUM-color {
+  color: var(--qtum);
+}
+
+.BTG-color {
+  color: var(--btg);
+}
+
+.ONEINCH-color {
+  color: var(--oneinch);
+}
+
+.BORA-color {
+  color: var(--bora);
+}
+
+.KDA-color {
+  color: var(--kda);
+}
+
+.ICX-color {
+  color: var(--icx);
+}
+
+.OMG-color {
+  color: var(--omg);
+}
+
+.ROSE-color {
+  color: var(--rose);
+}
+
+.KNC-color {
+  color: var(--knc);
+}
+
+.ZRX-color {
+  color: var(--zrx);
+}
+
+.IOTX-color {
+  color: var(--iotx);
+}
+
+.TFUEL-color {
+  color: var(--tfuel);
+}
+
+.IOST-color {
+  color: var(--iost);
+}
+
+.LDO-color {
+  color: var(--ldo);
+}
+
+.XYM-color {
+  color: var(--xym);
+}
+
+.ANKR-color {
+  color: var(--ankr);
+}
+
+.BNT-color {
+  color: var(--bnt);
+}
+
+.JST-color {
+  color: var(--jst);
+}
+
+.SNX-color {
+  color: var(--snx);
+}
+
+.LPT-color {
+  color: var(--lpt);
+}
+
+.AUDIO-color {
+  color: var(--audio);
+}
+
+.GLM-color {
+  color: var(--glm);
+}
+
+.RVN-color {
+  color: var(--rvn);
+}
+
+.CHSB-color {
+  color: var(--chsb);
+}
+
+.SC-color {
+  color: var(--sc);
+}
+
+.SRM-color {
+  color: var(--srm);
+}
+
+.SXP-color {
+  color: var(--sxp);
+}
+
+.ONT-color {
+  color: var(--ont);
+}
+
+.ZEN-color {
+  color: var(--zen);
+}
+
+.ENS-color {
+  color: var(--ens);
+}
+
+.IMX-color {
+  color: var(--imx);
+}
+
+.HIVE-color {
+  color: var(--hive);
+}
+
+.NFT-color {
+  color: var(--nft);
+}
+
+.SKL-color {
+  color: var(--skl);
+}
+
+.POLY-color {
+  color: var(--poly);
+}
+
+.MXC-color {
+  color: var(--mxc);
+}
+
+.VGX-color {
+  color: var(--vgx);
+}
+
+.BTRST-color {
+  color: var(--btrst);
+}
+
+.STORJ-color {
+  color: var(--storj);
+}
+
+.SCRT-color {
+  color: var(--scrt);
+}
+
+.RENBTC-color {
+  color: var(--renbtc);
+}
+
+.UMA-color {
+  color: var(--uma);
+}
+
+.SUSHI-color {
+  color: var(--sushi);
+}
+
+.YFI-color {
+  color: var(--yfi);
+}
+
+.GUSD-color {
+  color: var(--gusd);
+}
+
+.DGB-color {
+  color: var(--dgb);
+}
+
+.KEEP-color {
+  color: var(--keep);
+}
+
+.TWT-color {
+  color: var(--twt);
+}
+
+.RNDR-color {
+  color: var(--rndr);
+}
+
+.OCEAN-color {
+  color: var(--ocean);
+}
+
+.CSPR-color {
+  color: var(--cspr);
+}
+
+.ILV-color {
+  color: var(--ilv);
+}
+
+.LSK-color {
+  color: var(--lsk);
+}
+
+.WOO-color {
+  color: var(--woo);
+}
+
+.RLY-color {
+  color: var(--rly);
+}
+
+.MX-color {
+  color: var(--mx);
+}
+
+.ACA-color {
+  color: var(--aca);
+}
+
+.XNO-color {
+  color: var(--xno);
+}
+
+.NU-color {
+  color: var(--nu);
+}
+
+.CFX-color {
+  color: var(--cfx);
+}
+
+.ORBS-color {
+  color: var(--orbs);
+}
+
+.FLUX-color {
+  color: var(--flux);
+}
+
+.MED-color {
+  color: var(--med);
+}
+
+.REN-color {
+  color: var(--ren);
+}
+
+.SYS-color {
+  color: var(--sys);
+}
+
+.WTRX-color {
+  color: var(--wtrx);
+}
+
+.TLM-color {
+  color: var(--tlm);
+}
+
+.STRAX-color {
+  color: var(--strax);
+}
+
+.ALICE-color {
+  color: var(--alice);
+}
+
+.MAID-color {
+  color: var(--maid);
+}
+
+.HOO-color {
+  color: var(--hoo);
+}
+
+.RGT-color {
+  color: var(--rgt);
+}
+
+.REEF-color {
+  color: var(--reef);
+}
+
+.DAWN-color {
+  color: var(--dawn);
+}
+
+.DAR-color {
+  color: var(--dar);
+}
+
+.STRK-color {
+  color: var(--strk);
+}
+
+.GHST-color {
+  color: var(--ghst);
+}
+
+.UQC-color {
+  color: var(--uqc);
+}
+
+.META-color {
+  color: var(--meta);
+}
+
+.QKC-color {
+  color: var(--qkc);
+}
+
+.LQTY-color {
+  color: var(--lqty);
+}
+
+.ERG-color {
+  color: var(--erg);
+}
+
+.RKN-color {
+  color: var(--rkn);
+}
+
+.RIF-color {
+  color: var(--rif);
+}
+
+.UTK-color {
+  color: var(--utk);
+}
+
+.ARK-color {
+  color: var(--ark);
+}
+
+.OUSD-color {
+  color: var(--ousd);
+}
+
+.ZEON-color {
+  color: var(--zeon);
+}
+
+.CFG-color {
+  color: var(--cfg);
+}
+
+.SSX-color {
+  color: var(--ssx);
+}
+
+.BFC-color {
+  color: var(--bfc);
+}
+
+.DUSK-color {
+  color: var(--dusk);
+}
+
+.SUPER-color {
+  color: var(--super);
+}
+
+.TLOS-color {
+  color: var(--tlos);
+}
+
+.AURORA-color {
+  color: var(--aurora);
+}
+
+.ANT-color {
+  color: var(--ant);
+}
+
+.PROM-color {
+  color: var(--prom);
+}
+
+.XWC-color {
+  color: var(--xwc);
+}
+
+.XVS-color {
+  color: var(--xvs);
+}
+
+.NMR-color {
+  color: var(--nmr);
+}
+
+.SSV-color {
+  color: var(--ssv);
+}
+
+.PERP-color {
+  color: var(--perp);
+}
+
+.ONUS-color {
+  color: var(--onus);
+}
+
+.ALPHA-color {
+  color: var(--alpha);
+}
+
+.POND-color {
+  color: var(--pond);
+}
+
+.NKN-color {
+  color: var(--nkn);
+}
+
+.RAD-color {
+  color: var(--rad);
+}
+
+.XVG-color {
+  color: var(--xvg);
+}
+
+.MLN-color {
+  color: var(--mln);
+}
+
+.AGIX-color {
+  color: var(--agix);
+}
+
+.EXRD-color {
+  color: var(--exrd);
+}
+
+.BAND-color {
+  color: var(--band);
+}
+
+.AXEL-color {
+  color: var(--axel);
+}
+
+.ZB-color {
+  color: var(--zb);
+}
+
+.SNL-color {
+  color: var(--snl);
+}
+
+.BOR-color {
+  color: var(--bor);
+}
+
+.MBOX-color {
+  color: var(--mbox);
+}
+
+.BOBA-color {
+  color: var(--boba);
+}
+
+.BEL-color {
+  color: var(--bel);
+}
+
+.LOOM-color {
+  color: var(--loom);
+}
+
+.WOZX-color {
+  color: var(--wozx);
+}
+
+.ORC-color {
+  color: var(--orc);
+}
+
+.VERI-color {
+  color: var(--veri);
+}
+
+.YGG-color {
+  color: var(--ygg);
+}
+
+.BETA-color {
+  color: var(--beta);
+}
+
+.BAKE-color {
+  color: var(--bake);
+}
+
+.KAI-color {
+  color: var(--kai);
+}
+
+.AMPL-color {
+  color: var(--ampl);
+}
+
+.QC-color {
+  color: var(--qc);
+}
+
+.ORN-color {
+  color: var(--orn);
+}
+
+.FORTH-color {
+  color: var(--forth);
+}
+
+.HERO-color {
+  color: var(--hero);
+}
+
+.JASMY-color {
+  color: var(--jasmy);
+}
+
+.DKA-color {
+  color: var(--dka);
+}
+
+.FLETA-color {
+  color: var(--fleta);
+}
+
+.KLV-color {
+  color: var(--klv);
+}
+
+.BAL-color {
+  color: var(--bal);
+}
+
+.MNGO-color {
+  color: var(--mngo);
+}
+
+.CEL-color {
+  color: var(--cel);
+}
+
+.EPS-color {
+  color: var(--eps);
+}
+
+.LCX-color {
+  color: var(--lcx);
+}
+
+.XCH-color {
+  color: var(--xch);
+}
+
+.POLS-color {
+  color: var(--pols);
+}
+
+.CKB-color {
+  color: var(--ckb);
+}
+
+.WXT-color {
+  color: var(--wxt);
+}
+
+.VLX-color {
+  color: var(--vlx);
+}
+
+.DAO-color {
+  color: var(--dao);
+}
+
+.CEEK-color {
+  color: var(--ceek);
+}
+
+.COCOS-color {
+  color: var(--cocos);
+}
+
+.XPRT-color {
+  color: var(--xprt);
+}
+
+.XNC-color {
+  color: var(--xnc);
+}
+
+.XDB-color {
+  color: var(--xdb);
+}
+
+.COTI-color {
+  color: var(--coti);
+}
+
+.CHR-color {
+  color: var(--chr);
+}
+
+.ETN-color {
+  color: var(--etn);
+}
+
+.RSR-color {
+  color: var(--rsr);
+}
+
+.POWR-color {
+  color: var(--powr);
+}
+
+.SNT-color {
+  color: var(--snt);
+}
+
+.CTSI-color {
+  color: var(--ctsi);
+}
+
+.BADGER-color {
+  color: var(--badger);
+}
+
+.TEL-color {
+  color: var(--tel);
+}
+
+.MTL-color {
+  color: var(--mtl);
+}
+
+.DPR-color {
+  color: var(--dpr);
+}
+
+.C98-color {
+  color: var(--c98);
+}
+
+.MUSD-color {
+  color: var(--musd);
+}
+
+.ARDR-color {
+  color: var(--ardr);
+}
+
+.PUNDIX-color {
+  color: var(--pundix);
+}
+
+.DERO-color {
+  color: var(--dero);
+}
+
+.OGN-color {
+  color: var(--ogn);
+}
+
+.DENT-color {
+  color: var(--dent);
+}
+
+.PYR-color {
+  color: var(--pyr);
+}
+
+.ASD-color {
+  color: var(--asd);
+}
+
+.REQ-color {
+  color: var(--req);
+}
+
+.TRIBE-color {
+  color: var(--tribe);
+}
+
+.API3-color {
+  color: var(--api3);
+}
+
+.XYO-color {
+  color: var(--xyo);
+}
+
+.CVC-color {
+  color: var(--cvc);
+}
+
+.SAFEMOON-color {
+  color: var(--safemoon);
+}
+
+.TT-color {
+  color: var(--tt);
+}
+
+.SPS-color {
+  color: var(--sps);
+}
+
+.TOMO-color {
+  color: var(--tomo);
+}
+
+.MASK-color {
+  color: var(--mask);
+}
+
+.ANC-color {
+  color: var(--anc);
+}
+
+.NSBT-color {
+  color: var(--nsbt);
+}
+
+.XPR-color {
+  color: var(--xpr);
+}
+
+.CON-color {
+  color: var(--con);
+}
+
+.HUNT-color {
+  color: var(--hunt);
+}
+
+.GENE-color {
+  color: var(--gene);
+}
+
+.AERGO-color {
+  color: var(--aergo);
+}
+
+.DVF-color {
+  color: var(--dvf);
+}
+
+.IDEX-color {
+  color: var(--idex);
+}
+
+.MBL-color {
+  color: var(--mbl);
+}
+
+.ARPA-color {
+  color: var(--arpa);
+}
+
+.FLM-color {
+  color: var(--flm);
+}
+
+.EGG-color {
+  color: var(--egg);
+}
+
+.BMX-color {
+  color: var(--bmx);
+}
+
+.ATOLO-color {
+  color: var(--atolo);
+}
+
+.DPI-color {
+  color: var(--dpi);
+}
+
+.SERO-color {
+  color: var(--sero);
+}
+
+.CRTS-color {
+  color: var(--crts);
+}
+
+.STAKE-color {
+  color: var(--stake);
+}
+
+.GXC-color {
+  color: var(--gxc);
+}
+
+.CLT-color {
+  color: var(--clt);
+}
+
+.SFP-color {
+  color: var(--sfp);
+}
+
+.MFT-color {
+  color: var(--mft);
+}
+
+.MONA-color {
+  color: var(--mona);
+}
+
+.CRE-color {
+  color: var(--cre);
+}
+
+.BLZ-color {
+  color: var(--blz);
+}
+
+.VUSDT-color {
+  color: var(--vusdt);
+}
+
+.NOIA-color {
+  color: var(--noia);
+}
+
+.LTO-color {
+  color: var(--lto);
+}
+
+.TRU-color {
+  color: var(--tru);
+}
+
+.CLV-color {
+  color: var(--clv);
+}
+
+.CENNZ-color {
+  color: var(--cennz);
+}
+
+.GMT-color {
+  color: var(--gmt);
+}
+
+.WAN-color {
+  color: var(--wan);
+}
+
+.STARL-color {
+  color: var(--starl);
+}
+
+.BNANA-color {
+  color: var(--bnana);
+}
+
+.AIOZ-color {
+  color: var(--aioz);
+}
+
+.HYN-color {
+  color: var(--hyn);
+}
+
+.ATA-color {
+  color: var(--ata);
+}
+
+.RBN-color {
+  color: var(--rbn);
+}
+
+.MC-color {
+  color: var(--mc);
+}
+
+.YOOSHI-color {
+  color: var(--yooshi);
+}
+
+.HTR-color {
+  color: var(--htr);
+}
+
+.SOS-color {
+  color: var(--sos);
+}
+
+.GTC-color {
+  color: var(--gtc);
+}
+
+.AE-color {
+  color: var(--ae);
+}
+
+.AKT-color {
+  color: var(--akt);
+}
+
+.STEEM-color {
+  color: var(--steem);
+}
+
+.LIT-color {
+  color: var(--lit);
+}
+
+.YOUC-color {
+  color: var(--youc);
+}
+
+.STETH-color {
+  color: var(--steth);
+}
+
+.PRE-color {
+  color: var(--pre);
+}
+
+.XCN-color {
+  color: var(--xcn);
+}
+
+.FRAX-color {
+  color: var(--frax);
+}
+
+.TON-color {
+  color: var(--ton);
+}
+
+.WBNB-color {
+  color: var(--wbnb);
+}
+
+.BTTOLD-color {
+  color: var(--bttold);
+}
+
+.LOG-color {
+  color: var(--log);
+}
+
+.LUSD-color {
+  color: var(--lusd);
+}
+
+.DFI-color {
+  color: var(--dfi);
+}
+
+.XAUT-color {
+  color: var(--xaut);
+}
+
+.MLK-color {
+  color: var(--mlk);
+}
+
+.FRTS-color {
+  color: var(--frts);
+}
+
+.LUNC-color {
+  color: var(--lunc);
+}
+
+.WEMIX-color {
+  color: var(--wemix);
+}
+
+.HUSD-color {
+  color: var(--husd);
+}
+
+.BNX-color {
+  color: var(--bnx);
+}
+
+.T-color {
+  color: var(--t);
+}
+
+.TTT-color {
+  color: var(--ttt);
+}
+
+.LON-color {
+  color: var(--lon);
+}
+
+.OSMO-color {
+  color: var(--osmo);
+}
+
+.VR-color {
+  color: var(--vr);
+}
+
+.PHA-color {
+  color: var(--pha);
+}
+
+.PRQ-color {
+  color: var(--prq);
+}
+
+.PHL-color {
+  color: var(--phl);
+}
+
+.FIVEIRE-color {
+  color: var(--5ire);
+}
+
+.KZEN-color {
+  color: var(--kzen);
+}
+
+.SQR-color {
+  color: var(--sqr);
+}
+
+.FLUID-color {
+  color: var(--fluid);
+}
+
+.SAFFLE-color {
+  color: var(--saffle);
+}
+
+.ZAM-color {
+  color: var(--zam);
+}
+
+.FUSE-color {
+  color: var(--fuse);
+}
+
+.ONEART-color {
+  color: var(--1art);
+}
+
+.UFI-color {
+  color: var(--ufi);
+}
+
+.CGU-color {
+  color: var(--cgu);
+}
+
+.KIRO-color {
+  color: var(--kiro);
+}
+
+.ARNX-color {
+  color: var(--arnx);
+}
+
+.BTCP-color {
+  color: var(--btcp);
+}
+
+.BSD-color {
+  color: var(--bsd);
+}
+
+.BTS-color {
+  color: var(--bts);
+}
+
+.BLK-color {
+  color: var(--blk);
+}
+
+.BCD-color {
+  color: var(--bcd);
+}
+
+.TKO-color {
+  color: var(--tko);
+}
+
+.TROY-color {
+  color: var(--troy);
+}
+
+.NRG-color {
+  color: var(--nrg);
+}
+
+.ALPACA-color {
+  color: var(--alpaca);
+}
+
+.ALPINE-color {
+  color: var(--alpine);
+}
+
+.SWP-color {
+  color: var(--swp);
+}
+
+.RMRK-color {
+  color: var(--rmrk);
+}
+
+.BLCT-color {
+  color: var(--blct);
+}
+
+.HOPR-color {
+  color: var(--hopr);
+}
+
+.AETHC-color {
+  color: var(--aethc);
+}
+
+.HYDRA-color {
+  color: var(--hydra);
+}
+
+.CBK-color {
+  color: var(--cbk);
+}
+
+.BLOK-color {
+  color: var(--blok);
+}
+
+.QOM-color {
+  color: var(--qom);
+}
+
+.RFR-color {
+  color: var(--rfr);
+}
+
+.DIA-color {
+  color: var(--dia);
+}
+
+.HNS-color {
+  color: var(--hns);
+}
+
+.BZRX-color {
+  color: var(--bzrx);
+}
+
+.GRS-color {
+  color: var(--grs);
+}
+
+.VEGA-color {
+  color: var(--vega);
+}
+
+.BZZ-color {
+  color: var(--bzz);
+}
+
+.FCT-color {
+  color: var(--fct);
+}
+
+.REI-color {
+  color: var(--rei);
+}
+
+.ALCX-color {
+  color: var(--alcx);
+}
+
+.CQT-color {
+  color: var(--cqt);
+}
+
+.NCT-color {
+  color: var(--nct);
+}
+
+.GAS-color {
+  color: var(--gas);
+}
+
+.SFUND-color {
+  color: var(--sfund);
+}
+
+.UFO-color {
+  color: var(--ufo);
+}
+
+.EUM-color {
+  color: var(--eum);
+}
+
+.RISE-color {
+  color: var(--rise);
+}
+
+.FOX-color {
+  color: var(--fox);
+}
+
+.TVK-color {
+  color: var(--tvk);
+}
+
+.VRA-color {
+  color: var(--vra);
+}
+
+.UNFI-color {
+  color: var(--unfi);
+}
+
+.SOUL-color {
+  color: var(--soul);
+}
+
+.COS-color {
+  color: var(--cos);
+}
+
+.KMD-color {
+  color: var(--kmd);
+}
+
+.FIO-color {
+  color: var(--fio);
+}
+
+.VOXEL-color {
+  color: var(--voxel);
+}
+
+.BOSON-color {
+  color: var(--boson);
+}
+
+.AKRO-color {
+  color: var(--akro);
+}
+
+.FARM-color {
+  color: var(--farm);
+}
+
+.EFI-color {
+  color: var(--efi);
+}
+
+.VXVS-color {
+  color: var(--vxvs);
+}
+
+.HARD-color {
+  color: var(--hard);
+}
+
+.MEV-color {
+  color: var(--mev);
+}
+
+.ASM-color {
+  color: var(--asm);
+}
+
+.MWC-color {
+  color: var(--mwc);
+}
+
+.VXV-color {
+  color: var(--vxv);
+}
+
+.DREP-color {
+  color: var(--drep);
+}
+
+.BOO-color {
+  color: var(--boo);
+}
+
+.QUACK-color {
+  color: var(--quack);
+}
+
+.COVAL-color {
+  color: var(--coval);
+}
+
+.DNT-color {
+  color: var(--dnt);
+}
+
+.TPT-color {
+  color: var(--tpt);
+}
+
+.KIN-color {
+  color: var(--kin);
+}
+
+.KRT-color {
+  color: var(--krt);
+}
+
+.DAD-color {
+  color: var(--dad);
+}
+
+.CET-color {
+  color: var(--cet);
+}
+
+.PRQ-color {
+  color: var(--prq);
+}
+
+.AMO-color {
+  color: var(--amo);
+}
+
+.NIF-color {
+  color: var(--nif);
+}
+
+.ERN-color {
+  color: var(--ern);
+}
+
+.CTXC-color {
+  color: var(--ctxc);
+}
+
+.IRIS-color {
+  color: var(--iris);
+}
+
+.AURY-color {
+  color: var(--aury);
+}
+
+.ADX-color {
+  color: var(--adx);
+}
+
+.AGLD-color {
+  color: var(--agld);
+}
+
+.KPR-color {
+  color: var(--kpr);
+}
+
+.BABY-color {
+  color: var(--baby);
+}
+
+.CHESS-color {
+  color: var(--chess);
+}
+
+.REV-color {
+  color: var(--rev);
+}
+
+.SLP-color {
+  color: var(--slp);
+}
+
+.DG-color {
+  color: var(--dg);
+}
+
+.PSG-color {
+  color: var(--psg);
+}
+
+.GYEN-color {
+  color: var(--gyen);
+}
+
+.DDX-color {
+  color: var(--ddx);
+}
+
+.TORN-color {
+  color: var(--torn);
+}
+
+.RSS3-color {
+  color: var(--rss3);
+}
+
+.VBIT-color {
+  color: var(--vbit);
+}
+
+.MIX-color {
+  color: var(--mix);
+}
+
+.SDAO-color {
+  color: var(--sdao);
+}
+
+.BTSE-color {
+  color: var(--btse);
+}
+
+.FIRO-color {
+  color: var(--firo);
+}
+
+.APX-color {
+  color: var(--apx);
+}
+
+.DATA-color {
+  color: var(--data);
+}
+
+.SWAP-color {
+  color: var(--swap);
+}
+
+.NMC-color {
+  color: var(--nmc);
+}
+
+.FIS-color {
+  color: var(--fis);
+}
+
+.ICHI-color {
+  color: var(--ichi);
+}
+
+.TNB-color {
+  color: var(--tnb);
+}
+
+.LA-color {
+  color: var(--la);
+}
+
+.NYE-color {
+  color: var(--nye);
+}
+
+.PNK-color {
+  color: var(--pnk);
+}
+
+.CUBE-color {
+  color: var(--cube);
+}
+
+.MNW-color {
+  color: var(--mnw);
+}
+
+.DXD-color {
+  color: var(--dxd);
+}
+
+.TRB-color {
+  color: var(--trb);
+}
+
+.PEAK-color {
+  color: var(--peak);
+}
+
+.CTX-color {
+  color: var(--ctx);
+}
+
+.MSOL-color {
+  color: var(--msol);
+}
+
+.BOND-color {
+  color: var(--bond);
+}
+
+.LAZIO-color {
+  color: var(--lazio);
+}
+
+.AHT-color {
+  color: var(--aht);
+}
+
+.OXEN-color {
+  color: var(--oxen);
+}
+
+.OM-color {
+  color: var(--om);
+}
+
+.MARO-color {
+  color: var(--maro);
+}
+
+.KILT-color {
+  color: var(--kilt);
+}
+
+.RAMP-color {
+  color: var(--ramp);
+}
+
+.FSN-color {
+  color: var(--fsn);
+}
+
+.ASK-color {
+  color: var(--ask);
+}
+
+.MOVEZ-color {
+  color: var(--movez);
+}
+
+.BIOT-color {
+  color: var(--biot);
+}
+
+.RARI-color {
+  color: var(--rari);
+}
+
+.MDT-color {
+  color: var(--mdt);
+}
+
+.MATH-color {
+  color: var(--math);
+}
+
+.DERC-color {
+  color: var(--derc);
+}
+
+.DX-color {
+  color: var(--dx);
+}
+
+.RARE-color {
+  color: var(--rare);
+}
+
+.REAP-color {
+  color: var(--reap);
+}
+
+.FRONT-color {
+  color: var(--front);
+}
+
+.KEY-color {
+  color: var(--key);
+}
+
+.YLD-color {
+  color: var(--yld);
+}
+
+.SAMO-color {
+  color: var(--samo);
+}
+
+.QASH-color {
+  color: var(--qash);
+}
+
+.SIX-color {
+  color: var(--six);
+}
+
+.SOFI-color {
+  color: var(--sofi);
+}
+
+.NULS-color {
+  color: var(--nuls);
+}
+
+.ULT-color {
+  color: var(--ult);
+}
+
+.HEZ-color {
+  color: var(--hez);
+}
+
+.RAI-color {
+  color: var(--rai);
+}
+
+.SUKU-color {
+  color: var(--suku);
+}
+
+.XHV-color {
+  color: var(--xhv);
+}
+
+.SANTOS-color {
+  color: var(--santos);
+}
+
+.WILD-color {
+  color: var(--wild);
+}
+
+.BAR-color {
+  color: var(--bar);
+}
+
+.RVP-color {
+  color: var(--rvp);
+}
+
+.WNXM-color {
+  color: var(--wnxm);
+}
+
+.QSP-color {
+  color: var(--qsp);
+}
+
+.CITY-color {
+  color: var(--city);
+}
+
+.HIGH-color {
+  color: var(--high);
+}
+
+.MOF-color {
+  color: var(--mof);
+}
+
+.BTM-color {
+  color: var(--btm);
+}
+
+.BIDR-color {
+  color: var(--bidr);
+}
+
+.SDN-color {
+  color: var(--sdn);
+}
+
+.FIDA-color {
+  color: var(--fida);
+}
+
+.USDJ-color {
+  color: var(--usdj);
+}
+
+.TIME-color {
+  color: var(--time);
+}
+
+.MITH-color {
+  color: var(--mith);
+}
+
+.QUICK-color {
+  color: var(--quick);
+}
+
+.DEXE-color {
+  color: var(--dexe);
+}
+
+.GTO-color {
+  color: var(--gto);
+}
+
+.BEAM-color {
+  color: var(--beam);
+}
+
+.DF-color {
+  color: var(--df);
+}
+
+.IDRT-color {
+  color: var(--idrt);
+}
+
+.ROOK-color {
+  color: var(--rook);
+}
+
+.RFOX-color {
+  color: var(--rfox);
+}
+
+.HBTC-color {
+  color: var(--hbtc);
+}
+
+.LUSD-color {
+  color: var(--lusd);
+}
+
+.SAFE-color {
+  color: var(--safe);
+}
+
+.PLA-color {
+  color: var(--pla);
+}
+
+.LUNA-color {
+  color: var(--luna);
+}
+
+.BIT-color {
+  color: var(--bit);
+}
+
+.NXM-color {
+  color: var(--nxm);
+}
+
+.TITAN-color {
+  color: var(--titan);
+}
+
+.LN-color {
+  color: var(--ln);
+}
+
+.CBG-color {
+  color: var(--cbg);
+}
+
+.ASTR-color {
+  color: var(--astr);
+}
+
+.ACH-color {
+  color: var(--ach);
+}
+
+.ACM-color {
+  color: var(--acm);
+}
+
+.ADADOWN-color {
+  color: var(--adadown);
+}
+
+.ADAUP-color {
+  color: var(--adaup);
+}
+
+.AION-color {
+  color: var(--aion);
+}
+
+.AMB-color {
+  color: var(--amb);
+}
+
+.ASR-color {
+  color: var(--asr);
+}
+
+.AST-color {
+  color: var(--ast);
+}
+
+.ATM-color {
+  color: var(--atm);
+}
+
+.AUCTION-color {
+  color: var(--auction);
+}
+
+.AUD-color {
+  color: var(--aud);
+}
+
+.AUTO-color {
+  color: var(--auto);
+}
+
+.AVA-color {
+  color: var(--ava);
+}
+
+.BETH-color {
+  color: var(--beth);
+}
+
+.BICO-color {
+  color: var(--bico);
+}
+
+.BIFI-color {
+  color: var(--bifi);
+}
+
+.BNBDOWN-color {
+  color: var(--bnbdown);
+}
+
+.BNBDOWN-color {
+  color: var(--bnbdown);
+}
+
+.BRD-color {
+  color: var(--brd);
+}
+
+.BSW-color {
+  color: var(--bsw);
+}
+
+.BTCDOWN-color {
+  color: var(--btcdown);
+}
+
+.BTCST-color {
+  color: var(--btcst);
+}
+
+.BTCUP-color {
+  color: var(--btcup);
+}
+
+.BTT-C-color {
+  color: var(--btt-c);
+}
+
+.BURGER-color {
+  color: var(--burger);
+}
+
+.CELR-color {
+  color: var(--celr);
+}
+
+.CREAM-color {
+  color: var(--cream);
+}
+
+.CTK-color {
+  color: var(--ctk);
+}
+
+.CVP-color {
+  color: var(--cvp);
+}
+
+.DEGO-color {
+  color: var(--dego);
+}
+
+.DOCK-color {
+  color: var(--dock);
+}
+
+.DODO-color {
+  color: var(--dodo);
+}
+
+.DOTDOWN-color {
+  color: var(--dotdown);
+}
+
+.DOTUP-color {
+  color: var(--dotup);
+}
+
+.DYDX-color {
+  color: var(--dydx);
+}
+
+.ELF-color {
+  color: var(--elf);
+}
+
+.EPX-color {
+  color: var(--epx);
+}
+
+.ETH-color {
+  color: var(--eth);
+}
+
+.ETHDOWN-color {
+  color: var(--ethdown);
+}
+
+.ETHUP-color {
+  color: var(--ethup);
+}
+
+.EUR-color {
+  color: var(--eur);
+}
+
+.EZ-color {
+  color: var(--ez);
+}
+
+.FET-color {
+  color: var(--fet);
+}
+
+.FOR-color {
+  color: var(--for);
+}
+
+.FUN-color {
+  color: var(--fun);
+}
+
+.FXS-color {
+  color: var(--fxs);
+}
+
+.GAL-color {
+  color: var(--gal);
+}
+
+.GBP-color {
+  color: var(--gbp);
+}
+
+.GLMR-color {
+  color: var(--glmr);
+}
+
+.GO-color {
+  color: var(--go);
+}
+
+.INJ-color {
+  color: var(--inj);
+}
+
+.IOTA-color {
+  color: var(--iota);
+}
+
+.IQ-color {
+  color: var(--iq);
+}
+
+.JOE-color {
+  color: var(--joe);
+}
+
+.JUV-color {
+  color: var(--juv);
+}
+
+.LINA-color {
+  color: var(--lina);
+}
+
+.LINKDOWN-color {
+  color: var(--linkdown);
+}
+
+.LINKUP-color {
+  color: var(--linkup);
+}
+
+.LOKA-color {
+  color: var(--loka);
+}
+
+.MATIC-color {
+  color: var(--matic);
+}
+
+.MDA-color {
+  color: var(--mda);
+}
+
+.MDX-color {
+  color: var(--mdx);
+}
+
+.MIR-color {
+  color: var(--mir);
+}
+
+.MOB-color {
+  color: var(--mob);
+}
+
+.MOVR-color {
+  color: var(--movr);
+}
+
+.MULTI-color {
+  color: var(--multi);
+}
+
+.NAS-color {
+  color: var(--nas);
+}
+
+.NAV-color {
+  color: var(--nav);
+}
+
+.NBS-color {
+  color: var(--nbs);
+}
+
+.NEBL-color {
+  color: var(--nebl);
+}
+
+.NXS-color {
+  color: var(--nxs);
+}
+
+.OAX-color {
+  color: var(--oax);
+}
+
+.OG-color {
+  color: var(--og);
+}
+
+.ONG-color {
+  color: var(--ong);
+}
+
+.OOKI-color {
+  color: var(--ooki);
+}
+
+.OP-color {
+  color: var(--op);
+}
+
+.OXT-color {
+  color: var(--oxt);
+}
+
+.PEOPLE-color {
+  color: var(--people);
+}
+
+.PERL-color {
+  color: var(--perl);
+}
+
+.PHB-color {
+  color: var(--phb);
+}
+
+.PIVX-color {
+  color: var(--pivx);
+}
+
+.PNT-color {
+  color: var(--pnt);
+}
+
+.PORTO-color {
+  color: var(--porto);
+}
+
+.PROS-color {
+  color: var(--pros);
+}
+
+.QI-color {
+  color: var(--qi);
+}
+
+.QLC-color {
+  color: var(--qlc);
+}
+
+.RAY-color {
+  color: var(--ray);
+}
+
+.REP-color {
+  color: var(--rep);
+}
+
+.RLC-color {
+  color: var(--rlc);
+}
+
+.SNM-color {
+  color: var(--snm);
+}
+
+.SPARTA-color {
+  color: var(--sparta);
+}
+
+.SPELL-color {
+  color: var(--spell);
+}
+
+.STMX-color {
+  color: var(--stmx);
+}
+
+.STPT-color {
+  color: var(--stpt);
+}
+
+.SUN-color {
+  color: var(--sun);
+}
+
+.TCT-color {
+  color: var(--tct);
+}
+
+.TRXDOWN-color {
+  color: var(--trxdown);
+}
+
+.TRXUP-color {
+  color: var(--trxup);
+}
+
+.UFT-color {
+  color: var(--uft);
+}
+
+.USTC-color {
+  color: var(--ustc);
+}
+
+.VIB-color {
+  color: var(--vib);
+}
+
+.VIDT-color {
+  color: var(--vidt);
+}
+
+.VITE-color {
+  color: var(--vite);
+}
+
+.VTHO-color {
+  color: var(--vtho);
+}
+
+.WABI-color {
+  color: var(--wabi);
+}
+
+.WAXP-color {
+  color: var(--waxp);
+}
+
+.WIN-color {
+  color: var(--win);
+}
+
+.WING-color {
+  color: var(--wing);
+}
+
+.WRX-color {
+  color: var(--wrx);
+}
+
+.WTC-color {
+  color: var(--wtc);
+}
+
+.XRPDOWN-color {
+  color: var(--xrpdown);
+}
+
+.XRPUP-color {
+  color: var(--xrpup);
+}
+
+.YFII-color {
+  color: var(--yfii);
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cryptofont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-BCHDOWN::before {
+  content: "\eb7a";
+}
+
+.icon-BCHUP::before {
+  content: "\eb7b";
+}
+
+.icon-YFIDOWN::before {
+  content: "\eb7c";
+}
+
+.icon-YFIUP::before {
+  content: "\eb7d";
+}
+
+.icon-FILDOWN::before {
+  content: "\eb7e";
+}
+
+.icon-FILUP::before {
+  content: "\eb7f";
+}
+
+.icon-SXPDOWN::before {
+  content: "\eb80";
+}
+
+.icon-SXPUP::before {
+  content: "\eb81";
+}
+
+.icon-BRL::before {
+  content: "\eb82";
+}
+
+.icon-UNIDOWN::before {
+  content: "\eb83";
+}
+
+.icon-UNIUP::before {
+  content: "\eb84";
+}
+
+.icon-LTCDOWN::before {
+  content: "\eb85";
+}
+
+.icon-LTCUP::before {
+  content: "\eb86";
+}
+
+.icon-SWRV::before {
+  content: "\eb87";
+}
+
+.icon-EOSDOWN::before {
+  content: "\eb88";
+}
+
+.icon-EOSUP::before {
+  content: "\eb89";
+}
+
+.icon-XTZDOWN::before {
+  content: "\eb8a";
+}
+
+.icon-XTZUP::before {
+  content: "\eb8b";
+}
+
+.icon-BIDR::before {
+  content: "\eb8c";
+}
+
+.icon-BKRW::before {
+  content: "\eb8d";
+}
+
+.icon-NGN::before {
+  content: "\eb8e";
+}
+
+.icon-ERD::before {
+  content: "\eb8f";
+}
+
+.icon-BTCB::before {
+  content: "\eb90";
+}
+
+.icon-NPXS::before {
+  content: "\eb91";
+}
+
+.icon-BCN::before {
+  content: "\eb92";
+}
+
+.icon-GNT::before {
+  content: "\eb93";
+}
+
+.icon-WPR::before {
+  content: "\eb94";
+}
+
+.icon-STORM::before {
+  content: "\eb95";
+}
+
+.icon-NCASH::before {
+  content: "\eb96";
+}
+
+.icon-VIA::before {
+  content: "\eb97";
+}
+
+.icon-CHAT::before {
+  content: "\eb98";
+}
+
+.icon-INS::before {
+  content: "\eb99";
+}
+
+.icon-APPC::before {
+  content: "\eb9a";
+}
+
+.icon-EDO::before {
+  content: "\eb9b";
+}
+
+.icon-OST::before {
+  content: "\eb9c";
+}
+
+.icon-PPT::before {
+  content: "\eb9d";
+}
+
+.icon-DGD::before {
+  content: "\eb9e";
+}
+
+.icon-POE::before {
+  content: "\eb9f";
+}
+
+.icon-GVT::before {
+  content: "\eba0";
+}
+
+.icon-BCPT::before {
+  content: "\eba1";
+}
+
+.icon-RCN::before {
+  content: "\eba2";
+}
+
+.icon-MOD::before {
+  content: "\eba3";
+}
+
+.icon-EVX::before {
+  content: "\eba4";
+}
+
+.icon-MTH::before {
+  content: "\eba5";
+}
+
+.icon-SALT::before {
+  content: "\eba6";
+}
+
+.icon-SNGLS::before {
+  content: "\eba7";
+}
+
+.icon-YOYOW::before {
+  content: "\eba8";
+}
+
+.icon-ICN::before {
+  content: "\eba9";
+}
+
+.icon-MCO::before {
+  content: "\ebaa";
+}
+
+.icon-RON::before {
+  content: "\ebab";
+}
+
+.icon-MAGIC::before {
+  content: "\ebac";
+}
+
+.icon-HOOK::before {
+  content: "\ebad";
+}
+
+.icon-HFT::before {
+  content: "\ebae";
+}
+
+.icon-PLN::before {
+  content: "\ebaf";
+}
+
+.icon-GMX::before {
+  content: "\ebb0";
+}
+
+.icon-STG::before {
+  content: "\ebb1";
+}
+
+.icon-LEVER::before {
+  content: "\ebb2";
+}
+
+.icon-NBT::before {
+  content: "\ebb3";
+}
+
+.icon-BDOT::before {
+  content: "\ebb4";
+}
+
+.icon-UST::before {
+  content: "\ebb5";
+}
+
+.icon-ANY::before {
+  content: "\ebb6";
+}
+
+.icon-INCHDOWN::before {
+  content: "\ebb7";
+}
+
+.icon-INCHUP::before {
+  content: "\ebb8";
+}
+
+.icon-VAI::before {
+  content: "\ebb9";
+}
+
+.icon-BVND::before {
+  content: "\ebba";
+}
+
+.icon-XLMDOWN::before {
+  content: "\ebbb";
+}
+
+.icon-XLMUP::before {
+  content: "\ebbc";
+}
+
+.icon-SUSHIDOWN::before {
+  content: "\ebbd";
+}
+
+.icon-SUSHIUP::before {
+  content: "\ebbe";
+}
+
+.icon-COVER::before {
+  content: "\ebbf";
+}
+
+.icon-SUSD::before {
+  content: "\ebc0";
+}
+
+.icon-AAVEDOWN::before {
+  content: "\ebc1";
+}
+
+.icon-AAVEUP::before {
+  content: "\ebc2";
+}
+
+.icon-HEGIC::before {
+  content: "\ebc3";
+}
+
+.icon-GUSD::before {
+  content: "\ebc4";
+}
+
+.icon-ETHW::before {
+  content: "\e900";
+}
+
+.icon-ETHF::before {
+  content: "\e901";
+}
+
+.icon-DCRN::before {
+  content: "\e902";
+}
+
+.icon-APT::before {
+  content: "\e903";
+}
+
+.icon-KAR::before {
+  content: "\e904";
+}
+
+.icon-SOL::before {
+  content: "\e905";
+}
+
+.icon-BUSD::before {
+  content: "\e906";
+}
+
+.icon-XRP::before {
+  content: "\e907";
+}
+
+.icon-ADA::before {
+  content: "\e908";
+}
+
+.icon-USDC::before {
+  content: "\e909";
+}
+
+.icon-USDT::before {
+  content: "\e90a";
+}
+
+.icon-ETH::before {
+  content: "\e90b";
+}
+
+.icon-LEO::before {
+  content: "\e90c";
+}
+
+.icon-SHIB::before {
+  content: "\e90d";
+}
+
+.icon-AVAX::before {
+  content: "\e90e";
+}
+
+.icon-DAI::before {
+  content: "\e90f";
+}
+
+.icon-TRX::before {
+  content: "\e910";
+}
+
+.icon-DOT::before {
+  content: "\e911";
+}
+
+.icon-LTC::before {
+  content: "\e912";
+}
+
+.icon-CRO::before {
+  content: "\e913";
+}
+
+.icon-DOGE::before {
+  content: "\e914";
+}
+
+.icon-KCS::before {
+  content: "\e915";
+}
+
+.icon-EGLD::before {
+  content: "\e916";
+}
+
+.icon-XTZ::before {
+  content: "\e917";
+}
+
+.icon-APE::before {
+  content: "\e918";
+}
+
+.icon-ICP::before {
+  content: "\e919";
+}
+
+.icon-HBAR::before {
+  content: "\e91a";
+}
+
+.icon-VET::before {
+  content: "\e91b";
+}
+
+.icon-FLOW::before {
+  content: "\e91c";
+}
+
+.icon-ETC::before {
+  content: "\e91d";
+}
+
+.icon-LINK::before {
+  content: "\e91e";
+}
+
+.icon-XLM::before {
+  content: "\e91f";
+}
+
+.icon-BCH::before {
+  content: "\e920";
+}
+
+.icon-FTT::before {
+  content: "\e921";
+}
+
+.icon-UNI::before {
+  content: "\e922";
+}
+
+.icon-NEAR::before {
+  content: "\e923";
+}
+
+.icon-BTC::before {
+  content: "\e924";
+}
+
+.icon-BNB::before {
+  content: "\e925";
+}
+
+.icon-MATIC::before {
+  content: "\e926";
+}
+
+.icon-WBTC::before {
+  content: "\e927";
+}
+
+.icon-SAND::before {
+  content: "\e928";
+}
+
+.icon-MANA::before {
+  content: "\e929";
+}
+
+.icon-ALGO::before {
+  content: "\e92a";
+}
+
+.icon-XMR::before {
+  content: "\e92b";
+}
+
+.icon-1INCH::before {
+  content: "\e92c";
+}
+
+.icon-AAVE::before {
+  content: "\e92d";
+}
+
+.icon-ACA::before {
+  content: "\e92e";
+}
+
+.icon-AMP::before {
+  content: "\e92f";
+}
+
+.icon-ANKR::before {
+  content: "\e930";
+}
+
+.icon-AR::before {
+  content: "\e931";
+}
+
+.icon-AUDIO::before {
+  content: "\e932";
+}
+
+.icon-AXS::before {
+  content: "\e933";
+}
+
+.icon-BAT::before {
+  content: "\e934";
+}
+
+.icon-BNT::before {
+  content: "\e935";
+}
+
+.icon-BORA::before {
+  content: "\e936";
+}
+
+.icon-BSV::before {
+  content: "\e937";
+}
+
+.icon-BTG::before {
+  content: "\e938";
+}
+
+.icon-BTRST::before {
+  content: "\e939";
+}
+
+.icon-BTT::before {
+  content: "\e93a";
+}
+
+.icon-CAKE::before {
+  content: "\e93b";
+}
+
+.icon-CELO::before {
+  content: "\e93c";
+}
+
+.icon-CFX::before {
+  content: "\e93d";
+}
+
+.icon-CHSB::before {
+  content: "\e93e";
+}
+
+.icon-CHZ::before {
+  content: "\e93f";
+}
+
+.icon-COMP::before {
+  content: "\e940";
+}
+
+.icon-CRV::before {
+  content: "\e941";
+}
+
+.icon-CSPR::before {
+  content: "\e942";
+}
+
+.icon-CVX::before {
+  content: "\e943";
+}
+
+.icon-DASH::before {
+  content: "\e944";
+}
+
+.icon-DCR::before {
+  content: "\e945";
+}
+
+.icon-DGB::before {
+  content: "\e946";
+}
+
+.icon-ENJ::before {
+  content: "\e947";
+}
+
+.icon-ENS::before {
+  content: "\e948";
+}
+
+.icon-EOS::before {
+  content: "\e949";
+}
+
+.icon-FEI::before {
+  content: "\e94a";
+}
+
+.icon-FIL::before {
+  content: "\e94b";
+}
+
+.icon-FLUX::before {
+  content: "\e94c";
+}
+
+.icon-FTM::before {
+  content: "\e94d";
+}
+
+.icon-GALA::before {
+  content: "\e94e";
+}
+
+.icon-GLM::before {
+  content: "\e94f";
+}
+
+.icon-GMT::before {
+  content: "\e950";
+}
+
+.icon-GNO::before {
+  content: "\e951";
+}
+
+.icon-GRT::before {
+  content: "\e952";
+}
+
+.icon-GT::before {
+  content: "\e953";
+}
+
+.icon-USD::before {
+  content: "\e954";
+}
+
+.icon-HIVE::before {
+  content: "\e955";
+}
+
+.icon-HNT::before {
+  content: "\e956";
+}
+
+.icon-HOT::before {
+  content: "\e957";
+}
+
+.icon-HT::before {
+  content: "\e958";
+}
+
+.icon-ICX::before {
+  content: "\e959";
+}
+
+.icon-ILV::before {
+  content: "\e95a";
+}
+
+.icon-IMX::before {
+  content: "\e95b";
+}
+
+.icon-IOST::before {
+  content: "\e95c";
+}
+
+.icon-IOTX::before {
+  content: "\e95d";
+}
+
+.icon-JST::before {
+  content: "\e95e";
+}
+
+.icon-KAVA::before {
+  content: "\e95f";
+}
+
+.icon-KDA::before {
+  content: "\e960";
+}
+
+.icon-KEEP::before {
+  content: "\e961";
+}
+
+.icon-KLAY::before {
+  content: "\e962";
+}
+
+.icon-KNC::before {
+  content: "\e963";
+}
+
+.icon-KSM::before {
+  content: "\e964";
+}
+
+.icon-LDO::before {
+  content: "\e965";
+}
+
+.icon-LPT::before {
+  content: "\e966";
+}
+
+.icon-LRC::before {
+  content: "\e967";
+}
+
+.icon-LSK::before {
+  content: "\e968";
+}
+
+.icon-MED::before {
+  content: "\e969";
+}
+
+.icon-MINA::before {
+  content: "\e96a";
+}
+
+.icon-MIOTA::before {
+  content: "\e96b";
+}
+
+.icon-MKR::before {
+  content: "\e96c";
+}
+
+.icon-MX::before {
+  content: "\e96d";
+}
+
+.icon-MXC::before {
+  content: "\e96e";
+}
+
+.icon-NEO::before {
+  content: "\e96f";
+}
+
+.icon-NEXO::before {
+  content: "\e970";
+}
+
+.icon-NFT::before {
+  content: "\e971";
+}
+
+.icon-NU::before {
+  content: "\e972";
+}
+
+.icon-OCEAN::before {
+  content: "\e973";
+}
+
+.icon-OKB::before {
+  content: "\e974";
+}
+
+.icon-OMG::before {
+  content: "\e975";
+}
+
+.icon-ONE::before {
+  content: "\e976";
+}
+
+.icon-ONT::before {
+  content: "\e977";
+}
+
+.icon-ORBS::before {
+  content: "\e978";
+}
+
+.icon-PAXG::before {
+  content: "\e979";
+}
+
+.icon-POLY::before {
+  content: "\e97a";
+}
+
+.icon-QNT::before {
+  content: "\e97b";
+}
+
+.icon-QTUM::before {
+  content: "\e97c";
+}
+
+.icon-REN::before {
+  content: "\e97d";
+}
+
+.icon-RENBTC::before {
+  content: "\e97e";
+}
+
+.icon-RLY::before {
+  content: "\e97f";
+}
+
+.icon-RNDR::before {
+  content: "\e980";
+}
+
+.icon-ROSE::before {
+  content: "\e981";
+}
+
+.icon-RUNE::before {
+  content: "\e982";
+}
+
+.icon-RVN::before {
+  content: "\e983";
+}
+
+.icon-SC::before {
+  content: "\e984";
+}
+
+.icon-SCRT::before {
+  content: "\e985";
+}
+
+.icon-SKL::before {
+  content: "\e986";
+}
+
+.icon-SNX::before {
+  content: "\e987";
+}
+
+.icon-SRM::before {
+  content: "\e988";
+}
+
+.icon-STORJ::before {
+  content: "\e989";
+}
+
+.icon-STX::before {
+  content: "\e98a";
+}
+
+.icon-SUSHI::before {
+  content: "\e98b";
+}
+
+.icon-SXP::before {
+  content: "\e98c";
+}
+
+.icon-SYS::before {
+  content: "\e98d";
+}
+
+.icon-TFUEL::before {
+  content: "\e98e";
+}
+
+.icon-THETA::before {
+  content: "\e98f";
+}
+
+.icon-TUSD::before {
+  content: "\e990";
+}
+
+.icon-TWT::before {
+  content: "\e991";
+}
+
+.icon-UMA::before {
+  content: "\e992";
+}
+
+.icon-USDD::before {
+  content: "\e993";
+}
+
+.icon-USDN::before {
+  content: "\e994";
+}
+
+.icon-USDP::before {
+  content: "\e995";
+}
+
+.icon-VGX::before {
+  content: "\e996";
+}
+
+.icon-WAVES::before {
+  content: "\e997";
+}
+
+.icon-WOO::before {
+  content: "\e998";
+}
+
+.icon-XDC::before {
+  content: "\e999";
+}
+
+.icon-XEC::before {
+  content: "\e99a";
+}
+
+.icon-XEM::before {
+  content: "\e99b";
+}
+
+.icon-XNO::before {
+  content: "\e99c";
+}
+
+.icon-YFI::before {
+  content: "\e99d";
+}
+
+.icon-ZEC::before {
+  content: "\e99e";
+}
+
+.icon-ZEN::before {
+  content: "\e99f";
+}
+
+.icon-ZIL::before {
+  content: "\e9a0";
+}
+
+.icon-ZRX::before {
+  content: "\e9a1";
+}
+
+.icon-ACH::before {
+  content: "\e9a2";
+}
+
+.icon-BTCDOWN::before {
+  content: "\e9a3";
+}
+
+.icon-EZ::before {
+  content: "\e9a4";
+}
+
+.icon-BSW::before {
+  content: "\e9a5";
+}
+
+.icon-EUR::before {
+  content: "\e9a6";
+}
+
+.icon-BRD::before {
+  content: "\e9a7";
+}
+
+.icon-ETHUP::before {
+  content: "\e9a8";
+}
+
+.icon-BNBUP::before {
+  content: "\e9a9";
+}
+
+.icon-ETHDOWN::before {
+  content: "\e9aa";
+}
+
+.icon-BNBDOWN::before {
+  content: "\e9ab";
+}
+
+.icon-EPX::before {
+  content: "\e9ac";
+}
+
+.icon-BIFI::before {
+  content: "\e9ad";
+}
+
+.icon-ELF::before {
+  content: "\e9ae";
+}
+
+.icon-BICO::before {
+  content: "\e9af";
+}
+
+.icon-DYDX::before {
+  content: "\e9b0";
+}
+
+.icon-BETH::before {
+  content: "\e9b1";
+}
+
+.icon-DOTUP::before {
+  content: "\e9b2";
+}
+
+.icon-AVA::before {
+  content: "\e9b3";
+}
+
+.icon-DOTDOWN::before {
+  content: "\e9b4";
+}
+
+.icon-AUTO::before {
+  content: "\e9b5";
+}
+
+.icon-DODO::before {
+  content: "\e9b6";
+}
+
+.icon-AUD::before {
+  content: "\e9b7";
+}
+
+.icon-DOCK::before {
+  content: "\e9b8";
+}
+
+.icon-AUCTION::before {
+  content: "\e9b9";
+}
+
+.icon-DEGO::before {
+  content: "\e9ba";
+}
+
+.icon-ATM::before {
+  content: "\e9bb";
+}
+
+.icon-CVP::before {
+  content: "\e9bc";
+}
+
+.icon-VIDT::before {
+  content: "\e9bd";
+}
+
+.icon-MDX::before {
+  content: "\e9be";
+}
+
+.icon-PNT::before {
+  content: "\e9bf";
+}
+
+.icon-VIB::before {
+  content: "\e9c0";
+}
+
+.icon-MDA::before {
+  content: "\e9c1";
+}
+
+.icon-PIVX::before {
+  content: "\e9c2";
+}
+
+.icon-USTC::before {
+  content: "\e9c3";
+}
+
+.icon-PHB::before {
+  content: "\e9c4";
+}
+
+.icon-UFT::before {
+  content: "\e9c5";
+}
+
+.icon-LOKA::before {
+  content: "\e9c6";
+}
+
+.icon-PERL::before {
+  content: "\e9c7";
+}
+
+.icon-TRXUP::before {
+  content: "\e9c8";
+}
+
+.icon-LINKUP::before {
+  content: "\e9c9";
+}
+
+.icon-PEOPLE::before {
+  content: "\e9ca";
+}
+
+.icon-TRXDOWN::before {
+  content: "\e9cb";
+}
+
+.icon-LINKDOWN::before {
+  content: "\e9cc";
+}
+
+.icon-OXT::before {
+  content: "\e9cd";
+}
+
+.icon-TCT::before {
+  content: "\e9ce";
+}
+
+.icon-LINA::before {
+  content: "\e9cf";
+}
+
+.icon-OP::before {
+  content: "\e9d0";
+}
+
+.icon-SUN::before {
+  content: "\e9d1";
+}
+
+.icon-JUV::before {
+  content: "\e9d2";
+}
+
+.icon-OOKI::before {
+  content: "\e9d3";
+}
+
+.icon-STPT::before {
+  content: "\e9d4";
+}
+
+.icon-JOE::before {
+  content: "\e9d5";
+}
+
+.icon-ASR::before {
+  content: "\e9d6";
+}
+
+.icon-GBP::before {
+  content: "\e9d7";
+}
+
+.icon-CREAM::before {
+  content: "\e9d8";
+}
+
+.icon-AST::before {
+  content: "\e9d9";
+}
+
+.icon-CTK::before {
+  content: "\e9da";
+}
+
+.icon-AMB::before {
+  content: "\e9db";
+}
+
+.icon-GAL::before {
+  content: "\e9dc";
+}
+
+.icon-CELR::before {
+  content: "\e9dd";
+}
+
+.icon-AION::before {
+  content: "\e9de";
+}
+
+.icon-FXS::before {
+  content: "\e9df";
+}
+
+.icon-BURGER::before {
+  content: "\e9e0";
+}
+
+.icon-ADAUP::before {
+  content: "\e9e1";
+}
+
+.icon-FUN::before {
+  content: "\e9e2";
+}
+
+.icon-BTTC::before {
+  content: "\e9e3";
+}
+
+.icon-ADADOWN::before {
+  content: "\e9e4";
+}
+
+.icon-FOR::before {
+  content: "\e9e5";
+}
+
+.icon-BTCUP::before {
+  content: "\e9e6";
+}
+
+.icon-ACM::before {
+  content: "\e9e7";
+}
+
+.icon-FET::before {
+  content: "\e9e8";
+}
+
+.icon-BTCST::before {
+  content: "\e9e9";
+}
+
+.icon-ASTR::before {
+  content: "\e9ea";
+}
+
+.icon-CBG::before {
+  content: "\e9eb";
+}
+
+.icon-LN::before {
+  content: "\e9ec";
+}
+
+.icon-TITAN::before {
+  content: "\e9ed";
+}
+
+.icon-OSMO::before {
+  content: "\e9ee";
+}
+
+.icon-NXM::before {
+  content: "\e9ef";
+}
+
+.icon-BIT::before {
+  content: "\e9f0";
+}
+
+.icon-TTT::before {
+  content: "\e9f1";
+}
+
+.icon-T::before {
+  content: "\e9f2";
+}
+
+.icon-BNX::before {
+  content: "\e9f3";
+}
+
+.icon-HUSD::before {
+  content: "\e9f4";
+}
+
+.icon-WEMIX::before {
+  content: "\e9f5";
+}
+
+.icon-LUNC::before {
+  content: "\e9f6";
+}
+
+.icon-FRTS::before {
+  content: "\e9f7";
+}
+
+.icon-XAUT::before {
+  content: "\e9f8";
+}
+
+.icon-DFI::before {
+  content: "\e9f9";
+}
+
+.icon-LUSD::before {
+  content: "\e9fa";
+}
+
+.icon-KIRO::before {
+  content: "\e9fb";
+}
+
+.icon-CGU::before {
+  content: "\e9fc";
+}
+
+.icon-UFI::before {
+  content: "\e9fd";
+}
+
+.icon-ART::before {
+  content: "\e9fe";
+}
+
+.icon-FUSE::before {
+  content: "\e9ff";
+}
+
+.icon-ZAM::before {
+  content: "\ea00";
+}
+
+.icon-SAFFLE::before {
+  content: "\ea01";
+}
+
+.icon-FLUID::before {
+  content: "\ea02";
+}
+
+.icon-SQR::before {
+  content: "\ea03";
+}
+
+.icon-KZEN::before {
+  content: "\ea04";
+}
+
+.icon-PHL::before {
+  content: "\ea05";
+}
+
+.icon-IRE::before {
+  content: "\ea06";
+}
+
+.icon-BMC::before {
+  content: "\ea07";
+}
+
+.icon-BLK::before {
+  content: "\ea08";
+}
+
+.icon-BTS::before {
+  content: "\ea09";
+}
+
+.icon-BSD::before {
+  content: "\ea0a";
+}
+
+.icon-BTCP::before {
+  content: "\ea0b";
+}
+
+.icon-ARNX::before {
+  content: "\ea0c";
+}
+
+.icon-PRQ::before {
+  content: "\ea0d";
+}
+
+.icon-HBTC::before {
+  content: "\ea0e";
+}
+
+.icon-BTTOLD::before {
+  content: "\ea0f";
+}
+
+.icon-WBNB::before {
+  content: "\ea10";
+}
+
+.icon-TON::before {
+  content: "\ea11";
+}
+
+.icon-FRAX::before {
+  content: "\ea12";
+}
+
+.icon-XCN::before {
+  content: "\ea13";
+}
+
+.icon-STETH::before {
+  content: "\ea14";
+}
+
+.icon-YOUC::before {
+  content: "\ea15";
+}
+
+.icon-STEEM::before {
+  content: "\ea16";
+}
+
+.icon-PLA::before {
+  content: "\ea17";
+}
+
+.icon-CVC::before {
+  content: "\ea18";
+}
+
+.icon-XYO::before {
+  content: "\ea19";
+}
+
+.icon-TRIBE::before {
+  content: "\ea1a";
+}
+
+.icon-REQ::before {
+  content: "\ea1b";
+}
+
+.icon-ASD::before {
+  content: "\ea1c";
+}
+
+.icon-PYR::before {
+  content: "\ea1d";
+}
+
+.icon-DENT::before {
+  content: "\ea1e";
+}
+
+.icon-OGN::before {
+  content: "\ea1f";
+}
+
+.icon-PUNDIX::before {
+  content: "\ea20";
+}
+
+.icon-ARDR::before {
+  content: "\ea21";
+}
+
+.icon-C98::before {
+  content: "\ea22";
+}
+
+.icon-ONG::before {
+  content: "\ea23";
+}
+
+.icon-STMX::before {
+  content: "\ea24";
+}
+
+.icon-IQ::before {
+  content: "\ea25";
+}
+
+.icon-YFII::before {
+  content: "\ea26";
+}
+
+.icon-OG::before {
+  content: "\ea27";
+}
+
+.icon-SPELL::before {
+  content: "\ea28";
+}
+
+.icon-IOTA::before {
+  content: "\ea29";
+}
+
+.icon-XRPUP::before {
+  content: "\ea2a";
+}
+
+.icon-OAX::before {
+  content: "\ea2b";
+}
+
+.icon-SPARTA::before {
+  content: "\ea2c";
+}
+
+.icon-INJ::before {
+  content: "\ea2d";
+}
+
+.icon-XRPDOWN::before {
+  content: "\ea2e";
+}
+
+.icon-NXS::before {
+  content: "\ea2f";
+}
+
+.icon-SNM::before {
+  content: "\ea30";
+}
+
+.icon-GO::before {
+  content: "\ea31";
+}
+
+.icon-WTC::before {
+  content: "\ea32";
+}
+
+.icon-NEBL::before {
+  content: "\ea33";
+}
+
+.icon-REP::before {
+  content: "\ea34";
+}
+
+.icon-WING::before {
+  content: "\ea35";
+}
+
+.icon-NAV::before {
+  content: "\ea36";
+}
+
+.icon-RLC::before {
+  content: "\ea37";
+}
+
+.icon-GLMR::before {
+  content: "\ea38";
+}
+
+.icon-WRX::before {
+  content: "\ea39";
+}
+
+.icon-NBS::before {
+  content: "\ea3a";
+}
+
+.icon-RAY::before {
+  content: "\ea3b";
+}
+
+.icon-WIN::before {
+  content: "\ea3c";
+}
+
+.icon-NAS::before {
+  content: "\ea3d";
+}
+
+.icon-QLC::before {
+  content: "\ea3e";
+}
+
+.icon-WAXP::before {
+  content: "\ea3f";
+}
+
+.icon-MULTI::before {
+  content: "\ea40";
+}
+
+.icon-QI::before {
+  content: "\ea41";
+}
+
+.icon-WABI::before {
+  content: "\ea42";
+}
+
+.icon-MOVR::before {
+  content: "\ea43";
+}
+
+.icon-PROS::before {
+  content: "\ea44";
+}
+
+.icon-VTHO::before {
+  content: "\ea45";
+}
+
+.icon-MOB::before {
+  content: "\ea46";
+}
+
+.icon-PORTO::before {
+  content: "\ea47";
+}
+
+.icon-VITE::before {
+  content: "\ea48";
+}
+
+.icon-MIR::before {
+  content: "\ea49";
+}
+
+.icon-DERO::before {
+  content: "\ea4a";
+}
+
+.icon-BAKE::before {
+  content: "\ea4b";
+}
+
+.icon-NKN::before {
+  content: "\ea4c";
+}
+
+.icon-ARK::before {
+  content: "\ea4d";
+}
+
+.icon-MUSD::before {
+  content: "\ea4e";
+}
+
+.icon-BETA::before {
+  content: "\ea4f";
+}
+
+.icon-POND::before {
+  content: "\ea50";
+}
+
+.icon-UTK::before {
+  content: "\ea51";
+}
+
+.icon-DPR::before {
+  content: "\ea52";
+}
+
+.icon-YGG::before {
+  content: "\ea53";
+}
+
+.icon-ALPHA::before {
+  content: "\ea54";
+}
+
+.icon-RIF::before {
+  content: "\ea55";
+}
+
+.icon-VERI::before {
+  content: "\ea56";
+}
+
+.icon-ONUS::before {
+  content: "\ea57";
+}
+
+.icon-RKN::before {
+  content: "\ea58";
+}
+
+.icon-ETN::before {
+  content: "\ea59";
+}
+
+.icon-ORC::before {
+  content: "\ea5a";
+}
+
+.icon-PERP::before {
+  content: "\ea5b";
+}
+
+.icon-ERG::before {
+  content: "\ea5c";
+}
+
+.icon-XNC::before {
+  content: "\ea5d";
+}
+
+.icon-WOZX::before {
+  content: "\ea5e";
+}
+
+.icon-SSV::before {
+  content: "\ea5f";
+}
+
+.icon-LQTY::before {
+  content: "\ea60";
+}
+
+.icon-COCOS::before {
+  content: "\ea61";
+}
+
+.icon-LOOM::before {
+  content: "\ea62";
+}
+
+.icon-NMR::before {
+  content: "\ea63";
+}
+
+.icon-QKC::before {
+  content: "\ea64";
+}
+
+.icon-POLS::before {
+  content: "\ea65";
+}
+
+.icon-BEL::before {
+  content: "\ea66";
+}
+
+.icon-XVS::before {
+  content: "\ea67";
+}
+
+.icon-META::before {
+  content: "\ea68";
+}
+
+.icon-LCX::before {
+  content: "\ea69";
+}
+
+.icon-BOBA::before {
+  content: "\ea6a";
+}
+
+.icon-XWC::before {
+  content: "\ea6b";
+}
+
+.icon-UQC::before {
+  content: "\ea6c";
+}
+
+.icon-MNGO::before {
+  content: "\ea6d";
+}
+
+.icon-MBOX::before {
+  content: "\ea6e";
+}
+
+.icon-PROM::before {
+  content: "\ea6f";
+}
+
+.icon-GHST::before {
+  content: "\ea70";
+}
+
+.icon-KLV::before {
+  content: "\ea71";
+}
+
+.icon-BOR::before {
+  content: "\ea72";
+}
+
+.icon-ANT::before {
+  content: "\ea73";
+}
+
+.icon-STRK::before {
+  content: "\ea74";
+}
+
+.icon-FLETA::before {
+  content: "\ea75";
+}
+
+.icon-SNL::before {
+  content: "\ea76";
+}
+
+.icon-AURORA::before {
+  content: "\ea77";
+}
+
+.icon-DAR::before {
+  content: "\ea78";
+}
+
+.icon-DKA::before {
+  content: "\ea79";
+}
+
+.icon-ZB::before {
+  content: "\ea7a";
+}
+
+.icon-TLOS::before {
+  content: "\ea7b";
+}
+
+.icon-JASMY::before {
+  content: "\ea7c";
+}
+
+.icon-AXEL::before {
+  content: "\ea7d";
+}
+
+.icon-SUPER::before {
+  content: "\ea7e";
+}
+
+.icon-REEF::before {
+  content: "\ea7f";
+}
+
+.icon-DUSK::before {
+  content: "\ea80";
+}
+
+.icon-FORTH::before {
+  content: "\ea81";
+}
+
+.icon-EXRD::before {
+  content: "\ea82";
+}
+
+.icon-BFC::before {
+  content: "\ea83";
+}
+
+.icon-HOO::before {
+  content: "\ea84";
+}
+
+.icon-ORN::before {
+  content: "\ea85";
+}
+
+.icon-AGIX::before {
+  content: "\ea86";
+}
+
+.icon-SSX::before {
+  content: "\ea87";
+}
+
+.icon-MAID::before {
+  content: "\ea88";
+}
+
+.icon-QC::before {
+  content: "\ea89";
+}
+
+.icon-MLN::before {
+  content: "\ea8a";
+}
+
+.icon-CFG::before {
+  content: "\ea8b";
+}
+
+.icon-ALICE::before {
+  content: "\ea8c";
+}
+
+.icon-AMPL::before {
+  content: "\ea8d";
+}
+
+.icon-XVG::before {
+  content: "\ea8e";
+}
+
+.icon-ZEON::before {
+  content: "\ea8f";
+}
+
+.icon-KAI::before {
+  content: "\ea90";
+}
+
+.icon-RAD::before {
+  content: "\ea91";
+}
+
+.icon-OUSD::before {
+  content: "\ea92";
+}
+
+.icon-TLM::before {
+  content: "\ea93";
+}
+
+.icon-ADX::before {
+  content: "\ea94";
+}
+
+.icon-AE::before {
+  content: "\ea95";
+}
+
+.icon-AERGO::before {
+  content: "\ea96";
+}
+
+.icon-AETHC::before {
+  content: "\ea97";
+}
+
+.icon-AGLD::before {
+  content: "\ea98";
+}
+
+.icon-AHT::before {
+  content: "\ea99";
+}
+
+.icon-AIOZ::before {
+  content: "\ea9a";
+}
+
+.icon-AKRO::before {
+  content: "\ea9b";
+}
+
+.icon-AKT::before {
+  content: "\ea9c";
+}
+
+.icon-ALCX::before {
+  content: "\ea9d";
+}
+
+.icon-ALPACA::before {
+  content: "\ea9e";
+}
+
+.icon-ALPINE::before {
+  content: "\ea9f";
+}
+
+.icon-AMO::before {
+  content: "\eaa0";
+}
+
+.icon-ANC::before {
+  content: "\eaa1";
+}
+
+.icon-API3::before {
+  content: "\eaa2";
+}
+
+.icon-APX::before {
+  content: "\eaa3";
+}
+
+.icon-ARPA::before {
+  content: "\eaa4";
+}
+
+.icon-ASK::before {
+  content: "\eaa5";
+}
+
+.icon-ASM::before {
+  content: "\eaa6";
+}
+
+.icon-ATA::before {
+  content: "\eaa7";
+}
+
+.icon-ATOLO::before {
+  content: "\eaa8";
+}
+
+.icon-ATOM::before {
+  content: "\eaa9";
+}
+
+.icon-AURY::before {
+  content: "\eaaa";
+}
+
+.icon-BABY::before {
+  content: "\eaab";
+}
+
+.icon-BADGER::before {
+  content: "\eaac";
+}
+
+.icon-BAND::before {
+  content: "\eaad";
+}
+
+.icon-BAR::before {
+  content: "\eaae";
+}
+
+.icon-BCD::before {
+  content: "\eaaf";
+}
+
+.icon-BEAM::before {
+  content: "\eab0";
+}
+
+.icon-BIOT::before {
+  content: "\eab1";
+}
+
+.icon-BLCT::before {
+  content: "\eab2";
+}
+
+.icon-BLOK::before {
+  content: "\eab3";
+}
+
+.icon-BLZ::before {
+  content: "\eab4";
+}
+
+.icon-BMX::before {
+  content: "\eab5";
+}
+
+.icon-BNANA::before {
+  content: "\eab6";
+}
+
+.icon-BOND::before {
+  content: "\eab7";
+}
+
+.icon-BOO::before {
+  content: "\eab8";
+}
+
+.icon-BOSON::before {
+  content: "\eab9";
+}
+
+.icon-BTCST1::before {
+  content: "\eaba";
+}
+
+.icon-BTM::before {
+  content: "\eabb";
+}
+
+.icon-BTSE::before {
+  content: "\eabc";
+}
+
+.icon-BZRX::before {
+  content: "\eabd";
+}
+
+.icon-BZZ::before {
+  content: "\eabe";
+}
+
+.icon-CBK::before {
+  content: "\eabf";
+}
+
+.icon-CENNZ::before {
+  content: "\eac0";
+}
+
+.icon-CET::before {
+  content: "\eac1";
+}
+
+.icon-CHESS::before {
+  content: "\eac2";
+}
+
+.icon-CITY::before {
+  content: "\eac3";
+}
+
+.icon-CLT::before {
+  content: "\eac4";
+}
+
+.icon-CLV::before {
+  content: "\eac5";
+}
+
+.icon-CON::before {
+  content: "\eac6";
+}
+
+.icon-COS::before {
+  content: "\eac7";
+}
+
+.icon-COVAL::before {
+  content: "\eac8";
+}
+
+.icon-CQT::before {
+  content: "\eac9";
+}
+
+.icon-CRE::before {
+  content: "\eaca";
+}
+
+.icon-CRTS::before {
+  content: "\eacb";
+}
+
+.icon-CTX::before {
+  content: "\eacc";
+}
+
+.icon-CTXC::before {
+  content: "\eacd";
+}
+
+.icon-CUBE::before {
+  content: "\eace";
+}
+
+.icon-DAD::before {
+  content: "\eacf";
+}
+
+.icon-DATA::before {
+  content: "\ead0";
+}
+
+.icon-DDX::before {
+  content: "\ead1";
+}
+
+.icon-DERC::before {
+  content: "\ead2";
+}
+
+.icon-DEXE::before {
+  content: "\ead3";
+}
+
+.icon-DF::before {
+  content: "\ead4";
+}
+
+.icon-DG::before {
+  content: "\ead5";
+}
+
+.icon-DIA::before {
+  content: "\ead6";
+}
+
+.icon-DNT::before {
+  content: "\ead7";
+}
+
+.icon-DPI::before {
+  content: "\ead8";
+}
+
+.icon-DREP::before {
+  content: "\ead9";
+}
+
+.icon-DVF::before {
+  content: "\eada";
+}
+
+.icon-DX::before {
+  content: "\eadb";
+}
+
+.icon-DXD::before {
+  content: "\eadc";
+}
+
+.icon-EFI::before {
+  content: "\eadd";
+}
+
+.icon-EGG::before {
+  content: "\eade";
+}
+
+.icon-ERN::before {
+  content: "\eadf";
+}
+
+.icon-EUM::before {
+  content: "\eae0";
+}
+
+.icon-FARM::before {
+  content: "\eae1";
+}
+
+.icon-FCT::before {
+  content: "\eae2";
+}
+
+.icon-FIDA::before {
+  content: "\eae3";
+}
+
+.icon-FIO::before {
+  content: "\eae4";
+}
+
+.icon-FIRO::before {
+  content: "\eae5";
+}
+
+.icon-FIS::before {
+  content: "\eae6";
+}
+
+.icon-FOX::before {
+  content: "\eae7";
+}
+
+.icon-FRONT::before {
+  content: "\eae8";
+}
+
+.icon-FSN::before {
+  content: "\eae9";
+}
+
+.icon-GAS::before {
+  content: "\eaea";
+}
+
+.icon-GENE::before {
+  content: "\eaeb";
+}
+
+.icon-GRS::before {
+  content: "\eaec";
+}
+
+.icon-GTC::before {
+  content: "\eaed";
+}
+
+.icon-GTO::before {
+  content: "\eaee";
+}
+
+.icon-GXC::before {
+  content: "\eaef";
+}
+
+.icon-GYEN::before {
+  content: "\eaf0";
+}
+
+.icon-HARD::before {
+  content: "\eaf1";
+}
+
+.icon-HERO::before {
+  content: "\eaf2";
+}
+
+.icon-HEZ::before {
+  content: "\eaf3";
+}
+
+.icon-HIGH::before {
+  content: "\eaf4";
+}
+
+.icon-HNS::before {
+  content: "\eaf5";
+}
+
+.icon-HOPR::before {
+  content: "\eaf6";
+}
+
+.icon-HTR::before {
+  content: "\eaf7";
+}
+
+.icon-HUNT::before {
+  content: "\eaf8";
+}
+
+.icon-HYDRA::before {
+  content: "\eaf9";
+}
+
+.icon-HYN::before {
+  content: "\eafa";
+}
+
+.icon-ICHI::before {
+  content: "\eafb";
+}
+
+.icon-IDEX::before {
+  content: "\eafc";
+}
+
+.icon-IDRT::before {
+  content: "\eafd";
+}
+
+.icon-IRIS::before {
+  content: "\eafe";
+}
+
+.icon-KEY::before {
+  content: "\eaff";
+}
+
+.icon-KILT::before {
+  content: "\eb00";
+}
+
+.icon-KIN::before {
+  content: "\eb01";
+}
+
+.icon-KMD::before {
+  content: "\eb02";
+}
+
+.icon-KP3R::before {
+  content: "\eb03";
+}
+
+.icon-KRT::before {
+  content: "\eb04";
+}
+
+.icon-LA::before {
+  content: "\eb05";
+}
+
+.icon-LAT::before {
+  content: "\eb06";
+}
+
+.icon-LAZIO::before {
+  content: "\eb07";
+}
+
+.icon-LIT::before {
+  content: "\eb08";
+}
+
+.icon-LOG::before {
+  content: "\eb09";
+}
+
+.icon-LON::before {
+  content: "\eb0a";
+}
+
+.icon-LTO::before {
+  content: "\eb0b";
+}
+
+.icon-LUNA::before {
+  content: "\eb0c";
+}
+
+.icon-MARO::before {
+  content: "\eb0d";
+}
+
+.icon-MASK::before {
+  content: "\eb0e";
+}
+
+.icon-MATH::before {
+  content: "\eb0f";
+}
+
+.icon-MBL::before {
+  content: "\eb10";
+}
+
+.icon-MC::before {
+  content: "\eb11";
+}
+
+.icon-MDT::before {
+  content: "\eb12";
+}
+
+.icon-MEV::before {
+  content: "\eb13";
+}
+
+.icon-MFT::before {
+  content: "\eb14";
+}
+
+.icon-MITH::before {
+  content: "\eb15";
+}
+
+.icon-MIX::before {
+  content: "\eb16";
+}
+
+.icon-MLK::before {
+  content: "\eb17";
+}
+
+.icon-MNW::before {
+  content: "\eb18";
+}
+
+.icon-MOF::before {
+  content: "\eb19";
+}
+
+.icon-MONA::before {
+  content: "\eb1a";
+}
+
+.icon-MOVEZ::before {
+  content: "\eb1b";
+}
+
+.icon-MSOL::before {
+  content: "\eb1c";
+}
+
+.icon-MWC::before {
+  content: "\eb1d";
+}
+
+.icon-NCT::before {
+  content: "\eb1e";
+}
+
+.icon-NIF::before {
+  content: "\eb1f";
+}
+
+.icon-NMC::before {
+  content: "\eb20";
+}
+
+.icon-NOIA::before {
+  content: "\eb21";
+}
+
+.icon-NRG::before {
+  content: "\eb22";
+}
+
+.icon-NSBT::before {
+  content: "\eb23";
+}
+
+.icon-NULS::before {
+  content: "\eb24";
+}
+
+.icon-NYE::before {
+  content: "\eb25";
+}
+
+.icon-OM::before {
+  content: "\eb26";
+}
+
+.icon-OXEN::before {
+  content: "\eb27";
+}
+
+.icon-PEAK::before {
+  content: "\eb28";
+}
+
+.icon-PHA::before {
+  content: "\eb29";
+}
+
+.icon-PNK::before {
+  content: "\eb2a";
+}
+
+.icon-PRE::before {
+  content: "\eb2b";
+}
+
+.icon-PRQ1::before {
+  content: "\eb2c";
+}
+
+.icon-PSG::before {
+  content: "\eb2d";
+}
+
+.icon-QASH::before {
+  content: "\eb2e";
+}
+
+.icon-QOM::before {
+  content: "\eb2f";
+}
+
+.icon-QSP::before {
+  content: "\eb30";
+}
+
+.icon-QUACK::before {
+  content: "\eb31";
+}
+
+.icon-QUICK::before {
+  content: "\eb32";
+}
+
+.icon-RAI::before {
+  content: "\eb33";
+}
+
+.icon-RAMP::before {
+  content: "\eb34";
+}
+
+.icon-RARE::before {
+  content: "\eb35";
+}
+
+.icon-RARI::before {
+  content: "\eb36";
+}
+
+.icon-RBN::before {
+  content: "\eb37";
+}
+
+.icon-REAP::before {
+  content: "\eb38";
+}
+
+.icon-REI::before {
+  content: "\eb39";
+}
+
+.icon-REV::before {
+  content: "\eb3a";
+}
+
+.icon-RFOX::before {
+  content: "\eb3b";
+}
+
+.icon-RFR::before {
+  content: "\eb3c";
+}
+
+.icon-RGT::before {
+  content: "\eb3d";
+}
+
+.icon-RISE::before {
+  content: "\eb3e";
+}
+
+.icon-RMRK::before {
+  content: "\eb3f";
+}
+
+.icon-ROOK::before {
+  content: "\eb40";
+}
+
+.icon-RSS3::before {
+  content: "\eb41";
+}
+
+.icon-RVP::before {
+  content: "\eb42";
+}
+
+.icon-SAFE::before {
+  content: "\eb43";
+}
+
+.icon-SAFEMOON::before {
+  content: "\eb44";
+}
+
+.icon-SAMO::before {
+  content: "\eb45";
+}
+
+.icon-SANTOS::before {
+  content: "\eb46";
+}
+
+.icon-SDAO::before {
+  content: "\eb47";
+}
+
+.icon-SDN::before {
+  content: "\eb48";
+}
+
+.icon-SERO::before {
+  content: "\eb49";
+}
+
+.icon-SFP::before {
+  content: "\eb4a";
+}
+
+.icon-SFUND::before {
+  content: "\eb4b";
+}
+
+.icon-SIX::before {
+  content: "\eb4c";
+}
+
+.icon-SLP::before {
+  content: "\eb4d";
+}
+
+.icon-SOFI::before {
+  content: "\eb4e";
+}
+
+.icon-SOS::before {
+  content: "\eb4f";
+}
+
+.icon-SOUL::before {
+  content: "\eb50";
+}
+
+.icon-SPS::before {
+  content: "\eb51";
+}
+
+.icon-STAKE::before {
+  content: "\eb52";
+}
+
+.icon-STARL::before {
+  content: "\eb53";
+}
+
+.icon-STRAX::before {
+  content: "\eb54";
+}
+
+.icon-SUKU::before {
+  content: "\eb55";
+}
+
+.icon-SWAP::before {
+  content: "\eb56";
+}
+
+.icon-SWP::before {
+  content: "\eb57";
+}
+
+.icon-TICKER537::before {
+  content: "\eb58";
+}
+
+.icon-TIME::before {
+  content: "\eb59";
+}
+
+.icon-TKO::before {
+  content: "\eb5a";
+}
+
+.icon-TNB::before {
+  content: "\eb5b";
+}
+
+.icon-TOMO::before {
+  content: "\eb5c";
+}
+
+.icon-TORN::before {
+  content: "\eb5d";
+}
+
+.icon-TPT::before {
+  content: "\eb5e";
+}
+
+.icon-TRB::before {
+  content: "\eb5f";
+}
+
+.icon-TROY::before {
+  content: "\eb60";
+}
+
+.icon-TRU::before {
+  content: "\eb61";
+}
+
+.icon-TT::before {
+  content: "\eb62";
+}
+
+.icon-TVK::before {
+  content: "\eb63";
+}
+
+.icon-UFO::before {
+  content: "\eb64";
+}
+
+.icon-ULT::before {
+  content: "\eb65";
+}
+
+.icon-UNFI::before {
+  content: "\eb66";
+}
+
+.icon-USDJ::before {
+  content: "\eb67";
+}
+
+.icon-VBIT::before {
+  content: "\eb68";
+}
+
+.icon-VEGA::before {
+  content: "\eb69";
+}
+
+.icon-VOXEL::before {
+  content: "\eb6a";
+}
+
+.icon-VR::before {
+  content: "\eb6b";
+}
+
+.icon-VRA::before {
+  content: "\eb6c";
+}
+
+.icon-VUSDT::before {
+  content: "\eb6d";
+}
+
+.icon-VXV::before {
+  content: "\eb6e";
+}
+
+.icon-VXVS::before {
+  content: "\eb6f";
+}
+
+.icon-WAN::before {
+  content: "\eb70";
+}
+
+.icon-WILD::before {
+  content: "\eb71";
+}
+
+.icon-WNXM::before {
+  content: "\eb72";
+}
+
+.icon-XHV::before {
+  content: "\eb73";
+}
+
+.icon-XPR::before {
+  content: "\eb74";
+}
+
+.icon-XYM::before {
+  content: "\eb75";
+}
+
+.icon-YLD::before {
+  content: "\eb76";
+}
+
+.icon-YOOSHI::before {
+  content: "\eb77";
+}
+
+.icon-CRODO::before {
+  content: "\eb78";
+}
+
+.icon-CKB::before {
+  content: "\eb79";
+}
+
+.iconbox {
+  border-radius: 100px;
+  width: fit-content;
+  padding: 10px;
+  position: relative;
+}
+
+.backgroundRomb {
+  border-radius: 30%;
+  transform: rotate(45deg);
+  position: relative;
+}
+
+.backgroundRomb::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0); /* IE6-9 */
+  opacity: 0.25;
+  box-shadow: inset -1px -1px 0 rgb(0 0 0 / 10%);
+  border-radius: 30%;
+}
+
+.backgroundShadow {
+  border-radius: 10%;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 11%;
+  top: 11%;
+  filter: blur(6px);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.backgroundRomb .cryptoicon {
+  transform: rotate(-45deg);
+  text-shadow: 0 2px 0 rgb(0 0 0 / 10%);
+}
+
+.backgroundRomb .cryptoicon {
+  transform: rotate(-45deg);
+}
+
+.cryptoicon {
+  display: block;
+  position: relative;
+}
+
+.white-style {
+  background: #fff;
+}
+
+.black-style {
+  background: #1e1e1e;
+}
+
+.orange-style {
+  background: #ed684b;
+}
+
+.icon-color-white {
+  color: #fff;
+}
+
+.icon-color-black {
+  color: #1e1e1e;
+}
