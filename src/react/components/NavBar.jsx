@@ -4,8 +4,8 @@ import { selectFilterBy } from '../../redux/coins/coinsSelectors';
 import { selectCoinDetailsById, selectDetailsError } from '../../redux/details/detailsSelectors';
 import { clearFilterCoins, filterCoins } from '../../redux/coins/coinsSlice';
 import {
-  CancelIcon,
-  CoinIcon, CoinsIcon, GoBackIcon, HomeIcon, LensIcon,
+  CancelIcon, LensIcon, GoBackIcon, HomeIcon,
+  CoinIcon, CoinsIcon, CryptoIcon,
 } from './icons';
 
 const NavBar = () => {
@@ -53,7 +53,7 @@ const NavBar = () => {
               <GoBackIcon />
             </NavLink>
             <NavLink to={id} end className="fsControls navLink navCoin">
-              <CoinIcon />
+              {<CryptoIcon symbol={coin.symbol} /> || <CoinIcon />}
               <span className="fsControls navName">{coin ? coin.name : `${id}coin`}</span>
             </NavLink>
           </>

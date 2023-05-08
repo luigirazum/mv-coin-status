@@ -2,13 +2,17 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import genericCoinIcon from '../../assets/logo/generic-crypto-mock-logo.svg';
-import { selectCoinDetailsById, selectDetailsError, selectDetailsIsLoading } from '../../redux/details/detailsSelectors';
+import {
+  selectCoinDetailsById, selectDetailsError,
+  selectDetailsIsLoading, selectedCoinHasSvgIcon,
+} from '../../redux/details/detailsSelectors';
 import { fetchDetails } from '../../redux/details/detailsActions';
 import { selectAllCoinsIds } from '../../redux/coins/coinsSelectors';
 
 const CoinDetails = () => {
   const { id } = useParams();
   const coin = useSelector((store) => selectCoinDetailsById(store, id));
+  const coinHasSvg = useSelector(selectedCoinHasSvgIcon);
   const detailsLoading = useSelector(selectDetailsIsLoading);
   const detailsError = useSelector(selectDetailsError);
   const allCoins = useSelector(selectAllCoinsIds, shallowEqual);
@@ -40,13 +44,31 @@ const CoinDetails = () => {
     );
   }
 
+  const conditionalImage = () => {
+    if (process.env.REACT_APP_API === 'intercept') {
+      return (
+        <div className="iconContainer">
+          {genericCoinIcon}
+        </div>
+      );
+    }
+
+    if (!coinHasSvg) {
+      return (
+        <div className="iconContainer">
+          <img data-testid="coinIcon" src={coin.icon} className="coinIcon" alt={coin.name} />
+        </div>
+      );
+    }
+
+    return <div className="iconContainer" dangerouslySetInnerHTML={{ __html: coin.svg }} />;
+  };
+
   return coin ? (
     <section className="coinDetails">
       <article data-testid={id} className="coin">
         <div className="coinBasics">
-          <div className="iconContainer">
-            <img data-testid="coinIcon" src={process.env.REACT_APP_API === 'intercept' ? genericCoinIcon : coin.icon} className="coinIcon" alt={coin.name} />
-          </div>
+          {conditionalImage()}
           <section className="descriptionSection">
             <h3 data-testid="coinName" className="coinName">{coin.name}</h3>
             <h4 data-testid="coinSymbol" className="sectionCategory symbolCategory">Symbol</h4>

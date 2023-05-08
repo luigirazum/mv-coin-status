@@ -4,6 +4,7 @@ import CoinsLayout from './routes/CoinsLayout';
 import AllCoins from './routes/AllCoins';
 import CoinDetails from './routes/CoinDetails';
 import '../styles/App.css';
+import '../styles/cryptoicons.css';
 
 const App = () => (
   <Routes>

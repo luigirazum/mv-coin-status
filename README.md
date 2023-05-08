@@ -81,7 +81,7 @@ This project was bootstrapped with:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- <a href="https://statuesque-fox-2c2e3f.netlify.app/" target="_blank" rel="noopener noreferrer">CoinStatus App</a>
+- <a href="https://coinstatuscp.netlify.app/" target="_blank" rel="noopener noreferrer">CoinStatus App</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -174,7 +174,19 @@ To get a local copy of this project up and running, follow these steps.
 
 - [ ] *Store app settings using localStorage.*
 - [ ] *Set favorite Cryptocurrencies.*
+- [ ] *Use of SVG images at details page.* <!-- use https://cryptologos.cc/ or http://cryptoicons.co/ to check for svg logos -->
+- [ ] *Add dynamic histogram graphic at details page.*
+- [ ] *Improve hover effects with some transitions.*
+- [ ] *Implement a modal window to show "loading" states.*
 
+<!--
+  For the histogram graphic at details page, you can consult the following articles:
+   - https://codeburst.io/simple-data-visualization-with-react-js-svg-line-chart-tutorial-df12e5843ce
+   - https://codeburst.io/how-i-built-an-interactive-30-day-bitcoin-price-graph-with-react-and-an-api-6fe551c2ab1d
+   - https://medium.com/analytics-vidhya/make-a-clever-bitcoin-price-chart-with-react-and-d3-e6359d604b54
+
+
+-->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

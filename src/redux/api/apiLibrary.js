@@ -3,6 +3,28 @@ import axios from 'axios';
 /** ----------------------------------------------------------------------
  *   > API endpoints Url generators
  *  ---------------------------------------------------------------------- */
+export const coinSvgIconUrlByIdSymbol = (id, symbol, mockedAPI = null) => {
+  const baseCoinIconSvgUrlByIdSymbol = 'https://cryptologos.cc';
+  const endPoint = 'logos';
+  const parseId = id.trim().toLowerCase();
+  const parseSymbol = symbol.trim().toLowerCase();
+  const coinSvgIcon = `${parseId}-${parseSymbol}-logo.svg?v=025`;
+
+  return ((process.env.REACT_APP_API === 'intercept') && mockedAPI)
+    ? `${baseCoinIconSvgUrlByIdSymbol}/${endPoint}`
+    : `${baseCoinIconSvgUrlByIdSymbol}/${endPoint}/${coinSvgIcon}`;
+};
+
+export const coinSvgIconMonoUrlBySymbol = (symbol, mockedAPI = null) => {
+  const baseCryptoFontMonoUrl = 'https://raw.githubusercontent.com/Cryptofonts/cryptofont';
+  const endPoint = '6bb9ed3466ec5a25ac173edd0353a2b5f60a985d/SVG';
+  const svgMonoIcon = `${symbol.trim().toLowerCase()}.svg`;
+
+  return ((process.env.REACT_APP_API === 'intercept') && mockedAPI)
+    ? `${baseCryptoFontMonoUrl}/${endPoint}`
+    : `${baseCryptoFontMonoUrl}/${endPoint}/${svgMonoIcon}`;
+};
+
 export const allCoinsUrl = (mockedAPI = null) => {
   const baseAllCoinsUrl = 'https://api.coinstats.app/public/v1/coins';
 
